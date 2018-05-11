@@ -1,0 +1,42 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "b657df4180ce0beaf601af348a87e7f4a5963b609f11f99fc5a5050aa4e45c07"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.6"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.tuna.tsinghua.edu.cn/simple/",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "bootstrap-admin": {
+            "hashes": [
+                "sha256:55f036ec60dc1376ef5e873c6386343b046e717858dee5464959745699558451",
+                "sha256:b4dfc62d7c790c1226123d1c29b9c3e274c91ed2c6487d16bdb19bfb05ca8adb"
+            ],
+            "version": "==0.3.9"
+        },
+        "django": {
+            "hashes": [
+                "sha256:26b34f4417aa38d895b6b5307177b51bc3f4d53179d8696a5c19dcb50582523c",
+                "sha256:71d1a584bb4ad2b4f933d07d02c716755c1394feaac1ce61ce37843ac5401092"
+            ],
+            "version": "==2.0.5"
+        },
+        "pytz": {
+            "hashes": [
+                "sha256:65ae0c8101309c45772196b21b74c46b2e5d11b6275c45d251b150d5da334555",
+                "sha256:c06425302f2cf668f1bba7a0a03f3c1d34d4ebeef2c72003da308b3947c7f749"
+            ],
+            "version": "==2018.4"
+        }
+    },
+    "develop": {}
+}
