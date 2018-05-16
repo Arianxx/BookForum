@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.template.defaultfilters import slugify
 
 
 # Create your models here.
@@ -12,31 +13,33 @@ class Book(models.Model):
     """
     name = models.CharField(max_length=32, verbose_name="book name")
     pub_date = models.DateField(default=timezone.now, blank=True, null=True)
+    slug = models.SlugField(max_length=64, unique=True)
 
-    publishing = models.ForeignKey("Publishing", on_delete=models.CASCADE, related_name="books")
+    publishing = models.ForeignKey("Publishing", on_delete=models.CASCADE, related_name="books", null=True)
     auther = models.ForeignKey("Auther", on_delete=models.CASCADE, related_name="books")
     tags = models.ManyToManyField("Tag", related_name="books")
 
     class Meta:
-        ordering = ['pub_date']
+        ordering = ['-pub_date']
+        unique_together = ['name', 'auther', ]
 
     def __str__(self):
         return "Book(%s)" % self.name
 
     def save(self, *args, **kwargs):
-        """
-        保存书籍时，一并保存它的计票对象（Poll），从而不用手动去创建计票对象。
+        # 自动根据书籍的名称和作者添加一个slug
+        slug = ' writen by '.join([self.name, self.auther.name])
+        self.slug = slugify(slug)
 
-        :param args: Some args.
-        :param kwargs: Some kwargs.
-        :return: original return value
-        """
         ret = super(Book, self).save(*args, **kwargs)
+
+        # 保存书籍时，一并保存它的计票对象（Poll），从而不用手动去创建计票对象。
         try:
             self.__getattribute__("poll")
         except AttributeError:
             poll = Poll(book=self)
             poll.save()
+
         return ret
 
 
@@ -44,7 +47,7 @@ class Auther(models.Model):
     """
     与书籍模型（Book）是一对一关系。关系在Book中定义。
     """
-    name = models.CharField(max_length=32, verbose_name="post name")
+    name = models.CharField(max_length=32, verbose_name="auther name")
     age = models.IntegerField(null=True, blank=True)
     location = models.CharField(max_length=128, blank=True)
 
@@ -66,7 +69,7 @@ class Tag(models.Model):
     """
     与书籍模型（Book)是多对多关系。关系在Book中定义。
     """
-    name = models.CharField(max_length=32, verbose_name="tag name")
+    name = models.CharField(max_length=32, verbose_name="tag name", unique=True)
 
     def __str__(self):
         return "Tag(%s)" % self.name

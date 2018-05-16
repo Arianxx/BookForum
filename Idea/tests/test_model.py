@@ -13,6 +13,9 @@ from ..models import (
 # Create your tests here.
 
 class RelationshipTestCase(TestCase):
+    """
+    测试各模型之间的关系是否正确
+    """
 
     def setUp(self):
         auther = Auther.objects.create(name="Mike")
