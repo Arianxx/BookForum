@@ -1,0 +1,25 @@
+.index_switch {
+    margin-top: 20px;
+    /*border-bottom: 1px grey solid;*/
+}
+
+.index_switch_link {
+    /*width: 150px;*/
+    font-weight: bolder;
+    color: grey;
+    margin-right: 20px;
+}
+
+.index_switch_link:hover {
+    color: #66ccff;
+}
+
+.link_switch_active {
+    /*background-color: grey;*/
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.link_switch_active:hover {
+    border-bottom: 1px solid #66ccff;
+}

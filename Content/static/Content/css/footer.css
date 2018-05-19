@@ -1,0 +1,49 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    padding-bottom: 100px;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: white;
+}
+
+.footer-text {
+    font-size: 15px;
+}
+
+.footer-link {
+    font-size: 15px;
+    font-weight: bolder;
+    color: grey;
+}
+
+.link-separate {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer-first {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.footer-second {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+
+.footer-third {
+    margin-top: 5px;
+    margin-bottom: 0;
+}

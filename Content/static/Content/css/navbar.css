@@ -1,0 +1,36 @@
+.nav-brand-text {
+    position: relative;
+    top: 2px;
+}
+
+.nav-brand-img {
+    position: relative;
+    bottom: 2px
+}
+.active {
+    color: #66ccff !important;
+}
+
+.nav-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-text:hover {
+    color: #66ccff !important;
+}
+
+.navbar {
+    box-shadow: 1px 1px 10px 1px grey;
+}
+
+.nav-search {
+    border: 1px solid;
+    /*border-radius: 25px;*/
+    -moz-border-radius: 25px;
+}
+
+.nav-icon {
+    max-width: 15px;
+    margin-bottom: 3px;
+}

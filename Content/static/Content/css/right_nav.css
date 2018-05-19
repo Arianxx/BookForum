@@ -1,0 +1,58 @@
+.right_nav {
+    margin-top: 25px
+}
+
+.per_right_nav {
+    background-color: white;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.right_nav_icon {
+    max-height: 20px;
+    margin-bottom: 7px;
+}
+
+.right_nav_title {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 5px;
+    letter-spacing: 3px;
+}
+
+.right_nav_header_content {
+    border-bottom: 2px solid #66ccff;
+    padding-bottom: 10px;
+}
+
+.list-group {
+    margin-top: 6px;
+}
+
+.right_book_info {
+    float:right;
+}
+
+.right_item_icon {
+    max-height: 15px;
+    position: relative;
+    left: -16px;
+}
+
+.right_item_title {
+    position: relative;
+    left: -12px;
+    color: black;
+}
+
+.tag_cloud_content {
+    border-top: 1px solid lightgrey;
+    margin-top: 5px;
+    z-index: 100;
+    padding-top: 10px;
+}
+
+.right_tag {
+    margin: 3px;
+}

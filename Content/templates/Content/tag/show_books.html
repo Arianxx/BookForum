@@ -1,0 +1,73 @@
+{% load static %}
+{% load content_tags %}
+
+{% for book in books_list %}
+    <div class="book_body mb-4">
+        <div class="row">
+
+            <div class="col col-3 book_cover pl-4 pl-md-3 pr-0 my-3 text-center">
+                <img class="align-content-center book_cover_img" src="{% static 'Content/img/example.jpg' %}"/>
+            </div>
+
+            <div class="col col-9 book_info pl-4 pl-md-0">
+                <div class="book_info_header text-muted">
+                    <span class="book_auther">
+                        <img class="book_icon align-content-center" src="{% static 'Content/img/icon/auther.png' %}" />
+                        <small>{{ book.auther.name }}</small>
+                    </span>
+                    <span class="book_publishing">
+                        <img class="book_icon align-content-center" src="{% static 'Content/img/icon/publishing.png' %}" />
+                        <small>{{ book.publishing.name }}</small>
+                    </span>
+                    <span class="book_pub_date">
+                        <img class="book_icon align-content-center" src="{% static 'Content/img/icon/pub_date.png' %}" />
+                        <small>{{ book.pub_date }}</small>
+                    </span>
+                </div>
+
+               <div class="book_info_main">
+                    <p class="book_name">
+                        {{ book.name }}
+                    </p>
+                    <p class="book_intro mr-2">
+                        <small>
+                            {{ book.intro| truncatechars:512 }}
+                        </small>
+                    </p>
+                </div>
+
+                <div class="book_info_footer text-muted">
+                    <span class="book_tags">
+                        <img class="book_icon" src="{% static 'Content/img/icon/tag.png' %}" />
+                        {% get_tags book as tags %}
+                        {% for tag in tags %}
+                            <small class="text-muted tag">{{ tag.name }}</small>
+                        {% endfor %}
+                    </span>
+
+                    <span class="book_discuss">
+                        <img class="book_icon" src="{% static 'Content/img/icon/discuss.png' %}" />
+                        <small class="text-muted">{% get_discussions_number book %}</small>
+                    </span>
+
+                    <span class="book_poll mr-5 mr-md-3">
+                        <span class="book_poll_up">
+                            <img class="book_icon" src="{% static 'Content/img/icon/up.png' %}" />
+                            {{ book.poll.up }}
+                        </span>
+                        <span class="book_poll_down">
+                            <img class="book_icon" src="{% static 'Content/img/icon/down.png' %}" />
+                            {{ book.poll.down }}
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% empty %}
+    <p class="lead text-center mt-4">
+        这儿还没有任何东西，去别的地方看看吧。
+    </p>
+{% endfor %}
+

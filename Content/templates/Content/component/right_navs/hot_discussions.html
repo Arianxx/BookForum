@@ -1,0 +1,22 @@
+{% load static %}
+{% load content_tags %}
+
+<!-- 热门回复 -->
+<div class="hot_discussion per_right_nav">
+    <div class="right_nav_header">
+        <span class="right_nav_header_content">
+            <img class="right_nav_icon" src="{% static 'Content/img/icon/hot_disscuss.png' %}" />
+            <span class="right_nav_title">热门讨论</span>
+        </span>
+
+        {% get_hot_discussions as disscussions %}
+        <div class="list-group list-group-flush hot_disscussion_list">
+            {% for discussion in disscussions %}
+                <div class="list-group-item list-group-item-action list-group-item-white hot_discussion_item">
+                    <img class="right_item_icon" src="{% static 'Content/img/icon/hot_discuss_item.png' %}" />
+                    <span class="right_item_title">{{ discussion.title| truncatechars:64 }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

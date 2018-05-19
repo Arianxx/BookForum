@@ -1,0 +1,82 @@
+.book_body {
+    background-color: white;
+    min-height: 100px;
+    /*border: 1px solid lightgrey;*/
+    /*max-height: 100px;*/
+}
+
+.book_cover {
+}
+
+.book_cover_img {
+    width: auto;
+    height: auto;
+    max-width: 130px;
+    max-height: 150px;
+}
+
+.book_info_header {
+    color: black;
+    margin-top: 5px;
+}
+
+.book_auther:hover {
+    color: #66ccff;
+}
+
+.book_icon {
+    max-height: 18px;
+    margin-bottom: 2px;
+}
+
+.book_publishing {
+    margin-left: 10px;
+}
+
+.book_publishing:hover {
+    color: #66ccff;
+}
+
+.book_pub_date {
+    margin-left: 10px
+}
+
+.book_pub_date:hover {
+    color: #66ccff;
+}
+
+.book_name {
+    margin-top: 5px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #38aeff;
+}
+
+.book_name:hover {
+    color: #ff4b46;
+}
+
+.book_intro {
+    margin-top: -20px;
+    padding-bottom: 20px;
+    font-size: 19px;
+}
+
+.book_info_footer {
+    position: absolute;
+    height: 20px;
+    width: 97%;
+    bottom: 15px;
+}
+
+.tag {
+    color: #ff7742 !important;
+}
+
+.book_discuss {
+    margin-left: 10px;
+}
+
+.book_poll {
+    float: right;
+}

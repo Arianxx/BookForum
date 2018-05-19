@@ -1,16 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0129ff5-dd5e-4cd3-a5f4-f1d67708d94b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="18a89c78-a3bb-4bc1-a00f-4ab05186123a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/management/commands/clear_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/management/commands/fake_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/css/book_list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/css/index_switch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/css/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/css/right_nav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/Favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/example.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/archive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/auther.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/discuss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/hot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/hot_discuss_item.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/hot_disscuss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/pub_date.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/publishing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/tag_cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/icon/up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/js/jquery-3.3.1.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/static/Content/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/component/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/component/index_switch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/component/messages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/component/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/component/right_nav_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/component/right_navs/hot_books.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/component/right_navs/hot_discussions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/component/right_navs/tag_cloud.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/discussions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/tag/paginator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/tag/show_books.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templates/Content/tag/show_discussions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/templatetags/content_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Share/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/SimpleDjango.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Vence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Vence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Vence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/management/commands/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/tests/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/tests/test_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Idea/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleDjango/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/static/Content/css/discussion_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Share/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleDjango/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Share/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleDjango/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Share/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,25 +78,82 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
-  </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/SimpleDjango$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1526092044757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="useSoftWraps" value="true" />
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            <state relative-caret-position="-7">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_discussions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/templates/Content/tag/show_discussions.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hot_books.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/right_navs/hot_books.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="discussions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/templates/Content/discussions.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fake_data.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Content/management/commands/fake_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,24 +163,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>date</find>
-      <find>datetime.now()</find>
-      <find>now()</find>
-      <find>TEST_RUNNER</find>
-      <find>f</find>
-      <find>unique_toge</find>
-      <find>Idea</find>
+      <find>font</find>
     </findStrings>
-    <replaceStrings>
-      <replace>timezone.now</replace>
-      <replace>now</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,21 +179,54 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Pipfile" />
-        <option value="$PROJECT_DIR$/SimpleDjango/urls.py" />
-        <option value="$PROJECT_DIR$/books/tests.py" />
-        <option value="$PROJECT_DIR$/books/urls.py" />
-        <option value="$PROJECT_DIR$/books/admin.py" />
-        <option value="$PROJECT_DIR$/books/tests/test_model.py" />
-        <option value="$PROJECT_DIR$/books/views.py" />
-        <option value="$PROJECT_DIR$/books/models.py" />
-        <option value="$PROJECT_DIR$/Idea/apps.py" />
-        <option value="$PROJECT_DIR$/SimpleDjango/settings.py" />
-        <option value="$PROJECT_DIR$/Idea/urls.py" />
-        <option value="$PROJECT_DIR$/Idea/migrations/__init__.py" />
-        <option value="$PROJECT_DIR$/Idea/models.py" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/show_books_list.py" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/show_books_list.html" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/messages.html" />
+        <option value="$PROJECT_DIR$/Idea/views.py" />
+        <option value="$PROJECT_DIR$/Idea/static/Idea/css/footer.css" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/navbar.html" />
         <option value="$PROJECT_DIR$/Idea/admin.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Idea/management/__init__.py" />
+        <option value="$PROJECT_DIR$/Idea/management/commands.py" />
+        <option value="$PROJECT_DIR$/Idea/management/commands/commands.py" />
+        <option value="$PROJECT_DIR$/Idea/management/commands/clear_data.py" />
+        <option value="$PROJECT_DIR$/Idea/management/commands/fake_data.py" />
+        <option value="$PROJECT_DIR$/Idea/models.py" />
+        <option value="$PROJECT_DIR$/Idea/static/Idea/css/book_list.css" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/tag/show_books.html" />
+        <option value="$PROJECT_DIR$/Idea/templatetags/idea_tags.py" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/right_nav.html" />
+        <option value="$PROJECT_DIR$/Idea/static/Idea/css/right_nav.css" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/base.html" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/index.html" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/right_navs/hot_books.html" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/right_navs/hot_discussions.html" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/right_navs/tag_cloud.html" />
+        <option value="$PROJECT_DIR$/Idea/templates/Idea/component/right_nav_index.html" />
+        <option value="$PROJECT_DIR$/Idea/tests/test_model.py" />
+        <option value="$PROJECT_DIR$/Content/apps.py" />
+        <option value="$PROJECT_DIR$/Content/urls.py" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/component/index_switch.html" />
+        <option value="$PROJECT_DIR$/Content/templatetags/idea_tags.py" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/index.html" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/component/right_nav_index.html" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/component/right_navs/hot_discussions.html" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/component/right_navs/tag_cloud.html" />
+        <option value="$PROJECT_DIR$/Share/settings.py" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/discussions.html" />
+        <option value="$PROJECT_DIR$/Content/static/Content/css/index_switch.css" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/tag/show_books.html" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/tag/paginator.html" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/base.html" />
+        <option value="$PROJECT_DIR$/Content/models.py" />
+        <option value="$PROJECT_DIR$/Content/views.py" />
+        <option value="$PROJECT_DIR$/Content/static/Content/css/book_list.css" />
+        <option value="$PROJECT_DIR$/Content/static/Content/css/right_nav.css" />
+        <option value="$PROJECT_DIR$/Content/static/Content/css/discussion_list.css" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/tag/show_discussions.html" />
+        <option value="$PROJECT_DIR$/Content/templatetags/content_tags.py" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/component/right_navs/hot_books.html" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/component/navbar.html" />
       </list>
     </option>
   </component>
@@ -100,12 +240,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1918" />
-    <option name="height" value="1078" />
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1090" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -115,53 +253,74 @@
         <subPane>
           <expand>
             <path>
-              <item name="SimpleDjango" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SimpleDjango" type="462c0819:PsiDirectoryNode" />
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SimpleDjango" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SimpleDjango" type="462c0819:PsiDirectoryNode" />
-              <item name="Idea" type="462c0819:PsiDirectoryNode" />
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SimpleDjango" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SimpleDjango" type="462c0819:PsiDirectoryNode" />
-              <item name="SimpleDjango" type="462c0819:PsiDirectoryNode" />
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="management" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="SimpleDjango" type="cbb8eebc:String" user="SimpleDjango" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="SimpleDjango" type="cbb8eebc:String" user="SimpleDjango" />
-              <item name="Idea" type="cbb8eebc:String" user="Idea" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ListVie&#9;null&#9;null&#10;generic&#9;null&#9;null&#10;ListView&#9;null&#9;null&#10;TEST_RUN&#9;null&#9;null" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="as_p&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/books/models.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/books/models.py" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\AMydsik\exercise\py\SimpleDjango\books\tests" />
+      <recent name="C:\AMydsik\exercise\py\Share\Content\templates\Content\tag" />
+      <recent name="C:\AMydsik\exercise\py\Share\Idea\management\commands" />
+      <recent name="C:\AMydsik\exercise\py\Share\Idea\templates\Idea\tags" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -177,13 +336,12 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="SimpleDjango" type="Python.DjangoServer" factoryName="Django server">
-      <module name="SimpleDjango" />
+    <configuration name="Share" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Share" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="SimpleDjango.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -201,31 +359,22 @@
       <option name="customRunCommand" value="" />
     </configuration>
   </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c0129ff5-dd5e-4cd3-a5f4-f1d67708d94b" name="Default" comment="" />
-      <created>1526032834776</created>
+      <changelist id="18a89c78-a3bb-4bc1-a00f-4ab05186123a" name="Default" comment="" />
+      <created>1526479708127</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1526032834776</updated>
+      <updated>1526479708127</updated>
     </task>
-    <task id="LOCAL-00001" summary="Change the app name.">
-      <created>1526453464297</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1526453464297</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Test__ - 2018.05.12 at 10h 27m 26s.xml">
-      <configuration name="Test: " configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -240,32 +389,53 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32985386" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5012953" side_tool="true" weight="0.22860125" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49870467" weight="0.22860125" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.26304802" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32985386" />
-      <window_info anchor="bottom" id="Terminal" order="15" visible="true" weight="0.2098121" />
+      <window_info anchor="bottom" id="TODO" order="8" visible="true" weight="0.32985386" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.30480167" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.15866388" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27453026" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19728601" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32985386" />
-      <window_info anchor="right" id="SciView" order="4" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7348643" visible="true" weight="0.16364606" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32985386" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info x="732" y="401" width="268" height="278" id="Structure" order="1" sideWeight="0.2651357" side_tool="true" weight="0.15565032" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49967927" weight="0.21816283" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.22651356" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="manage.py@SimpleDjango" order="0" sideWeight="0.49806452" weight="0.23173277" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32985386" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7348643" visible="true" weight="0.16204691" />
+      <window_info x="732" y="401" width="268" height="278" id="Structure" order="1" sideWeight="0.2651357" side_tool="true" weight="0.15565032" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.32985386" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.16805845" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.24217118" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32985386" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19728601" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.22651356" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -299,419 +469,368 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change the app name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the app name." />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SimpleDjango/urls.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/apps/registry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="4014">
+          <caret line="232" selection-start-line="232" selection-end-line="232" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Share/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/tag/show_books.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/right_nav_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" column="99" selection-start-line="39" selection-start-column="99" selection-end-line="39" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/right_nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/book_list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templatetags/content_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
           <folding>
-            <element signature="e#636#668#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleDjango/settings.py">
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/footer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        <state relative-caret-position="36">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/apps.py">
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="5" column="125446" lean-forward="true" selection-start-line="5" selection-start-column="125446" selection-end-line="5" selection-end-column="125446" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/utils/translation/trans_real.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="126" column="35" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/forms/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="289" column="8" selection-start-line="289" selection-start-column="8" selection-end-line="289" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/core/management/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="451" column="14" lean-forward="true" selection-start-line="451" selection-start-column="14" selection-end-line="451" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/management/commands/clear_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/tests/test_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Share/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/urls.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/selectors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="310">
+          <caret line="318" column="18" selection-start-line="318" selection-start-column="18" selection-end-line="318" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Content/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/db/models/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/tests/test_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/core/management/commands/runserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/core/checks/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/views.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/messages.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/db/models/base.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/footer.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Share/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="727" column="46" lean-forward="true" selection-start-line="727" selection-start-column="46" selection-end-line="727" selection-end-column="46" />
+        <state relative-caret-position="378">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/contrib/admin/options.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/right_navs/hot_discussions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="511" column="4" selection-start-line="511" selection-start-column="4" selection-end-line="511" selection-end-column="4" />
+        <state relative-caret-position="18">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books/migrations/0001_initial.py" />
-    <entry file="file://$PROJECT_DIR$/books/migrations/0004_auto_20180511_2229.py" />
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/core/management/base.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/right_navs/tag_cloud.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="409" selection-start-line="409" selection-end-line="409" />
+        <state relative-caret-position="18">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/admin.py">
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/index_switch.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/models.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/tag/paginator.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="88" lean-forward="true" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
+        <state relative-caret-position="306">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/tag/show_books.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleDjango/urls.py">
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/book_list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/right_nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/discussion_list.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleDjango/settings.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/index_switch.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="270">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/admin.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/right_nav_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
+    <entry file="file://$PROJECT_DIR$/Content/templatetags/content_tags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="18">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/db/models/utils.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="288">
+          <caret line="16" selection-start-line="16" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/core/management/commands/runserver.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="450">
+          <caret line="25" column="101" lean-forward="true" selection-start-line="25" selection-start-column="101" selection-end-line="25" selection-end-column="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/core/checks/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Share/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="450">
+          <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/apps/registry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="400">
+          <caret line="241" column="49" selection-start-line="241" selection-start-column="49" selection-end-line="241" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="uml://Python/books.models.Discuss">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>books.models.Discuss</OriginalElement>
-          <nodes>
-            <node x="" y="">books.models.Discuss</node>
-            <node x="" y="">django.db.models.base.ModelBase</node>
-            <node x="" y="">object</node>
-            <node x="" y="">django.db.models.base.Model</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="151.0" y="94.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/unittest/test/test_runner.py">
+    <entry file="file://$PROJECT_DIR$/Content/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="137" column="6" selection-start-line="137" selection-start-column="6" selection-end-line="137" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-7">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding>
-            <element signature="e#22#31#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/forms/models.py">
+    <entry file="file://$PROJECT_DIR$/Content/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="548" column="52" selection-start-line="548" selection-start-column="52" selection-end-line="548" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/contrib/admin/options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="667" column="28" lean-forward="true" selection-start-line="667" selection-start-column="28" selection-end-line="667" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/numpy/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20502">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/views/generic/list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3366">
-          <caret line="187" column="6" selection-start-line="187" selection-start-column="6" selection-end-line="187" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/views/generic/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="971" column="19" selection-start-line="971" selection-start-column="8" selection-end-line="971" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-2007614468/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/tests/test_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="-7">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/views.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/tag/show_discussions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="-7">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/component/right_navs/hot_books.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/apps.py">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/discussions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state relative-caret-position="306">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/importlib/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Content/management/commands/fake_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="125" column="25" lean-forward="true" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1621">
-          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="1260">
+          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/core/management/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="409" selection-start-line="409" selection-end-line="409" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Idea/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleDjango/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleDjango/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
