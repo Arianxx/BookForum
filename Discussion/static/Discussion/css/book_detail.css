@@ -1,0 +1,49 @@
+.book_detail {
+
+}
+
+.book_detail_back {
+
+}
+
+.book_detail_container {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.book_detail_cover {
+    margin-bottom: 20px;
+}
+
+.book_detail_cover_img {
+    max-width: 150px;
+    max-height: 200px;
+}
+
+.book_detail_info {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.book_detail_label {
+    font-weight: lighter;
+    font-size: smaller;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+.book_detail_text {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.book_detail_tags {
+    margin-top: 10px;
+}
+
+.book_detail_per_tag {
+    margin: 0 5px 10px 5px;
+}

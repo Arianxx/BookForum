@@ -56,3 +56,14 @@
 .right_tag {
     margin: 3px;
 }
+
+.more {
+}
+
+.more_link {
+    color: black;
+}
+
+.nav_link {
+    text-decoration: none !important;
+}

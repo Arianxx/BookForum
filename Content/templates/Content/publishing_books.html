@@ -1,0 +1,46 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+{% load content_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Content/css/publishing_info.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    Publishing
+{% endblock %}
+
+{% block content %}
+    <div class="top_publishing_info jumbotron lead">
+        <h1 class="display-4 top_publishing_title text-success">{{ publishing.name }}</h1>
+        <p class="top_publishing_name">
+            <span class="top_publishing_name_text">这是出版社 <em>{{ publishing.name }}</em> 的主页</span>
+        </p>
+        <p class="top_publishing_establish">
+            <span class="top_publishing_establish_text">这家出版社于 <em>{{ publishing.establish_date }}</em> 创办。历史悠久。</span>
+        </p>
+        <p class="top_publishing_book_num">
+            <span class="top_publishing_book_num_text">
+                已经收录了本出版社 {{ publishing.book_num }} 本书籍
+            </span>
+        </p>
+        {% if  publishing.about %}
+            关于这家出版社:
+            <p class="top_publishing_about">
+                {{ publishing.about }}
+            </p>
+        {% endif %}
+    </div>
+
+    <ul class="nav index_switch text-center">
+        <li class="nav-item">
+            <a class="nav-link index_switch_link link_switch_active" href="#">
+                <span class="index_switch_text">出版社 {{ publishing.name }} 的书籍（共{{ publishing.book_num }}本）</span>
+            </a>
+        </li>
+    </ul>
+
+    {% show_books object_list %}
+    {% paginate paginator page_obj %}
+{% endblock %}

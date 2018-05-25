@@ -1,0 +1,22 @@
+{% extends 'Content/index.html' %}
+{% load content_tags %}
+
+{% block title %}
+    Hot books
+{% endblock %}
+
+{% block content %}
+    {% include 'component/hot_switch.html' %}
+    {% show_books books %}
+
+    <div class="row justify-content-center">
+        <a class="newest_books btn btn-info mb-3" href="{% url 'Content:index' %}#switcher">查看更多最新书籍</a>
+    </div>
+{% endblock %}
+
+{% block right-nav %}
+    <div class="per_right_nav">
+        <a class="btn btn-outline-info" href="{% url 'Content:index' %}#switcher" style="width:100%">查看最新书籍</a>
+    </div>
+    {{ block.super }}
+{% endblock %}

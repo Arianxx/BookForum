@@ -1,0 +1,45 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+{% load content_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Content/css/auther_info.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    Autehr
+{% endblock %}
+
+{% block content %}
+    <div class="top_auther_info jumbotron lead">
+        <h1 class="display-4 top_auther_title text-info">{{ auther.name }}</h1>
+        <p class="top_auther_name">
+            <span class="top_auther_name_text">你正在查看 <em>{{ auther.name }}</em> 的主页。</span>
+        </p>
+        <p class="top_auther_book_num">
+            <span class="top_auther_book_num_text">
+                已经收录了本作者的 {{ auther.book_num }} 本书籍
+            </span>
+        </p>
+        {% if auther.about %}
+            关于这个作者：
+            <p class="top_auther_about">
+            <span class="top_auther_about_text">
+                {{ auther.about }}
+            </span>
+            </p>
+        {% endif %}
+    </div>
+
+    <ul class="nav index_switch text-center">
+        <li class="nav-item">
+            <a class="nav-link index_switch_link link_switch_active" href="#">
+                <span class="index_switch_text">作者 {{ auther.name }} 的书籍（共{{ auther.book_num }}本）</span>
+            </a>
+        </li>
+    </ul>
+
+    {% show_books object_list %}
+    {% paginate paginator page_obj %}
+{% endblock %}

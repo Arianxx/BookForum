@@ -80,3 +80,34 @@
 .book_poll {
     float: right;
 }
+
+.tag_link {
+    text-decoration: none !important;
+}
+
+.tag:hover {
+    color: red !important;
+}
+
+.auther_link {
+    text-decoration: none !important;
+    color: grey;
+}
+
+.auther_name:hover {
+    color: #66ccff;
+}
+
+.publishing_link {
+    color: grey !important;
+    text-decoration: none !important;
+}
+
+.publishing_link:hover {
+    color: #66ccff !important;
+}
+
+.book_link {
+    color: #66ccff;
+    text-decoration: none !important;
+}

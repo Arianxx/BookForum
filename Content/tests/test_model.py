@@ -1,12 +1,15 @@
 from django.test import TestCase
+
+from Discussion.models import (
+    Discuss,
+    DiscussReply,
+)
 from ..models import (
     Book,
     Auther,
     Publishing,
     Tag,
     Poll,
-    Discuss,
-    DiscussReply,
 )
 
 
@@ -58,3 +61,17 @@ class RelationshipTestCase(TestCase):
         reply = DiscussReply.objects.create(discuss=discuss)
 
         self.true = self.assertTrue(reply.discuss == discuss)
+
+
+class ImgTestCase(TestCase):
+
+    def test_default_cover_path(self):
+        auther = Auther(name='Test')
+        auther.save()
+        book = Book(name='Test Book', auther=auther)
+        book.save()
+
+        cover_path = book.cover.path
+        default_path = book.cover.field.default.replace('/', '\\')
+
+        self.assertTrue(default_path in cover_path)

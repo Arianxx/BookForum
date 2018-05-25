@@ -1,0 +1,21 @@
+{% load static %}
+{% load content_tags %}
+
+<!-- 标签云 -->
+<div class="tag_cloud per_right_nav">
+    <div class="right_nav_header">
+        <span class="right_nav_header_content">
+            <img class="right_nav_icon" src="{% static 'Content/img/icon/tag_cloud.png' %}" />
+            <span class="right_nav_title">标签云</span>
+        </span>
+
+        {% get_all_tags as tags %}
+        <div class="tag_cloud_content">
+            {% for tag in tags %}
+                {% get_random_color as color %}
+                <a class="btn btn-outline-{{ color }} right_tag"
+                   href="{% url 'Content:tag' tag.slug %}">{{ tag.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

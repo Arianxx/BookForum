@@ -1,0 +1,15 @@
+{% load static %}
+
+<div class="right_nav">
+    {% url 'Content:hot_books' as hot_books %}
+    {% if hot_books != request.path %}
+        {% include 'component/right_navs/hot_books.html' %}
+    {% endif %}
+
+    {% url 'Discussion:hot_discussions' as hot_discussions %}
+    {% if hot_discussions != request.path %}
+        {% include 'component/right_navs/hot_discussions.html' %}
+    {% endif %}
+
+    {% include 'component/right_navs/tag_cloud.html' %}
+</div>

@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Book, Publishing, Auther, Tag, Poll, Discuss, DiscussReply
+
+from .models import Book, Publishing, Auther, Tag, Poll, Carousel
 
 # Register your models here.
 
@@ -23,7 +24,10 @@ class BookAdmin(admin.ModelAdmin):
     filter_horizontal = ('tags',)
 
     # 启用编辑的字段
-    fields = ('name', 'pub_date', 'auther', 'publishing', 'intro', 'tags')
+    fields = ('name', 'pub_date', 'auther', 'publishing', 'cover', 'intro', 'tags')
+
+    # 启用搜索的外键编辑字段
+    raw_id_fields = ('auther', 'publishing',)
 
     # 可供搜索的列
     search_fields = ['name']
@@ -43,9 +47,9 @@ class BookAdmin(admin.ModelAdmin):
 
 @admin.register(Auther)
 class AutherAdmin(admin.ModelAdmin):
-    list_display = ('name', 'age', 'location', 'books_count')
+    list_display = ('name', 'books_count')
 
-    fields = ('name', 'age', 'location')
+    fields = ('name', 'about')
 
     def books_count(self, obj):
         return obj.books.count()
@@ -55,7 +59,13 @@ class AutherAdmin(admin.ModelAdmin):
 
 @admin.register(Publishing)
 class PublishingAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('name', 'establish_date',)
+
+    fields = ('name', 'establish_date', 'about',)
+
+    list_filter = ('establish_date',)
+
+    date_hierarchy = 'establish_date'
 
 
 @admin.register(Tag)
@@ -75,24 +85,6 @@ class PollAdmin(admin.ModelAdmin):
     list_display = ('book', 'up', 'down',)
 
 
-@admin.register(Discuss)
-class DiscussAdmin(admin.ModelAdmin):
-    list_display = ('title', 'pub_date', 'book', 'replys_count')
-
-    list_filter = ('pub_date', 'book',)
-
-    date_hierarchy = 'pub_date'
-
-    def replys_count(self, obj):
-        return obj.replys.count()
-
-    replys_count.short_description = 'replys count'
-
-
-@admin.register(DiscussReply)
-class DiscussReplyAdmin(admin.ModelAdmin):
-    list_display = ('discuss', 'pub_date')
-
-    list_filter = ('pub_date', 'discuss',)
-
-    date_hierarchy = 'pub_date'
+@admin.register(Carousel)
+class CarouselAdmin(admin.ModelAdmin):
+    list_display = ('name', 'img', 'title')

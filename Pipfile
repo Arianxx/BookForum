@@ -10,6 +10,8 @@ name = "pypi"
 django = "*"
 bootstrap-admin = "*"
 faker = "*"
+itsdangerous = "*"
+pillow = "*"
 
 
 [dev-packages]

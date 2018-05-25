@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class IdeaConfig(AppConfig):
+class ContentConfig(AppConfig):
     name = 'Content'

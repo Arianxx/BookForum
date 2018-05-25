@@ -1,0 +1,50 @@
+{% load content_tags %}
+{% load discussion_tags %}
+
+<div class="book_detail_container">
+    <div class="book_detail_cover text-center">
+        <img class="book_detail_cover_img" src="{{ book.cover.url }}"/>
+    </div>
+
+    <div class="book_detail_info">
+        <p class="book_detail_label">书名</p>
+        <a class="book_link" href="{% url 'Content:book' book.slug %}">
+            <p class="book_detail_text lead">{{ book.name }}</p>
+        </a>
+    </div>
+
+    <div class="book_detail_info">
+        <p class="book_detail_label">作者</p>
+        <a class="book_link" href="{% url 'Content:auther' book.auther.slug %}">
+            <p class="book_detail_text lead">{{ book.auther.name }}</p>
+        </a>
+    </div>
+
+    <div class="book_detail_info">
+        <p class="book_detail_label">出版商</p>
+        <a class="book_link" href="{% url 'Content:publishing' book.publishing.slug %}">
+            <p class="book_detail_text lead">{{ book.publishing.name }}</p>
+        </a>
+    </div>
+
+    <div class="book_detail_info">
+        <p class="book_detail_label">出版日期</p>
+        <p class="book_detail_text lead">{{ book.pub_date }}</p>
+    </div>
+
+    <div class="book_detail_info">
+        <p class="book_detail_label">书籍简介</p>
+        <p class="book_detail_text lead">{{ book.intro }}</p>
+    </div>
+
+    <div class="book_detail_info">
+        <p class="book_detail_label">标签</p>
+        <div class="book_detail_tags text-center">
+            {% get_tags book as tags %}
+            {% for tag in tags %}
+                <a class="book_detail_per_tag btn btn-outline-{% get_random_color %}"
+                   href="{% url 'Content:tag' tag.slug %}">{{ tag.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,6 +1,9 @@
 .index_switch {
     margin-top: 20px;
-    /*border-bottom: 1px grey solid;*/
+}
+
+.second_index_switch {
+    margin-top: -20px;
 }
 
 .index_switch_link {
@@ -11,7 +14,7 @@
 }
 
 .index_switch_link:hover {
-    color: #66ccff;
+    color: #66ccff !important;
 }
 
 .link_switch_active {

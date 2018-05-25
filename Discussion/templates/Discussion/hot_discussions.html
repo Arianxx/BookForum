@@ -1,0 +1,24 @@
+{% extends 'Discussion/discussions.html' %}
+{% load content_tags %}
+{% load discussion_tags %}
+
+{% block title %}
+    Hot dicussions
+{% endblock %}
+
+{% block content %}
+    {% include 'component/hot_switch.html' %}
+    {% show_discussions discussions %}
+
+    <div class="row justify-content-center">
+        <a class="btn btn-info mt-4 mb-3" href="{% url 'Discussion:discussions' %}#switcher">查看更多最新讨论</a>
+    </div>
+{% endblock %}
+
+{% block right-nav %}
+    <div class="per_right_nav">
+        <a class="btn btn-outline-info" href="{% url 'Discussion:discussions' %}#switcher" style="width:100%">查看最新讨论</a>
+    </div>
+
+    {{ block.super }}
+{% endblock %}

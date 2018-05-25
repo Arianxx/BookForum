@@ -1,7 +1,8 @@
-from django import template
-from django.db.models.aggregates import Count
 import random
-from ..models import Book, Poll, Discuss, Tag
+
+from django import template
+
+from ..models import Book, Poll, Tag, Carousel
 
 register = template.Library()
 
@@ -26,26 +27,6 @@ def get_all_tags():
     """
     return Tag.objects.all()
 
-
-@register.simple_tag()
-def get_discussions_number(book_object):
-    """
-    获得本书讨论的数量。
-
-    :param book_object: Book模型实例
-    :return: Tag模型标签
-    """
-    return book_object.discussions.count()
-
-@register.simple_tag()
-def get_replys_number(discussion_object):
-    return discussion_object.replys.count()
-
-@register.simple_tag()
-def get_discussion_replys(discussion, sort="-pub_date", num=1):
-    num = int(num)
-    replys = discussion.replys.order_by(sort)[:num]
-    return replys
 
 @register.simple_tag()
 def get_books(sort='book.pub_date', num=5):
@@ -73,19 +54,6 @@ def get_hot_books(num=5):
 
 
 @register.simple_tag()
-def get_hot_discussions(num=5):
-    """
-    得到指定数量的热门讨论
-
-    :param num: 想要得到的讨论数量
-    :return: Discuss模型的实例列表
-    """
-    discussions = Discuss.objects.annotate(reply_num=Count('replys')).all()
-    discussions = sorted(discussions, key=lambda x: x.reply_num)
-    return discussions[:num]
-
-
-@register.simple_tag()
 def get_random_color():
     """
     获得一个随机的bootstrap颜色字符串标识
@@ -104,7 +72,7 @@ def get_random_color():
     return random.choice(color_str)
 
 
-@register.inclusion_tag('Content/tag/show_books.html')
+@register.inclusion_tag('tag/show_books.html')
 def show_books(object_list):
     """
     加载指定书籍列表的模板。
@@ -117,20 +85,21 @@ def show_books(object_list):
     }
     return context
 
-@register.inclusion_tag('Content/tag/show_discussions.html')
-def show_discussions(discussions_list):
-    """
-    加载指定讨论列表的模板
 
-    :param dicussions_list:
-    :return: 返回一个字典作为模板的上下文
+@register.inclusion_tag('tag/show_carousel.html')
+def show_carousel():
+    """
+    加载展示头图的模板。头图储存于Carousel模型中
+
+    :return: Carousel对象的集合
     """
     context = {
-        'discussions_list': discussions_list,
+        "carousels": Carousel.objects.all(),
     }
     return context
 
-@register.inclusion_tag('Content/tag/paginator.html')
+
+@register.inclusion_tag('tag/paginator.html')
 def paginate(paginator, page, other=None, limit=1):
     """
     分页器标签。传入指定的参数，返回分页模板
@@ -144,20 +113,20 @@ def paginate(paginator, page, other=None, limit=1):
     all_pages = paginator.num_pages
     now_page = page.number
 
-    #根据当前页数和limit生成页码范围，None是页码之间的省略
-    if (all_pages <= limit * 2 + 1):
+    # 根据当前页数和limit生成页码范围，None是页码之间的省略
+    if (all_pages <= limit * 4 + 1):
         page_range = paginator.page_range
     else:
         if (now_page - limit <= 2):
-            page_range = list(range(1, now_page+2)) + [None] \
-                         + list(range(all_pages-limit, all_pages+1))
+            page_range = list(range(1, now_page + 2)) + [None] \
+                         + list(range(all_pages - limit, all_pages + 1))
         elif (all_pages - now_page <= 2):
-            page_range = list(range(1, limit+1)) + [None] \
-                         + list(range(now_page-1, all_pages+1))
+            page_range = list(range(1, limit + 1)) + [None] \
+                         + list(range(now_page - 1, all_pages + 1))
         else:
-            page_range = list(range(1, limit+1)) + [None] \
-                         + list(range(now_page-limit, now_page+limit+1)) + [None] \
-                         + list(range(all_pages-limit+1, all_pages+1))
+            page_range = list(range(1, limit + 1)) + [None] \
+                         + list(range(now_page - limit, now_page + limit + 1)) + [None] \
+                         + list(range(all_pages - limit + 1, all_pages + 1))
 
     context = {
         'paginator': paginator,

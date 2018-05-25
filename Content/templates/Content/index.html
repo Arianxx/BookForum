@@ -4,31 +4,35 @@
 
 {% block css %}
     {{ block.super }}
-    <link rel="stylesheet" href="{% static 'Content/css/book_list.css' %}" />
-    <link rel="stylesheet" href="{% static 'Content/css/right_nav.css' %}" />
-    <link rel="stylesheet" href="{% static 'Content/css/index_switch.css' %}" />
+    <link rel="stylesheet" href="{% static 'Content/css/book_list.css' %}"/>
+    <link rel="stylesheet" href="{% static 'Content/css/right_nav.css' %}"/>
+    <link rel="stylesheet" href="{% static 'Content/css/index_switch.css' %}"/>
+    <link rel="stylesheet" href="{% static 'Content/css/carousel.css' %}"/>
 {% endblock %}
 
 {% block title %}
-Index
+    Index
 {% endblock %}
 
 {% block main %}
     <div class="container-fluid">
         <div class="row mx-sm-0 mx-md-5 px-sm-1 px-md-5">
-            <div class="col col-12 col-lg-8">
-            {% block content %}
-                {% include 'Content/component/index_switch.html' %}
-                {% show_books object_list %}
-                {% paginate paginator page_obj %}
-            {% endblock %}
-            </div>
+            {% block content-fluid %}
+                <div class="col col-12 col-lg-8">
+                    {% block content %}
+                        {% show_carousel %}
+                        {% include 'component/index_switch.html' %}
+                        {% show_books object_list %}
+                        {% paginate paginator page_obj %}
+                    {% endblock %}
+                </div>
 
-            <div class="col">
-            {% block right-nav %}
-                {% include 'Content/component/right_nav_index.html' %}
+                <div class="col">
+                    {% block right-nav %}
+                        {% include 'component/right_nav_index.html' %}
+                    {% endblock %}
+                </div>
             {% endblock %}
-            </div>
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+{% load content_tags %}
+
+<!-- 热门书籍 -->
+<div class="hot_books per_right_nav">
+    <div class="right_nav_header">
+        <span class="right_nav_header_content">
+            <img class="right_nav_icon" src="{% static 'Content/img/icon/hot.png' %}" />
+            <span class="right_nav_title">热门书籍</span>
+        </span>
+    </div>
+    {% get_hot_books 5 as books %}
+    <div class="list-group list-group-flush hot_book_list">
+        {% for book in books %}
+            <div class="list-group-item list-group-item-action list-group-item-white hot_book_item">
+                <a class="nav_link" href="{% url 'Content:book' slug=book.slug %}">
+                    <img class="right_item_icon" src="{% static 'Content/img/icon/right.png' %}"/>
+                    <span class="right_item_title">{{ book.name| truncatechars:32 }}</span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="more text-right mt-2">
+        <a class="more_link btn btn-sm btn-outline-info" href="{% url 'Content:hot_books' %}">更多</a>
+    </div>
+</div>

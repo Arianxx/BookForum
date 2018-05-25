@@ -1,0 +1,18 @@
+{% load static %}
+
+<ul class="nav index_switch text-center">
+    <li class="nav-item">
+        {% url 'Content:hot_books' as hot_books %}
+        <a class="nav-link index_switch_link {% if request.path == hot_books %}link_switch_active{% endif %}"
+           href="{{ hot_books }}">
+            <span class="index_switch_text">热门书籍</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        {% url 'Discussion:hot_discussions' as hot_discussions %}
+        <a class="nav-link index_switch_link {% if request.path == hot_discussions %}link_switch_active{% endif %}"
+           href="{{ hot_discussions }}">
+            <span class="index_switch_text">热门讨论</span>
+        </a>
+    </li>
+</ul>

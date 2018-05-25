@@ -1,0 +1,19 @@
+{% extends 'Content/index.html' %}
+{% load content_tags %}
+
+{% block title %}
+    Tag book
+{% endblock %}
+
+{% block content %}
+    <ul class="nav index_switch text-center">
+        <li class="nav-item">
+            <a class="nav-link index_switch_link link_switch_active" href="{% url 'Content:tag' tag.slug %}">
+                <span class="index_switch_text">标签 {{ tag.name }} 下的书籍（共{{ tag.book_num }}本)</span>
+            </a>
+        </li>
+    </ul>
+
+    {% show_books object_list %}
+    {% paginate paginator page_obj %}
+{% endblock %}

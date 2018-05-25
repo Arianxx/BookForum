@@ -1,0 +1,70 @@
+{% load static %}
+{% load content_tags %}
+{% load discussion_tags %}
+
+{% for discussion in discussions_list %}
+    <div class="discussion_body">
+        <div class="row">
+            <div class="owner_info col col-2 mx-2 mx-md-0 py-2 mx-md-0 text-center">
+                <!-- TODO: 需要增加头像功能-->
+                <img class="owner_icon" src="{% static 'Content/img/default_head_icon.jpg' %}" />
+            </div>
+
+            <div class="discussion_info col col-8 col-md-9 pl-4 pl-md-2">
+                <div class="discussion_title">
+                    {{ discussion.title }}
+                </div>
+
+                <div class="discussion_related text-muted">
+                    <small>
+                        <span class="discussion_book_name">
+                            <a class="book_link" href="{% url 'Content:book' slug=discussion.book.slug %}">
+                                {{ discussion.book.name }}
+                            </a>
+                        </span>
+
+                        <span class="span_separate">•</span>
+
+                        <span class="discussion_owner_name">
+                        <!-- TODO: 增加认证机制前的代替措施-->
+                            Anonymous
+                        </span>
+
+                        <span class="span_separate">•</span>
+
+                        <span class="discussion_pub_date">
+                            {{ discussion.pub_date|timesince }}
+                        </span>
+
+                        <span class="span_separate">•</span>
+
+                        <span class="discussion_last_reply">
+                            {% get_discussion_replys discussion "-pub_date" 1 as last_reply %}
+                            {% if last_reply %}
+                                <span class="last_reply_label">最后一个回复：</span>
+                                <span class="last_reply_name">
+                                    <!-- TODO: 增加认证前的代替措施 -->
+                                    {{ last_reply.0.body|truncatechars:8 }}
+                                </span>
+                            {% else %}
+
+                            {% endif %}
+                        </span>
+
+                    </small>
+                </div>
+            </div>
+
+            <div class="col col-1">
+                <!-- 这个讨论回复的数量 -->
+                <span class="reply_count badge badge-lg badge-secondary">
+                    {% get_replys_number discussion %}
+                </span>
+            </div>
+        </div>
+    </div>
+{% empty %}
+    <p class="lead text-center mt-4">
+        这儿还没有帖子，去别的地方看看吧。
+    </p>
+{% endfor %}

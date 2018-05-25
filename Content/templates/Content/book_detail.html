@@ -1,0 +1,29 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+{% load content_tags %}
+{% load discussion_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Discussion/css/book_detail.css' %}"/>
+    <link rel="stylesheet" href="{% static 'Discussion/css/discussion_list.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    {{ object.name }}
+{% endblock %}
+
+{% block content-fluid %}
+    <div class="col col-12 col-lg-4 book_detail mt-4 mb-0 mb-lg-4">
+        <div class="book_detail_container">
+            <a class="book_detail_back btn btn-outline-info" href="{% url 'Content:index' %}" style="width:100%;">查看更多最新书籍</a>
+        </div>
+
+        {% show_book_detail object %}
+    </div>
+
+    <div class="col book_discussions mt-2 mt-lg-4 mb-4">
+        {% get_discussions object as discussions %}
+        {% show_discussions discussions %}
+    </div>
+{% endblock %}

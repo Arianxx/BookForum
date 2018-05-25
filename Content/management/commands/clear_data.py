@@ -1,9 +1,13 @@
 from django.core.management import BaseCommand
-from Content.models import Book, Auther, Tag, Publishing, Discuss, DiscussReply, Poll
+
+from Content.models import Book, Auther, Tag, Publishing, Poll, Carousel
+from Discussion.models import Discuss, DiscussReply
+
 
 class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
+        Carousel.objects.all().delete()
         Poll.objects.all().delete()
         DiscussReply.objects.all().delete()
         Discuss.objects.all().delete()

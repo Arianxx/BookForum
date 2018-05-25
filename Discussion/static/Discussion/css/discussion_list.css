@@ -1,0 +1,65 @@
+.discussion_body {
+    background-color: white;
+    border-top: 1px solid lightgrey;
+}
+
+.owner_info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.owner_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.discussion_info {
+    margin-left: -3%;
+}
+
+.discussion_title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.discussion_related {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.discussion_book_name {
+    background-color: whitesmoke;
+    padding: 5px;
+}
+
+.discussion_book_name:hover {
+    background-color: lightgrey;
+}
+
+.discussion_owner_name {
+    font-weight: bold;
+}
+
+.last_reply_name {
+    font-weight: bold;
+}
+
+.span_separate {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.reply_count {
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    height: 20px;
+    right: 10px;
+    margin-top: -10px;
+}
+
+.book_link {
+    color: black;
+    text-decoration: none !important;
+}

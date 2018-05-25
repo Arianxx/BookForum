@@ -1,0 +1,18 @@
+{% load static %}
+
+<ul class="nav index_switch text-center">
+    <li class="nav-item">
+        {% url 'Content:index' as index %}
+        <a class="nav-link index_switch_link {% if request.path == index %}link_switch_active{% endif %}"
+           href="{{ index }}" name="switcher">
+            <span class="index_switch_text">最新书籍</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        {% url 'Discussion:discussions' as discussions %}
+        <a class="nav-link index_switch_link {% if request.path == discussions %}link_switch_active{% endif %}"
+           href="{{ discussions }}" name="switcher">
+            <span class="index_switch_text">最新讨论</span>
+        </a>
+    </li>
+</ul>
