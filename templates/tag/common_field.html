@@ -1,0 +1,15 @@
+{% load widget_tweaks %}
+
+<div class="form-group">
+    <label for="">
+        {{ field.label }}
+    </label>
+    {% if field.errors %}
+        <p class="form-errors">
+            {% for error in field.errors %}
+                <small class="form-help text-muted">{{ error }}</small>
+            {% endfor %}
+        </p>
+    {% endif %}
+    {{ field|add_class:'form-control' }}
+</div>

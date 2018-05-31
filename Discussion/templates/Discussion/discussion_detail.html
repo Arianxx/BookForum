@@ -1,0 +1,17 @@
+{% extends 'Content/book_detail.html' %}
+{% load static %}
+{% load discussion_tags %}
+
+{% block book_detail_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Discussion/css/discussion_detail.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    讨论{{ discussion.title }}
+{% endblock %}
+
+{% block book_detail_right %}
+    {% show_discussion_detail discussion %}
+    {% include 'component/post_reply_form.html' %}
+{% endblock %}

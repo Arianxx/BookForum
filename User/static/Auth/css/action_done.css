@@ -1,0 +1,19 @@
+.noti_hint {
+    background-color: white;
+    border: 1px solid lightgrey;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.noti_hint_text {
+    border-bottom: 1px solid lightgrey;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+}
+
+.noti_hint_link {
+    display: inline-block;
+    margin-bottom: 20px;
+}

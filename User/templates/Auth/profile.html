@@ -1,0 +1,52 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Auth/css/profile.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    个人资料
+{% endblock %}
+
+{% block content %}
+    {% include 'component/setting_switch.html' %}
+
+    <div class="jumbotron profile_container pt-3 pb-5">
+        {% block setting %}
+            <p class="lead text-center profile_title">资料页</p>
+            <div class="profile_group">
+                <span class="profile_label">用户名：</span>
+                <span class="profile_value">{{ user.username }}</span>
+            </div>
+            <div class="profile_group">
+                <span class="profile_label">邮箱：</span>
+                <span class="profile_value">{{ user.email }}</span>
+            </div>
+            <div class="profile_group">
+                <span class="profile_label">名：</span>
+                <span class="profile_value">{{ user.last_name }}</span>
+            </div>
+            <div class="profile_group">
+                <span class="profile_label">姓：</span>
+                <span class="profile_value">{{ user.first_name }}</span>
+            </div>
+            <div class="profile_group">
+                <span class="profile_label">生日：</span>
+                <span class="profile_value">{{ user.birth }}</span>
+            </div>
+            <div class="profile_group">
+                <span class="profile_label">个人网站：</span>
+                <span class="profile_value">{{ user.link }}</span>
+            </div>
+            <div class="profile_group">
+                <span class="profile_label">关于我：</span>
+                <p class="profile_value_about">{{ user.about }}</p>
+            </div>
+
+            {% url 'User:profile_edit' as profile_edit %}
+            <a class="btn btn-outline-info col col-5 float-right" href="{{ profile_edit }}">编辑</a>
+        {% endblock %}
+    </div>
+{% endblock %}

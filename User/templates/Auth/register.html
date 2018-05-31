@@ -1,0 +1,36 @@
+{% extends 'Auth/login.html' %}
+{% load auth_tags %}
+
+{% block title %}
+    注册
+{% endblock %}
+
+{% block form %}
+    <p class="form_name text-center">
+        注册
+    </p>
+
+    <form method="POST" action="" class="form">
+        {% csrf_token %}
+
+        {% field form.first_name %}
+        {% field form.last_name %}
+        {% field form.username %}
+        <div class="form-group">
+            <label>
+                密码
+            </label>
+            {% if form.password.errors %}
+                <p class="form-errors">
+                    {% for error in form.password.errors %}
+                        <small class="form-help text-muted">{{ error }}</small>
+                    {% endfor %}
+                </p>
+            {% endif %}
+            <input class='form-control' type="password" maxlength='32' name="password" required/>
+        </div>
+        {% field form.email %}
+
+        <input type="submit" class="btn btn-info submit" value="提交"/>
+    </form>
+{% endblock %}

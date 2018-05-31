@@ -26,11 +26,47 @@
                     <img class="nav-icon" src="{% static "Content/img/icon/home.png"  %}" alt="home" />
                     <span class="nav-home">首页</span>
                 </a>
-                {# url as ... #}
-                <a class="nav-item nav-link nav-text {# % if request.path == archive_url %  active  % endif % #} mx-1" href="{#  #}" >
-                    <img class="nav-icon" src="{% static "Content/img/icon/archive.png" %}" alt="archive" />
-                    <span class="nav-archive">归档</span>
-                </a>
+
+                {% if not user.is_authenticated %}
+                    {% url 'User:login' as login_url %}
+                    <a class="nav-item nav-link nav-text {% if request.path == login_url %} active {% endif %}mx-1"
+                       href="{{ login_url }}">
+                        <img class="nav-icon" src="{% static "Content/img/icon/login.png" %}" alt="login"/>
+                        <span class="nav-login">登陆</span>
+                    </a>
+
+                    {% url 'User:register' as register_url %}
+                    <a class="nav-item nav-link nav-text {% if request.path == register_url %} active {% endif %} mx-1"
+                       href="{{ register_url }}">
+                        <img class="nav-icon" src="{% static "Content/img/icon/register.png" %}" alt="register"/>
+                        <span class="nav-register">注册</span>
+                    </a>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                    {% url 'User:profile' as profile_url %}
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            <img class="nav-icon nav-text" src="{% static 'Content/img/icon/profile.png' %}"
+                                 alt="profile"/>
+                            <span class="nav-user nav-text">用户面板</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ profile_url }}">个人设置</a>
+                            {% if user.is_staff %}
+                                {% url 'admin:index' as admin_url %}
+                                <a class="dropdown-item" href="{{ admin_url }}">后台管理</a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    {% url 'User:logout' as logout_url %}
+                    <a class="nav-item nav-link nav-text {% if request.path == logout_url %} active {% endif %} max-1"
+                       href="{{ logout_url }}">
+                        <img class="nav-icon" src="{% static "Content/img/icon/logout.png" %}" alt="logout"/>
+                        <span class="nav-logout">登出</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </nav>

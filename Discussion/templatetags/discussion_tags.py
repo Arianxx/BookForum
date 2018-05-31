@@ -25,7 +25,7 @@ def get_discussions(book_object):
     :param book_object: Book模型实例
     :return: 本书所有讨论的列表
     """
-    return book_object.discussions.all()
+    return book_object.discussions.order_by('-pub_date').all()
 
 
 @register.simple_tag()
@@ -36,7 +36,11 @@ def get_replys_number(discussion_object):
 @register.simple_tag()
 def get_discussion_replys(discussion, sort="-pub_date", num=1):
     num = int(num)
-    replys = discussion.replys.order_by(sort)[:num]
+    if not num:
+        replys = discussion.replys.order_by(sort).all()
+    else:
+        replys = discussion.replys.order_by(sort)[:num]
+
     return replys
 
 
@@ -49,7 +53,7 @@ def get_hot_discussions(num=5):
     :return: Discuss模型的实例列表
     """
     discussions = Discuss.objects.annotate(reply_num=Count('replys')).all()
-    discussions = sorted(discussions, key=lambda x: x.reply_num)
+    discussions = sorted(discussions, key=lambda x: x.reply_num, reverse=True)
     return discussions[:num]
 
 
@@ -77,5 +81,19 @@ def show_book_detail(book_object):
     """
     context = {
         "book": book_object,
+    }
+    return context
+
+
+@register.inclusion_tag('tag/show_discussion_detail.html')
+def show_discussion_detail(discussion_object):
+    """
+    加载指定讨论的详细信息模板
+
+    :param discussion_object: 讨论(Discuss)模型的实例
+    :return: 一个用于模板的上下文
+    """
+    context = {
+        'discussion': discussion_object,
     }
     return context

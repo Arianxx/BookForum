@@ -1,0 +1,77 @@
+{% load discussion_tags %}
+
+<div class="lz p-4">
+    <div class="row lz_info">
+        <div class="post_top_info col col-9 pt-2 pl-4">
+            <div class="post_title">
+                {{ discussion.title }}
+            </div>
+            <div class="info text-muted mt-1">
+                <span class="post_user">
+                    用户:
+                    {{ discussion.user.username }}
+                </span>
+                <span class="post_pub_date">
+                    | 发布日期:
+                    {{ discussion.pub_date }}
+                </span>
+            </div>
+        </div>
+        <div class="post_avatar col col-3 align-content-center text-center">
+            <img class="post_avatar_img align-content-center text-center" src="{{ discussion.user.avatar.url }}"/>
+        </div>
+    </div>
+    <div class="row post_body lead pt-3 px-4 pb-2">
+        {{ discussion.body }}
+    </div>
+</div>
+
+{% get_discussion_replys discussion '-pub_date' 0 as replys %}
+{% for reply in replys %}
+    <div class="reply my-4 mx-0" id="{{ reply.id }}">
+        <div class="row reply_top_info pt-3">
+            <div class="reply_user_avatar col col-1 text-center mr-3 mr-md-0">
+                <img class="reply_avatar_img" src="{{ reply.user.avatar.url }}"/>
+            </div>
+
+            <div class="reply_related_info col col-9 text-muted pt-2 pl-4 pl-lg-3">
+                <span class="reply_username">
+                    {{ reply.user.username }}
+                </span>
+
+                <span class="reply_pub_date">
+                    | {{ reply.pub_date }}
+                </span>
+            </div>
+
+            <div class="reply_index col col-1 text-muted ml-auto lead">
+                {{ forloop.counter }}
+            </div>
+        </div>
+
+        <div class="row reply_body lead px-5 py-2">
+            {% if reply.reply_to %}
+                <span class="reply_to">
+                    回复 <a class="reply_to_url" href="#{{ reply.reply_to.id }}">
+                    {{ reply.reply_to.user.username }}
+                </a>：
+                </span>
+            {% endif %}
+            {{ reply.body }}
+        </div>
+
+        {#        <div class="row reply_tail_info px-4 pb-3">#}
+        {#            <div class="reply_index text-muted col col-1 ml-auto">#}
+        {#                {{ forloop.counter }}#}
+        {#            </div>#}
+        {#        </div>#}
+
+        <div class="row reply_operations px-4 pb-3">
+            <div class="new_reply ml-auto col col-1 mr-5">
+                <a class="new_reply_url btn btn-outline-info" href="#reply_form">
+                    回复
+                </a>
+            </div>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,30 @@
+{% extends  'Content/index.html' %}
+{% load static %}
+
+{% block metatags %}
+    {{ block.super }}
+    {% url 'Content:index' as index_url %}
+    <meta http-equiv="refresh" content="1;url={{ index_url }}"/>
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Auth/css/action_done.css' %}"/>
+{% endblock %}
+
+{% block main %}
+    <div class="row justify-content-center mx-sm-0 mx-md-5 px-sm-1 px-md-5 noti_container">
+        <div class="col col-10 col-md-6 col-lg-4 text-center">
+            <div class="noti_hint">
+                <p class="noti_hint_text">
+                    {% block noti %}
+                    {% endblock %}
+                </p>
+
+                <a class="noti_hint_link text-muted" href="{% url 'Content:index' %}">
+                    如果没有跳转，请点击我
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+.form_container {
+    margin-top: 25px;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border: 1px solid lightgrey;
+    background-color: white !important;
+}
+
+.form_name {
+    color: cornflowerblue;
+    font-size: 20px;
+    border-bottom: 1px solid lightgrey;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+}
+
+.form {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.forget_password_link {
+    display: inline-block;
+    margin-top: 5px;
+    color: grey;
+}
+
+.submit {
+    float: right;
+}
+
+.errorlist {
+    color: lightpink;
+}
+
+.required_hint {
+    color: red !important;
+}

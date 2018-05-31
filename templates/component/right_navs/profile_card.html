@@ -1,0 +1,37 @@
+{% load static %}
+
+<!-- 个人资料边栏 -->
+<div class="profile_nav per_right_nav">
+    {% if user.is_authenticated %}
+        <div class="container">
+            <div class="row">
+                <a class="right_nav_user_link">
+                    <img class="right_nav_user_avatar" src="{{ user.avatar.url }}"/>
+                    <span class="right_nav_user_name align-content-center">{{ user.username }}</span>
+                </a>
+            </div>
+        </div>
+    {% else %}
+        <div class="container">
+            <div class="row">
+                <p class="lead">
+                    很高兴见到你！
+                </p>
+                <p class="lead">
+                    欢迎来到本论坛。在这里，你可以自由发表你的意见，或者是于他人交流。
+                    你可创建更多的节点，分享自己感兴趣的内容。或者是收藏自己喜欢的节点、投票，关注自己感兴趣的用户，并随时获取他们的动态。
+                </p>
+                <p class="lead">
+                    请点击
+                    <a class="" href="{% url 'User:login' %}">登陆</a>
+                    以享受更多的功能。
+                </p>
+                <p class="lead">
+                    还没有账号？点击
+                    <a href="{% url 'User:register' %}">注册</a>
+                    立即加入我们！
+                </p>
+            </div>
+        </div>
+    {% endif %}
+</div>

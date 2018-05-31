@@ -18,3 +18,24 @@ class UserModelTest(TestCase):
         default_path = self.user.avatar.field.default.replace('/', '\\')
 
         self.assertTrue(default_path in real_path)
+
+    def test_right_token(self):
+        user = User.objects.first()
+        token = user.generate_token(True)
+        info = user.load_token(token)
+
+        self.assertTrue(info['info'])
+
+    def test_error_token(self):
+        user = User.objects.first()
+        token = user.generate_token(True) + 'error'
+        info = user.load_token(token)
+
+        self.assertFalse(info)
+
+    def test_expired_token(self):
+        user = User.objects.first()
+        token = user.generate_token(True)
+        info = user.load_token(token, expiration=0)
+
+        self.assertFalse(info)

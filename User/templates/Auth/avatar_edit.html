@@ -1,0 +1,31 @@
+{% extends 'Auth/profile.html' %}
+
+{% block title %}
+    头像设置
+{% endblock %}
+
+{% block setting %}
+    <p class="lead text-center profile_title">头像页</p>
+
+    <div class="now_avatar text-center">
+        <p>原始头像</p>
+        <img src="{{ user.avatar.url }}" style="max-width:300px"/>
+    </div>
+
+    <form method="POST" action="" enctype="multipart/form-data" class="mt-4 text-center pb-4">
+        {% csrf_token %}
+
+        <label for="avatar">
+            新头像
+        </label>
+
+        {% if form.avatar.errors %}
+            {% for error in form.avatar.errors %}
+                <small class="form-help text-muted">{{ error }}</small>
+            {% endfor %}
+        {% endif %}
+
+        <input type="file" name="avatar" id="avatar" class="form-control" required/>
+        <input type="submit" class="form-control btn btn-outline-info col col-5 float-right my-3" value="提交"/>
+    </form>
+{% endblock %}

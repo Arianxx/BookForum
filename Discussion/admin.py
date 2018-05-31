@@ -1,4 +1,5 @@
 from django.contrib import admin
+from guardian.admin import GuardedModelAdmin
 
 from .models import Discuss
 from .models import DiscussReply
@@ -7,7 +8,7 @@ from .models import DiscussReply
 # Register your models here.
 
 @admin.register(Discuss)
-class DiscussAdmin(admin.ModelAdmin):
+class DiscussAdmin(GuardedModelAdmin, admin.ModelAdmin):
     list_display = ('title', 'pub_date', 'book', 'replys_count')
 
     list_filter = ('pub_date', 'book',)
@@ -21,7 +22,7 @@ class DiscussAdmin(admin.ModelAdmin):
 
 
 @admin.register(DiscussReply)
-class DiscussReplyAdmin(admin.ModelAdmin):
+class DiscussReplyAdmin(GuardedModelAdmin, admin.ModelAdmin):
     list_display = ('discuss', 'pub_date')
 
     list_filter = ('pub_date', 'discuss',)

@@ -1,0 +1,38 @@
+<div class="post_discussion p-3 mb-3">
+    <form method="POST" action="{% url 'Discussion:post_discussion' book.slug %}">
+        <p class="lead">
+            发表一个新帖子!
+        </p>
+
+        {% if form.errors %}
+            <small class="form-help text-muted">{{ form.errors }}</small>
+        {% endif %}
+
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="title">
+                帖子标题
+            </label>
+
+            <input type='text' name="title" class="form-control" id="title"
+                   value="{% if form.title %}{{ form.title }}{% endif %}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="body">
+                帖子正文
+            </label>
+
+            <textarea name="body" id="body" class="form-control" rows="10">
+                {% if form.body %}
+                    {{ form.body }}
+                {% endif %}
+            </textarea>
+        </div>
+
+        <div class="submit pb-5" style="width:100%">
+            <input type="submit" class="form-control btn btn-info col col-5 float-right mt-1" value="提交"/>
+        </div>
+    </form>
+</div>

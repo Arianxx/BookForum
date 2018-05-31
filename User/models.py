@@ -1,6 +1,9 @@
+import os
+
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from itsdangerous import URLSafeTimedSerializer, SignatureExpired, BadTimeSignature
 
 from Content.common_tools import crop_img, delete_img
 
@@ -8,8 +11,13 @@ from Content.common_tools import crop_img, delete_img
 # Create your models here.
 
 class User(AbstractUser):
+    birth = models.DateField('生日', null=True, blank=True)
+    about = models.TextField('关于我', max_length=512, default='', blank=True)
+
     link = models.URLField("个人网站", blank=True)
     avatar = models.ImageField('用户头像', upload_to='avatar/%Y/%m/%d', default='avatar/default.jpg')
+
+    is_confirmed = models.BooleanField("验证邮箱", default=False)
 
     class Meta:
         verbose_name = '用户'
@@ -22,15 +30,45 @@ class User(AbstractUser):
     def save(self, *args, **kwargs):
         default_avatar_path = self.avatar.field.default.replace('/', '\\')
         if not default_avatar_path in self.avatar.path:
+            origin_user = User.objects.get(id=self.id)
+            if origin_user.avatar.path != self.avatar.path:
+                # 修改头像，删除原来头像
+                try:
+                    os.remove(origin_user.avatar.path)
+                except FileNotFoundError:
+                    pass
+
+        ret = super().save(*args, **kwargs)
+
+        if not default_avatar_path in self.avatar.path:
             # 只剪裁用户上传的头像，不剪裁默认头像
             # TODO 头像长宽设置
-            AVATAR_WIDTH = getattr(settings, 'AVATAR_WIDTH', 200)
-            AVATAR_HEIGHT = getattr(settings, 'AVATAR_HEIGHT', 200)
+            AVATAR_WIDTH = getattr(settings, 'AVATAR_WIDTH', 800)
+            AVATAR_HEIGHT = getattr(settings, 'AVATAR_HEIGHT', 800)
             crop_img(self.avatar, AVATAR_WIDTH, AVATAR_HEIGHT)
 
-        return super().save(*args, **kwargs)
+        return ret
 
     def delete(self, *args, **kwargs):
-        delete_img(self.avatar)
+        default_path = self.avatar.field.default.replace('/', '\\')
+        if not default_path in self.avatar.path:
+            delete_img(self.avatar)
 
         return super().delete(*args, **kwargs)
+
+    def generate_token(self, info):
+        serializer = URLSafeTimedSerializer(getattr(settings, 'SECRET_KEY'))
+        key_info = {'id': self.id, 'info': info, }
+        token = serializer.dumps(key_info)
+        return token
+
+    @staticmethod
+    def load_token(token, expiration):
+        serializer = URLSafeTimedSerializer(getattr(settings, 'SECRET_KEY'))
+        try:
+            key_info = serializer.loads(token, max_age=expiration)
+            return key_info
+        except SignatureExpired:
+            return False
+        except BadTimeSignature:
+            return False

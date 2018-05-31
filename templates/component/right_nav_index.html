@@ -1,6 +1,8 @@
 {% load static %}
 
 <div class="right_nav">
+    {% include 'component/right_navs/profile_card.html' %}
+
     {% url 'Content:hot_books' as hot_books %}
     {% if hot_books != request.path %}
         {% include 'component/right_navs/hot_books.html' %}

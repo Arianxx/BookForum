@@ -1,7 +1,9 @@
+import os
+
 from django.conf import settings
 from django.db import models
-from django.template.defaultfilters import slugify
 from django.utils import timezone
+from uuslug import slugify
 
 from .common_tools import crop_img, delete_img
 
@@ -35,6 +37,16 @@ class Book(models.Model):
         return "Book(%s)" % self.name
 
     def save(self, *args, **kwargs):
+        cover_default_path = self.cover.field.default.replace('/', '\\')
+        if not cover_default_path in self.cover.path:
+            origin_book = Book.objects.get(slug=self.slug)
+            if origin_book.cover.path != self.cover.path:
+                # 如果要更改封面，就删除原来的封面
+                try:
+                    os.remove(origin_book.cover.path)
+                except FileNotFoundError:
+                    pass
+
         ret = super(Book, self).save(*args, **kwargs)
 
         # 自动根据书籍的名称和作者添加一个slug
@@ -48,7 +60,6 @@ class Book(models.Model):
             poll = Poll(book=self)
             poll.save()
 
-        cover_default_path = self.cover.field.default.replace('/', '\\')
         if not cover_default_path in self.cover.path:
             # 不剪裁默认封面
             COVER_WIDTH = getattr(settings, 'COVER_WIDTH', 210)
@@ -59,7 +70,9 @@ class Book(models.Model):
 
     def delete(self, *args, **kwargs):
         # 删除书籍时，一并删除它储存在本地的封面图片
-        delete_img(self.cover)
+        default_path = self.cover.field.default.replace('/', '\\')
+        if not default_path in self.cover.path:
+            delete_img(self.cover)
 
         return super().delete(*args, **kwargs)
 

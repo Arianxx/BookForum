@@ -10,24 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import os
+from .settings_dev import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 AUTH_USER_MODEL = 'User.User'
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=wnuc_z8@9lv#suqysee^rubs4n6fp&eis_5e(3zy^mdf%&#i^'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', ]
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = 'User:login'
 
 # Application definition
 
@@ -40,10 +33,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'guardian',
+    'widget_tweaks',
+
     'Content.apps.ContentConfig',
     'Discussion.apps.DiscussionConfig',
     'User.apps.UserConfig',
 ]
+
+AUTHENTICATION_BACKENDS = {
+    'django.contrib.auth.backends.ModelBackend',
+    'guardian.backends.ObjectPermissionBackend',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,18 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Share.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -107,7 +96,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -120,7 +108,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/

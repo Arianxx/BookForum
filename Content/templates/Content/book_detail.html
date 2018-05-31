@@ -6,11 +6,15 @@
 {% block css %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'Discussion/css/book_detail.css' %}"/>
+    <link rel="stylesheet" href="{% static 'Discussion/css/post_discussion.css' %}"/>
+
+    {% block book_detail_css %}
     <link rel="stylesheet" href="{% static 'Discussion/css/discussion_list.css' %}"/>
+    {% endblock %}
 {% endblock %}
 
 {% block title %}
-    {{ object.name }}
+    {{ book.name }}
 {% endblock %}
 
 {% block content-fluid %}
@@ -19,11 +23,22 @@
             <a class="book_detail_back btn btn-outline-info" href="{% url 'Content:index' %}" style="width:100%;">查看更多最新书籍</a>
         </div>
 
-        {% show_book_detail object %}
+        {% url 'Content:book' book.slug as book_url %}
+        {% if request.path != book_url %}
+            <div class="book_detail_container">
+                <a class="book_detail_back btn btn-outline-info" href="{% url 'Content:book' book.slug %}"
+                   style="width:100%">查看这本书籍的更多讨论</a>
+            </div>
+        {% endif %}
+
+        {% show_book_detail book %}
     </div>
 
     <div class="col book_discussions mt-2 mt-lg-4 mb-4">
-        {% get_discussions object as discussions %}
-        {% show_discussions discussions %}
+        {% block book_detail_right %}
+            {% include 'component/post_discussion_form.html' %}
+            {% get_discussions book as discussions %}
+            {% show_discussions discussions %}
+        {% endblock %}
     </div>
 {% endblock %}

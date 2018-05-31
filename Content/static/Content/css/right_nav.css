@@ -67,3 +67,13 @@
 .nav_link {
     text-decoration: none !important;
 }
+
+.right_nav_user_avatar {
+    max-width: 50px;
+}
+
+.right_nav_user_name {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: lighter;
+}

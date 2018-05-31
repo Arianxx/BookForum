@@ -1,0 +1,5 @@
+你之所以收到这封邮件，是因为有用户请求关联这个邮箱。
+
+如果你确实进行了这个操作，请点击下面的链接：
+    {{ domain }}{% url 'User:email_change_confirm' token=token %}
+否则，请忽视这封邮件。

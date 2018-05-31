@@ -1,0 +1,61 @@
+.lz {
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+
+.post_avatar_img {
+    max-height: 70px;
+    max-width: 70px;
+    border-radius: 100px;
+    margin-top: 5px;
+}
+
+.lz_info {
+    padding-bottom: 10px;
+}
+
+.post_top_info {
+    /*padding-left: 25px;*/
+}
+
+.post_title {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.post_body {
+    font-size: 15px !important;
+    line-height: 30px;
+}
+
+.reply {
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+
+.reply_top_info {
+    padding-left: 30px !important;
+}
+
+.reply_related_info {
+    margin-top: 3px;
+}
+
+.reply_body {
+    font-size: 15px !important;
+    line-height: 30px;
+}
+
+.reply_to_url {
+    display: inline;
+}
+
+.reply_avatar_img {
+    max-height: 50px;
+    max-width: 50px;
+    border-radius: 100px;
+}
+
+.reply_index {
+    margin-right: 33px;
+}

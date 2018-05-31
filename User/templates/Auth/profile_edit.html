@@ -1,0 +1,102 @@
+{% extends 'Auth/profile.html' %}
+{% load auth_tags %}
+
+{% block title %}
+    编辑资料
+{% endblock %}
+
+{% block setting %}
+    <p class="lead text-center profile_title">资料页</p>
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="username">
+                {{ form.username.label }}
+            </label>
+            {% if form.username.errors %}
+                {% for error in form.username.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+            <input name="username" type="text" id="username" class="form-control" value="{{ form.username.data }}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="email">
+                {{ form.email.label }}
+            </label>
+            {% for error in form.email.errors %}
+                <small class="form-help text-muted">{{ error }}</small>
+            {% endfor %}
+            <input type="email" id="email" class="form-control" disabled value="{{ form.email.data }}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="first_name">
+                {{ form.first_name.label }}
+            </label>
+            {% if form.first_name.errors %}
+                {% for error in form.first_name.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+            <input name="first_name" type="text" id="first_name" class="form-control"
+                   value="{{ form.first_name.value }}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">
+                {{ form.last_name.label }}
+            </label>
+            {% if form.last_name.errors %}
+                {% for error in form.last_name.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+            <input name="last_name" type="text" class="form-control" id="last_name" value="{{ form.last_name.data }}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="birth">
+                {{ form.birth.label }}
+            </label>
+            {% if form.birth.errors %}
+                {% for error in form.birth.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+            <input name="birth" type="date" class="form-control" id="birth" value="{{ form.birth.data }}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="link">
+                {{ form.link.label }}
+            </label>
+            {% if form.link.errors %}
+                {% for error in form.link.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+            <input name="link" id="link" type="url" class="form-control" value="{{ form.link.data }}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="about">
+                {{ form.about.label }}
+            </label>
+
+            {% if form.about.errors %}
+                {% for error in form.about.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+            <textarea class="form-control" rows="10" id="about" maxlength="512" name="about">
+                {{ form.about.data }}
+            </textarea>
+        </div>
+
+        <input type="submit" class="float-right btn btn-outline-info col col-3" value="提交"/>
+        <a class="float-right btn btn-outline-dark mx-3" href="{% url 'User:profile' %}">取消</a>
+    </form>
+{% endblock %}

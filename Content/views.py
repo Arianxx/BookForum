@@ -100,8 +100,16 @@ class PublishingView(generic.ListView):
 
 class BookView(generic.DetailView):
     model = Book
-    context_object_name = 'Book'
-    tempate_name = 'Content/book_detail.html'
+    context_object_name = 'book'
+    template_name = 'Content/book_detail.html'
+
+    def get_context_data(self, **kwargs):
+        # 从session里获取暂存的表单信息，获取后就将其删除
+        context = super().get_context_data(**kwargs)
+        form = self.request.session.get('DiscussionForm')
+        context['form'] = form
+        self.request.session['DiscussionForm'] = None
+        return context
 
 
 def all_hot_books(request):

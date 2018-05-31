@@ -2,6 +2,7 @@ from django.core.management import BaseCommand
 
 from Content.models import Book, Auther, Tag, Publishing, Poll, Carousel
 from Discussion.models import Discuss, DiscussReply
+from User.models import User
 
 
 class Command(BaseCommand):
@@ -16,5 +17,6 @@ class Command(BaseCommand):
         Auther.objects.all().delete()
         Publishing.objects.all().delete()
         Book.objects.all().delete()
+        User.objects.all().delete()
 
         print('Clear all the data.')

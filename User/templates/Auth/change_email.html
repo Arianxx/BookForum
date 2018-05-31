@@ -1,0 +1,43 @@
+{% extends 'Auth/profile.html' %}
+
+{% block title %}
+    更换邮箱
+{% endblock %}
+
+{% block setting %}
+    <p class="lead text-center profile_title">更换邮箱</p>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="password">
+                {{ form.password.label }}
+            </label>
+
+            {% if form.password.errors %}
+                {% for error in form.password.errors %}
+                    <small class="text-muted form-help">{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+
+            <input type="password" class="form-control" required id="password" name="password"/>
+        </div>
+
+        <div class="form-group">
+            <label for="new_email">
+                {{ form.new_email.label }}
+            </label>
+
+            {% if form.new_email.errors %}
+                {% for error in form.new_email.errors %}
+                    <small class="text-muted form-help">{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+
+            <input type="email" class="form-control" required id="new_email" name="new_email"/>
+        </div>
+
+        <input type="submit" class="form-control btn btn-outline-info float-right col col-5" value="提交"/>
+    </form>
+{% endblock %}

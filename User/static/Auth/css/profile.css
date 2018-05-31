@@ -1,0 +1,18 @@
+.profile_container {
+    background-color: white !important;
+}
+
+.profile_group {
+    margin-bottom: 20px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.profile_title {
+    font-size: 30px;
+}
+
+.profile_value_about {
+    margin-top: 10px;
+}

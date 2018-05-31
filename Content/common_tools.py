@@ -1,6 +1,10 @@
 import os
+from threading import Thread
 
 from PIL import Image
+from django.conf import settings
+from django.core.mail import send_mail, EmailMessage
+from django.template.loader import render_to_string
 
 
 def crop_img(img, NEW_WIDTH, NEW_HEIGHT):
@@ -60,3 +64,26 @@ def delete_img(img):
         os.remove(real_path)
 
     return True
+
+
+def _send_mail(subject, template, recipient_list, kwargs):
+    context = dict(kwargs)
+    message = render_to_string(template, context=context)
+    from_email = getattr(settings, 'EMAIL_FROM')
+    fail_silently = False
+    if template.endswith('.html'):
+        msg = EmailMessage(subject, message, from_email=from_email, to=recipient_list)
+        msg.content_subtype = 'html'
+        msg.send()
+    else:
+        send_mail(subject, message, from_email=from_email, fail_silently=fail_silently, recipient_list=recipient_list)
+
+
+def send_mail_thread(subject, template, recipient, **kwargs):
+    thr = Thread(target=_send_mail, args=[subject, template, recipient, kwargs, ])
+    thr.start()
+    return thr
+
+
+def test():
+    send_mail_thread('Test', 'Auth/email/change_email.txt', ['ysnyyhs@163.com', ], token='a')

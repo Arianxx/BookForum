@@ -1,9 +1,11 @@
 {% if messages %}
     <div class="container">
         {% for message in messages %}
-            <div class="alert {% if message.tag %}alert-{{ message.tag }}{% else %}alert-info{% endif %} alert-dismissible fade show" role="alert">
+            <div class="alert {% if message.tag %}alert-
+                {{ message.tag }}{% else %}alert-info{% endif %} alert-dismissible fade show" role="alert"
+                 style="border-radius: 10px;bottom: -20px">
                 {{ message }}
-                <button type="button" data-toggle="close" data-dismiss="alert" aria-label="close">
+                <button type="button" class="close" data-toggle="close" data-dismiss="alert" aria-label="close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

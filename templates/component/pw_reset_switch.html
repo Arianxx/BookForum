@@ -1,0 +1,18 @@
+{% load static %}
+
+<ul class="nav index_switch text-center">
+    <li class="nav-item">
+        {% url 'User:password_reset' as password_reset_url %}
+        <a class="nav-link index_switch_link link_switch_active"
+           href="{{ password_reset_url }}" name="switcher">
+            <span class="index_switch_text">密码重置</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        {% url 'User:profile' as profile_url %}
+        <a class="nav-link index_switch_link"
+           href="{{ profile_url }}" name="switcher">
+            <span class="index_switch_text">返回设置</span>
+        </a>
+    </li>
+</ul>

@@ -12,6 +12,10 @@ bootstrap-admin = "*"
 faker = "*"
 itsdangerous = "*"
 pillow = "*"
+django-widget-tweaks = "*"
+python-dotenv = "*"
+django-guardian = "*"
+django-uuslug = "*"
 
 
 [dev-packages]

@@ -1,4 +1,5 @@
 from django.contrib import admin
+from guardian.admin import GuardedModelAdmin
 
 from .models import Book, Publishing, Auther, Tag, Poll, Carousel
 
@@ -10,7 +11,7 @@ admin.site.site_title = '后台管理'
 
 
 @admin.register(Book)
-class BookAdmin(admin.ModelAdmin):
+class BookAdmin(GuardedModelAdmin, admin.ModelAdmin):
     # 列名
     list_display = ('name', 'pub_date', 'auther', 'publishing', 'poll_count')
 
@@ -46,7 +47,7 @@ class BookAdmin(admin.ModelAdmin):
 
 
 @admin.register(Auther)
-class AutherAdmin(admin.ModelAdmin):
+class AutherAdmin(GuardedModelAdmin, admin.ModelAdmin):
     list_display = ('name', 'books_count')
 
     fields = ('name', 'about')
@@ -58,7 +59,7 @@ class AutherAdmin(admin.ModelAdmin):
 
 
 @admin.register(Publishing)
-class PublishingAdmin(admin.ModelAdmin):
+class PublishingAdmin(GuardedModelAdmin, admin.ModelAdmin):
     list_display = ('name', 'establish_date',)
 
     fields = ('name', 'establish_date', 'about',)
@@ -69,7 +70,7 @@ class PublishingAdmin(admin.ModelAdmin):
 
 
 @admin.register(Tag)
-class TagAdmin(admin.ModelAdmin):
+class TagAdmin(GuardedModelAdmin, admin.ModelAdmin):
     list_display = ('name', 'books_count')
 
     filter_horizontal = ('books',)
@@ -81,10 +82,10 @@ class TagAdmin(admin.ModelAdmin):
 
 
 @admin.register(Poll)
-class PollAdmin(admin.ModelAdmin):
+class PollAdmin(GuardedModelAdmin, admin.ModelAdmin):
     list_display = ('book', 'up', 'down',)
 
 
 @admin.register(Carousel)
-class CarouselAdmin(admin.ModelAdmin):
+class CarouselAdmin(GuardedModelAdmin, admin.ModelAdmin):
     list_display = ('name', 'img', 'title')

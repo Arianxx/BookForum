@@ -1,0 +1,42 @@
+{% load static %}
+
+<ul class="nav index_switch text-center flex-column flex-md-row pb-3 pb-md-0">
+    <li class="nav-item">
+        {% url 'User:profile' as profile_url %}
+        {% url 'User:profile_edit' as profile_edit_url %}
+        <a class="nav-link index_switch_link {% if request.path == profile_url or request.path == profile_edit_url %} link_switch_active {% endif %}"
+           href="{{ profile_url }}" name="switcher">
+            <span class="index_switch_text">个人资料</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        {% url 'User:avatar_edit' as avatar_edit_url %}
+        <a class="nav-link index_switch_link {% if request.path == avatar_edit_url %} link_switch_active {% endif %}"
+           href="{{ avatar_edit_url }}" name="switcher">
+            <span class="index_switch_text">头像设置</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        {% url 'User:password_change' as password_change_url %}
+        <a class="nav-link index_switch_link {% if request.path == password_change_url %} link_switch_active {% endif %}"
+           href="{{ password_change_url }}" name="switcher">
+            <span class="index_switch_text">修改密码</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        {% url 'User:password_reset' as password_reset_url %}
+        <a class="nav-link index_switch_link {% if request.path == password_reset_url %} link_switch_active {% endif %}"
+           href="{{ password_reset_url }}" name="switcher">
+            <span class="index_switch_text">重置密码</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        {% url 'User:email_change' as email_change_url %}
+        <a class="nav-link index_switch_link {% if request.path == email_change_url %} link_switch_active {% endif %}"
+           href="{{ email_change_url }}" name="switcher">
+            <span class="index_switch_text">更换邮箱</span>
+        </a>
+    </li>
+</ul>
