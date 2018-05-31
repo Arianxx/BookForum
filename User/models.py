@@ -42,7 +42,6 @@ class User(AbstractUser):
 
         if not default_avatar_path in self.avatar.path:
             # 只剪裁用户上传的头像，不剪裁默认头像
-            # TODO 头像长宽设置
             AVATAR_WIDTH = getattr(settings, 'AVATAR_WIDTH', 800)
             AVATAR_HEIGHT = getattr(settings, 'AVATAR_HEIGHT', 800)
             crop_img(self.avatar, AVATAR_WIDTH, AVATAR_HEIGHT)

@@ -15,7 +15,6 @@ class DiscussView(generic.ListView):
     model = Discuss
     context_object_name = 'Discussions'
     template_name = 'Discussion/discussions.html'
-    # TODO 分页数量
     paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
     paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
 

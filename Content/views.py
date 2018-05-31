@@ -11,7 +11,6 @@ class IndexView(generic.ListView):
     model = Book
     context_object_name = 'Books'
     template_name = 'Content/index.html'
-    # TODO:分页数量变量
     paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
     paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
 
@@ -24,7 +23,6 @@ class TagView(generic.ListView):
     model = Book
     content_object_name = 'Books'
     template_name = 'Content/tag_books.html'
-    # TODO 分页数量变量
     paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
     paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
 
@@ -50,7 +48,6 @@ class AutherView(generic.ListView):
     model = Book
     context_object_name = 'Books'
     template_name = 'Content/auther_books.html'
-    # TODO 分页数量
     paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
     paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
 
@@ -76,7 +73,6 @@ class PublishingView(generic.ListView):
     model = Book
     context_object_name = 'Books'
     template_name = 'Content/publishing_books.html'
-    # TODO 分页数量
     paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
     paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
 

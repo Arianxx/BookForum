@@ -1,9 +1,8 @@
-import os
-
 from django.conf import settings
 from django.db import models
-from django.utils import timezone
 from uuslug import slugify
+from django.utils import timezone
+import os
 
 from .common_tools import crop_img, delete_img
 
@@ -189,7 +188,6 @@ class Carousel(models.Model):
     def save(self, *args, **kwargs):
         ret = super().save(*args, **kwargs)
 
-        # TODO: 头图长宽的变量
         CAROUSEL_WIDTH = getattr(settings, 'CAROUSEL_WIDTH', 1600)
         CAROUSEL_HEIGHT = getattr(settings, 'CAROUSEL_HEIGHT', 900)
         crop_img(self.img, CAROUSEL_WIDTH, CAROUSEL_HEIGHT)

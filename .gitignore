@@ -5,6 +5,6 @@ __pycache__
 .idea
 media/avatar/*
 media/book_cover/*
-media/carousel/
+media/carousel/*
 !media/avatar/default.jpg
 !media/book_cover/default.jpg
