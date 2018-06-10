@@ -70,10 +70,16 @@
 
 .right_nav_user_avatar {
     max-width: 50px;
+    border-radius: 360px;
 }
 
 .right_nav_user_name {
     margin-left: 5px;
     font-size: 20px;
     font-weight: lighter;
+}
+
+.right_nav_user_link {
+    text-decoration: none !important;
+    color: grey;
 }

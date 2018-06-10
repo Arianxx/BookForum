@@ -95,6 +95,7 @@ def post_discussion(request, book_slug=''):
 
 
 def post_reply(request, pk=''):
+    #TODO：能够回复某个特别的用户
     if request.method == 'POST':
         form = ReplyForm(request.POST)
         if form.is_valid():

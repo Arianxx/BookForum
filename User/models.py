@@ -1,4 +1,5 @@
 import os
+from uuslug import slugify
 
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
@@ -13,6 +14,7 @@ from Content.common_tools import crop_img, delete_img
 class User(AbstractUser):
     birth = models.DateField('生日', null=True, blank=True)
     about = models.TextField('关于我', max_length=512, default='', blank=True)
+    slug = models.SlugField('Slug', unique=True)
 
     link = models.URLField("个人网站", blank=True)
     avatar = models.ImageField('用户头像', upload_to='avatar/%Y/%m/%d', default='avatar/default.jpg')
@@ -38,6 +40,7 @@ class User(AbstractUser):
                 except FileNotFoundError:
                     pass
 
+        self.slug = slugify(self.username)
         ret = super().save(*args, **kwargs)
 
         if not default_avatar_path in self.avatar.path:
@@ -45,6 +48,7 @@ class User(AbstractUser):
             AVATAR_WIDTH = getattr(settings, 'AVATAR_WIDTH', 800)
             AVATAR_HEIGHT = getattr(settings, 'AVATAR_HEIGHT', 800)
             crop_img(self.avatar, AVATAR_WIDTH, AVATAR_HEIGHT)
+
 
         return ret
 

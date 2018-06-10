@@ -1,0 +1,37 @@
+{% extends 'Content/index.html' %}
+{% load discussion_tags %}
+{% load auth_tags %}
+{% load content_tags %}
+{% load static %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Discussion/css/discussion_list.css' %}" />
+{% endblock %}
+
+{% block title %}
+    用户 {{ user.username }} 的所有讨论
+{% endblock %}
+
+{% block content %}
+    <ul class="nav index_switch text-center">
+    <li class="nav-item">
+        <a class="nav-link index_switch_link link_switch_active" href="{% url 'User:user_discussions' slug=user.slug %}">
+            用户 {{ user.username }} 发起的所有讨论
+        </a>
+    </li>
+    </ul>
+
+    {% show_discussions discussions %}
+    {% paginate paginator page_obj  %}
+
+    <div class="placeholder mb-4">
+    </div>
+{% endblock %}
+
+{% block right-nav %}
+    <div class="per_right_nav">
+        <a class="btn btn-outline-info" href="{% url 'User:user' slug=user.slug %}" style="width:100%">回到用户页</a>
+    </div>
+    {{ block.super }}
+{% endblock %}

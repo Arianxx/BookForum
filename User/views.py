@@ -1,11 +1,13 @@
 from django.contrib import messages
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect, reverse
-from django.views.generic import DetailView
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.views.generic import DetailView, ListView
+from django.conf import settings
 
 from Content.common_tools import send_mail_thread
 from .forms import RegisterForm, ProfileForm, AvatarForm, PasswordChangeForm, EmailChangeForm
+from Discussion.models import Discuss, DiscussReply
 from .models import User
 
 
@@ -13,8 +15,46 @@ class UserPersonalView(DetailView):
     model = User
     context_object_name = 'user'
     template_name = 'Auth/user_personal.html'
-    # TODO：增加用户个性页面
 
+class UserAllDiscussion(ListView):
+    model = Discuss
+    context_object_name = 'discussions'
+    template_name = 'Auth/user_all_discussions.html'
+    paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
+    paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
+
+    def get_queryset(self):
+        query_set = super().get_queryset()
+        slug = self.kwargs.get('slug')
+        user = get_object_or_404(User, slug=slug)
+        return query_set.filter(user=user)
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        slug = self.kwargs.get('slug')
+        user = get_object_or_404(User, slug=slug)
+        context['user'] = user
+        return context
+
+class UserAllReplys(ListView):
+    model = DiscussReply
+    context_object_name = 'replys'
+    template_name = 'Auth/user_all_replys.html'
+    paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
+    paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
+
+    def get_queryset(self):
+        query_set = super().get_queryset()
+        slug = self.kwargs.get('slug')
+        user = get_object_or_404(User, slug=slug)
+        return query_set.filter(user=user)
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        slug = self.kwargs.get('slug')
+        user = get_object_or_404(User, slug=slug)
+        context['user'] = user
+        return context
 
 def register(request):
     if request.method == 'POST':

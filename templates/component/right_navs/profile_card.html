@@ -5,7 +5,7 @@
     {% if user.is_authenticated %}
         <div class="container">
             <div class="row">
-                <a class="right_nav_user_link">
+                <a class="right_nav_user_link" href="{% url 'User:user' slug=user.slug %}" >
                     <img class="right_nav_user_avatar" src="{{ user.avatar.url }}"/>
                     <span class="right_nav_user_name align-content-center">{{ user.username }}</span>
                 </a>

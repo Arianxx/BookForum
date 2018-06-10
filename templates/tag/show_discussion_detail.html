@@ -1,4 +1,5 @@
 {% load discussion_tags %}
+{% load content_tags %}
 
 <div class="lz p-4">
     <div class="row lz_info">
@@ -9,7 +10,9 @@
             <div class="info text-muted mt-1">
                 <span class="post_user">
                     用户:
-                    {{ discussion.user.username }}
+                    <a class="discussion_user_link" href="{% url 'User:user' slug=discussion.user.slug %}">
+                        {{ discussion.user.username }}
+                    </a>
                 </span>
                 <span class="post_pub_date">
                     | 发布日期:
@@ -18,7 +21,9 @@
             </div>
         </div>
         <div class="post_avatar col col-3 align-content-center text-center">
-            <img class="post_avatar_img align-content-center text-center" src="{{ discussion.user.avatar.url }}"/>
+            <a class="discussion_user_link" href="{% url 'User:user' slug=discussion.user.slug %}">
+                <img class="post_avatar_img align-content-center text-center" src="{{ discussion.user.avatar.url }}"/>
+            </a>
         </div>
     </div>
     <div class="row post_body lead pt-3 px-4 pb-2">
@@ -31,12 +36,16 @@
     <div class="reply my-4 mx-0" id="{{ reply.id }}">
         <div class="row reply_top_info pt-3">
             <div class="reply_user_avatar col col-1 text-center mr-3 mr-md-0">
-                <img class="reply_avatar_img" src="{{ reply.user.avatar.url }}"/>
+                <a class="discussion_user_link" href="{% url 'User:user' slug=reply.user.slug %}">
+                    <img class="reply_avatar_img" src="{{ reply.user.avatar.url }}"/>
+                </a>
             </div>
 
-            <div class="reply_related_info col col-9 text-muted pt-2 pl-4 pl-lg-3">
+            <div class="reply_related_info col col-9 text-muted pt-2 pl-4 pl-md-4">
                 <span class="reply_username">
-                    {{ reply.user.username }}
+                    <a class="discussion_user_link" href="{% url 'User:user' slug=reply.user.slug %}">
+                        {{ reply.user.username }}
+                    </a>
                 </span>
 
                 <span class="reply_pub_date">
@@ -59,12 +68,6 @@
             {% endif %}
             {{ reply.body }}
         </div>
-
-        {#        <div class="row reply_tail_info px-4 pb-3">#}
-        {#            <div class="reply_index text-muted col col-1 ml-auto">#}
-        {#                {{ forloop.counter }}#}
-        {#            </div>#}
-        {#        </div>#}
 
         <div class="row reply_operations px-4 pb-3">
             <div class="new_reply ml-auto col col-1 mr-5">

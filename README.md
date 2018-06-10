@@ -1,6 +1,6 @@
 # ShareForum
 
->Notice: ShareForum has not been completely developed yet. In other words, it's under development.
+>Notice: ShareForum has not been completely developed yet.
 
 ## What's this?
 This is a forum system powered by Django and Bootstrap to share your ideas of some interesting books. All of the forum's posts are based the book node though, it can also have many other topics by extending the book node.

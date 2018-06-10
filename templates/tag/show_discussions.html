@@ -28,7 +28,9 @@
                         <span class="span_separate">•</span>
 
                         <span class="discussion_owner_name">
+                            <a class="discussion_user_link" href="{% url 'User:user' slug=discussion.user.slug %}">
                             {{ discussion.user.username }}
+                            </a>
                         </span>
 
                         <span class="span_separate">•</span>
@@ -44,7 +46,9 @@
                             {% if last_reply %}
                                 <span class="last_reply_label">最后一个回复：</span>
                                 <span class="last_reply_name">
-                                    {{ last_reply.0.user.username }}
+                                    <a class="discussion_user_link" href="{% url 'User:user' slug=discussion.user.slug %}">
+                                        {{ last_reply.0.user.username }}
+                                    </a>
                                 </span>
                             {% else %}
 

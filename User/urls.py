@@ -3,7 +3,8 @@ from django.contrib.auth.views import login, logout, password_reset, password_re
     password_reset_complete
 from django.urls import path
 
-from .views import register, profile, profile_edit, avatar_edit, password_change, email_change, email_change_confirm
+from .views import register, profile, profile_edit, avatar_edit, password_change, email_change, email_change_confirm, \
+    UserPersonalView, UserAllDiscussion, UserAllReplys
 
 app_name = 'User'
 urlpatterns = [
@@ -33,4 +34,7 @@ urlpatterns = [
     path('email-change-confirm/<token>', email_change_confirm, name="email_change_confirm"),
     path('profile-edit', profile_edit, name='profile_edit'),
     path('avatar-edit', avatar_edit, name='avatar_edit'),
+    path('user/<str:slug>', UserPersonalView.as_view(), name="user"),
+    path('user/<str:slug>/discussions', UserAllDiscussion.as_view(), name='user_discussions'),
+    path('user/<str:slug>/replys', UserAllReplys.as_view(), name='user_replys'),
 ]

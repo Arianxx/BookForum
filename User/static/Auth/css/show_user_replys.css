@@ -1,0 +1,15 @@
+.user_reply {
+    background-color: white;
+    border-top: 1px solid lightgrey;
+    padding: 30px;
+}
+
+.user_reply_info {
+    color: grey !important;
+    font-size: smaller !important;
+}
+
+.reply_info_link {
+    text-decoration: none !important;
+    color: grey !important;
+}

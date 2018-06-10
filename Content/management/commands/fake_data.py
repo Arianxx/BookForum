@@ -98,7 +98,7 @@ class Command(BaseCommand):
 
         all_books = Book.objects.all()
         all_users = User.objects.all()
-        for _ in range(fake_num * 10):
+        for _ in range(fake_num):
             # 随机选择书籍生成讨论，并随机选择作者
             book = random.choice(all_books)
             user = random.choice(all_users)

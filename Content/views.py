@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from .models import Book, Poll, Tag, Auther, Publishing
 
@@ -105,6 +106,7 @@ class BookView(generic.DetailView):
         form = self.request.session.get('DiscussionForm')
         context['form'] = form
         self.request.session['DiscussionForm'] = None
+
         return context
 
 

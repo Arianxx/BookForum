@@ -1,0 +1,27 @@
+.user_page {
+    margin-top: 25px;
+    background-color: white;
+    color: grey;
+}
+
+.user_page_avatar_img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 360px;
+    transition: 1s;
+}
+
+.user_page_avatar_img:hover {
+    transform: rotate(720deg) !important;
+    -webkit-transform: rotate(720deg) !important;
+    -moz-transform: rotate(720deg) !important;
+}
+
+.user_page_username {
+    color: grey;
+}
+
+.user_page_link {
+    text-decoration: none !important;
+    color: grey;
+}
