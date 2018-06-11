@@ -17,7 +17,6 @@ This is a forum system powered by Django and Bootstrap to share your ideas of so
     + Post, reply.
     + Add node, tag.
     + Notification.
-    + Popularity statistics
 
 ## Preview ShareForum
 ![](http://arian-blogs.oss-cn-beijing.aliyuncs.com/18-5-31/10912899.jpg)
@@ -35,7 +34,7 @@ This is a forum system powered by Django and Bootstrap to share your ideas of so
     pip install -r requirements.txt
     ```
     
-3. Put the sensitive values in your environment varibles accordding to the `settings_dev.py` , which should include something secret varibles that are needed to run the forum.
+3. Put the sensitive values in your environment variables according to the `settings_dev.py` , which should include something secret varibles that are needed to run the forum.
  
     You can alse use another way: Create a new file named `.env` in the `Share` folder, then write some key-value pairs in it. ShareForum will load them as environment varibles when the programming is started.
 
@@ -43,7 +42,7 @@ This is a forum system powered by Django and Bootstrap to share your ideas of so
     ```bash
     python manage.py runserver
     ```
-5. Create a administor user:
+5. Create a administrator user:
     ```bash
     python manage.py createsuperuser
     ```

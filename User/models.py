@@ -1,10 +1,10 @@
 import os
-from uuslug import slugify
 
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired, BadTimeSignature
+from uuslug import slugify
 
 from Content.common_tools import crop_img, delete_img
 
@@ -31,8 +31,8 @@ class User(AbstractUser):
 
     def save(self, *args, **kwargs):
         default_avatar_path = self.avatar.field.default.replace('/', '\\')
-        if not default_avatar_path in self.avatar.path:
-            origin_user = User.objects.get(id=self.id)
+        origin_user = User.objects.get(id=self.id)
+        if not default_avatar_path in origin_user.avatar.path:
             if origin_user.avatar.path != self.avatar.path:
                 # 修改头像，删除原来头像
                 try:

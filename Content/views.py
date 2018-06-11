@@ -1,9 +1,13 @@
-from django.conf import settings
-from django.shortcuts import render, get_object_or_404
-from django.views import generic
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+import time
 
-from .models import Book, Poll, Tag, Auther, Publishing
+from django.conf import settings
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.views import generic
+
+from .forms import AddNodeForm, AddAutherForm, AddPublishingForm, AddTagForm
+from .models import Book, Tag, Auther, Publishing
 
 
 # Create your views here.
@@ -109,12 +113,104 @@ class BookView(generic.DetailView):
 
         return context
 
+    def get_object(self, queryset=None):
+        object = super().get_object(queryset)
+        session = self.request.session
+        # 每隔半小时访问，增加这本书的viewing次数
+        key = 'book_{id}'.format(id=object.id)
+        if not key in session:
+            object.add_viewing()
+            object.save()
+            session[key] = time.time()
+        else:
+            now = time.time()
+            if now - session[key] > 30 * 60:
+                object.add_viewing()
+                object.save()
+                session[key] = time.time()
+        return object
+
 
 def all_hot_books(request):
-    # TODO：更好的计算方式
-    polls = Poll.objects.order_by('-up').all()[:10]
-    books = [poll.book for poll in polls]
+    books = Book.objects.order_by('-viewing').all()
     context = {
         'books': books,
     }
     return render(request, 'Content/hot_books.html', context=context)
+
+
+@login_required
+def add_node(request):
+    if request.method == 'POST':
+        form = AddNodeForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+
+            messages.success(request, "成功增加节点")
+            slug = form.instance.slug
+            redirect_url = reverse('Content:book', kwargs={'slug': slug})
+            return redirect(redirect_url)
+    else:
+        form = AddNodeForm()
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'Content/add_node.html', context=context)
+
+
+@login_required
+def add_auther(request):
+    if request.method == 'POST':
+        form = AddAutherForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            messages.success(request, '成功添加了一个作者，现在可以为其增添书籍')
+            redirect_url = reverse('Content:add_node')
+            return redirect(redirect_url)
+    else:
+        form = AddAutherForm()
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'Content/add_auther.html', context=context)
+
+
+@login_required
+def add_publishing(request):
+    if request.method == 'POST':
+        form = AddPublishingForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            messages.success(request, '你成功添加了一个出版社，现在可以为其增添书籍')
+            redirect_url = reverse('Content:add_node')
+            return redirect(redirect_url)
+    else:
+        form = AddPublishingForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'Content/add_publishing.html', context=context)
+
+
+@login_required
+def add_tag(request):
+    if request.method == 'POST':
+        form = AddTagForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            messages.success(request, '你成功添加了一个tag，现在可以用其添加书籍')
+            redirect_url = reverse('Content:add_node')
+            return redirect(redirect_url)
+    else:
+        form = AddTagForm()
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'Content/add_tag.html', context=context)

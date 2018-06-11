@@ -1,8 +1,10 @@
+import os
+
 from django.conf import settings
 from django.db import models
-from uuslug import slugify
+from django.db.models import ObjectDoesNotExist
 from django.utils import timezone
-import os
+from uuslug import slugify
 
 from .common_tools import crop_img, delete_img
 
@@ -11,11 +13,8 @@ from .common_tools import crop_img, delete_img
 
 class Book(models.Model):
     """
-    它和计票模型（Poll）是一对一关系。这个关系在Poll模型中定义，因为书籍id是计票模型的外键，以便删除时的一致性。因此不会存在没有引用书籍的计
-    票模型对象。
-    它还和讨论模型（Discuss)拥有一对多关系。
+    它和讨论模型（Discuss)拥有一对多关系。
     """
-    # TODO: 增加查看次数信息
     name = models.CharField('书籍名称', max_length=32)
     pub_date = models.DateField('出版日期', default=timezone.now, blank=True, null=True)
     slug = models.SlugField(max_length=64, unique=True)
@@ -25,6 +24,8 @@ class Book(models.Model):
     publishing = models.ForeignKey("Publishing", on_delete=models.CASCADE, related_name="books", null=True)
     auther = models.ForeignKey("Auther", on_delete=models.CASCADE, related_name="books")
     tags = models.ManyToManyField("Tag", related_name="books")
+
+    viewing = models.IntegerField('查看数', default=0)
 
     class Meta:
         verbose_name = '书籍'
@@ -38,26 +39,21 @@ class Book(models.Model):
     def save(self, *args, **kwargs):
         cover_default_path = self.cover.field.default.replace('/', '\\')
         if not cover_default_path in self.cover.path:
-            origin_book = Book.objects.get(slug=self.slug)
-            if origin_book.cover.path != self.cover.path:
-                # 如果要更改封面，就删除原来的封面
-                try:
-                    os.remove(origin_book.cover.path)
-                except FileNotFoundError:
-                    pass
-
-        ret = super(Book, self).save(*args, **kwargs)
+            try:
+                origin_book = Book.objects.get(slug=self.slug)
+                if origin_book.cover.path != self.cover.path:
+                    # 如果要更改封面，就删除原来的封面
+                    try:
+                        os.remove(origin_book.cover.path)
+                    except FileNotFoundError:
+                        pass
+            except ObjectDoesNotExist:
+                pass
 
         # 自动根据书籍的名称和作者添加一个slug
         slug = '-by-'.join([self.name, self.auther.name])
         self.slug = slugify(slug)
-
-        # 保存书籍时，一并保存它的计票对象（Poll），从而不用手动去创建计票对象。
-        try:
-            self.__getattribute__("poll")
-        except AttributeError:
-            poll = Poll(book=self)
-            poll.save()
+        ret = super(Book, self).save(*args, **kwargs)
 
         if not cover_default_path in self.cover.path:
             # 不剪裁默认封面
@@ -74,6 +70,10 @@ class Book(models.Model):
             delete_img(self.cover)
 
         return super().delete(*args, **kwargs)
+
+    def add_viewing(self):
+        self.viewing += 1
+        self.save()
 
 
 class Auther(models.Model):
@@ -149,23 +149,6 @@ class Tag(models.Model):
     @property
     def book_num(self):
         return self.books.count()
-
-
-class Poll(models.Model):
-    """
-    计票模型。保存了赞同和反对的信息。
-    """
-    # TODO:使用django内置的user对象来投票，并记录投票人。
-    up = models.IntegerField('赞同', default=0)
-    down = models.IntegerField('反对', default=0)
-    book = models.OneToOneField("Book", on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name = '投票信息'
-        verbose_name_plural = '投票信息'
-
-    def __str__(self):
-        return "Poll(book:%s, up:%d, down:%d)" % (self.book.name, self.up, self.down)
 
 
 class Carousel(models.Model):

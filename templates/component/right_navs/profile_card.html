@@ -10,6 +10,15 @@
                     <span class="right_nav_user_name align-content-center">{{ user.username }}</span>
                 </a>
             </div>
+            <div class="row mt-2">
+                <div class="add_node text-muted">
+                    <span class="add_node_text">
+                        没有你想要的节点？
+                        <a class="add_node_link" href="{% url 'Content:add_node' %}">点击这里</a>
+                            增加节点。
+                    </span>
+                </div>
+            </div>
         </div>
     {% else %}
         <div class="container">

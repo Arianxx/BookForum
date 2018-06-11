@@ -9,7 +9,6 @@ from ..models import (
     Auther,
     Publishing,
     Tag,
-    Poll,
 )
 
 
@@ -36,9 +35,6 @@ class RelationshipTestCase(TestCase):
     def test_book_basic(self):
         self.assertTrue(self.book.publishing_id == self.pub.id)
         self.assertTrue(self.book.auther_id == self.auther.id)
-
-        poll = Poll.objects.filter(book_id=self.book.id).first()
-        self.assertEqual(self.book.poll, poll)
 
     def test_book_tag(self):
         tag = Tag.objects.create(name="Test")

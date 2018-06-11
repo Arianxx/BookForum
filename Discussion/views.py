@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models.aggregates import Count
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.views import generic
@@ -50,6 +51,7 @@ def all_hot_dicussions(request):
     return render(request, 'Discussion/hot_discussions.html', context=context)
 
 
+@login_required
 def post_discussion(request, book_slug=''):
     if request.method == 'POST':
         form = DiscussionForm(request.POST)
@@ -94,6 +96,7 @@ def post_discussion(request, book_slug=''):
     return redirect(redirect_url)
 
 
+@login_required
 def post_reply(request, pk=''):
     #TODO：能够回复某个特别的用户
     if request.method == 'POST':

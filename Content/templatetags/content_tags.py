@@ -2,7 +2,7 @@ import random
 
 from django import template
 
-from ..models import Book, Poll, Tag, Carousel
+from ..models import Book, Tag, Carousel
 
 register = template.Library()
 
@@ -43,13 +43,10 @@ def get_books(sort='book.pub_date', num=5):
 @register.simple_tag()
 def get_hot_books(num=5):
     """
-    因为计票信息单独在一个表，上面那个无法查询，所以单独列出来.
-
     :param num: 想要得到的书籍的数量
     :return: Book模型实例的集合
     """
-    polls = Poll.objects.order_by('-up').all()[:num]
-    books = [poll.book for poll in polls]
+    books = Book.objects.order_by('-viewing').all()[:num]
     return books
 
 

@@ -83,3 +83,12 @@
     text-decoration: none !important;
     color: grey;
 }
+
+.add_node_text {
+    font-size: smaller;
+}
+
+.add_node_link {
+    text-decoration: none !important;
+    color: grey;
+}

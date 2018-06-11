@@ -1,7 +1,7 @@
 from django.contrib import admin
 from guardian.admin import GuardedModelAdmin
 
-from .models import Book, Publishing, Auther, Tag, Poll, Carousel
+from .models import Book, Publishing, Auther, Tag, Carousel
 
 # Register your models here.
 
@@ -13,7 +13,7 @@ admin.site.site_title = '后台管理'
 @admin.register(Book)
 class BookAdmin(GuardedModelAdmin, admin.ModelAdmin):
     # 列名
-    list_display = ('name', 'pub_date', 'auther', 'publishing', 'poll_count')
+    list_display = ('name', 'pub_date', 'auther', 'publishing', 'viewing')
 
     # 可以按照出版时间筛选
     date_hierarchy = 'pub_date'
@@ -32,18 +32,6 @@ class BookAdmin(GuardedModelAdmin, admin.ModelAdmin):
 
     # 可供搜索的列
     search_fields = ['name']
-
-    def poll_count(self, obj):
-        """
-        一个粗略的计票统计字段。
-        TODO:使用更好的计算方式
-        :param obj: 模型对象自身
-        :return: 赞同票与反对票的差值
-        """
-        return obj.poll.up - obj.poll.down
-
-    poll_count.short_description = 'poll count'
-    poll_count.admin_order_field = 'poll'
 
 
 @admin.register(Auther)
@@ -79,11 +67,6 @@ class TagAdmin(GuardedModelAdmin, admin.ModelAdmin):
         return obj.books.count()
 
     books_count.short_description = 'books count'
-
-
-@admin.register(Poll)
-class PollAdmin(GuardedModelAdmin, admin.ModelAdmin):
-    list_display = ('book', 'up', 'down',)
 
 
 @admin.register(Carousel)

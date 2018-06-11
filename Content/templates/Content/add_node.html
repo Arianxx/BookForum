@@ -1,0 +1,97 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Content/css/add_form.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    增加节点
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron add_form">
+        <div class="row add_title justify-content-center">
+            添加节点
+        </div>
+
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="name">
+                    {{ form.name.label }}
+                </label>
+
+                {% for error in form.name.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+
+                <input type="text" class="form-control name_form"
+                       value="{% if form.name.data %}{{ form.name.data }}{% else %}{% endif %}" required
+                       placeholder="名称" id="name" maxlength="32" name="name"/>
+            </div>
+
+            <div class="form-group">
+                <label for="introl">
+                    {{ form.intro.label }}
+                </label>
+
+                {% for error in form.intro.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+
+                <textarea class="form-control introl_form" required id="introl" rows="8" maxlength="1280" name="intro">
+                    {% if form.introl.data %}
+                        {{ form.introl.data }}
+                    {% else %}
+                    {% endif %}
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="cover">
+                    书籍封面
+                </label>
+
+                {{ form.cover|add_class:"form-control"|attr:"id:cover;name:cover" }}
+            </div>
+
+            <div class="form-group">
+                <label for="auther">
+                    选择作者
+                </label>
+                {{ form.auther|add_class:"form-control"|attr:"id:auther;name:auther" }}
+                <small class="form-help text-muted">
+                    <a class="add_form_link" href="{% url 'Content:add_auther' %}">点击这里</a>添加作者
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="publishing">
+                    选择出版社
+                </label>
+                {{ form.publishing|add_class:"form-control"|attr:"id:publishing;name:publishing" }}
+                <small class="form-help text-muted">
+                    <a class="add_form_link" href="{% url 'Content:add_publishing' %}">点击这里</a>添加出版社
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="tags">
+                    选择标签
+                </label>
+                {{ form.tags|add_class:"form-control"|attr:"id:tags;name:tags" }}
+                <small class="form-help text-muted">
+                    <a class="add_form_link" href="{% url 'Content:add_tag' %}">点击这里</a>添加标签
+                </small>
+            </div>
+
+            <div class="row justify-content-center">
+                <input type="submit" class="form-control btn btn-info col col-4" value="提交"/>
+            </div>
+        </form>
+    </div>
+{% endblock %}

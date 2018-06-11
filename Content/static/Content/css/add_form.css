@@ -1,0 +1,16 @@
+.add_form {
+    margin-top: 25px;
+    margin-bottom: 0;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.add_title {
+    font-size: larger;
+}
+
+.add_form_link {
+    text-decoration: none;
+    color: grey;
+}

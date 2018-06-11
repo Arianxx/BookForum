@@ -1,0 +1,51 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Content/css/add_form.css' %}"/>
+{% endblock %}
+
+
+{% block title %}
+    添加出版社
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron add_form">
+        <div class="row add_title">
+            添加出版社
+        </div>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <div for="name">
+                    作者名
+                </div>
+
+                {% for error in form.name.errors %}
+                    <small class="form-help text-muted">{{ error }}</small>
+                {% endfor %}
+                {{ form.name|attr:"id:name;name:name"|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <div class="about">
+                    关于信息
+                </div>
+
+                {% for error in form.about.errors %}
+                    <small class="help-help text-muted">{{ error }}</small>
+                {% endfor %}
+                {{ form.about|attr:"id:about;name:about"|add_class:"form-control" }}
+            </div>
+
+            <div class="row justify-content-center">
+                <input type="submit" class="form-control btn btn-info col col-5" value="提交"/>
+            </div>
+        </form>
+    </div>
+{% endblock %}

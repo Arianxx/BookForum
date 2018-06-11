@@ -10,4 +10,8 @@ urlpatterns = [
     path('auther/<str:slug>', AutherView.as_view(), name='auther'),
     path('publishing/<str:slug>', PublishingView.as_view(), name='publishing'),
     path('book/<str:slug>', BookView.as_view(), name='book'),
+    path('add_node', add_node, name='add_node'),
+    path('add_auther', add_auther, name='add_auther'),
+    path('add_publishing', add_publishing, name='add_publishing'),
+    path('add_tag', add_tag, name='add_tag'),
 ]

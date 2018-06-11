@@ -82,13 +82,10 @@ class Command(BaseCommand):
                     name=''.join(fake.words()),
                     intro=fake.text() * 10,
                     publishing=pub,
-                    auther=auther
+                    auther=auther,
+                    viewing=random.randint(0, 1000),
                 )
                 book.save()
-                poll = book.poll
-                poll.up = fake.random_digit()
-                poll.down = fake.random_digit()
-                poll.save()
                 book.tags.add(*tags)
                 book.save()
 
