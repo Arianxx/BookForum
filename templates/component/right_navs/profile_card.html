@@ -10,13 +10,22 @@
                     <span class="right_nav_user_name align-content-center">{{ user.username }}</span>
                 </a>
             </div>
-            <div class="row mt-2">
+            <div class="row mt-2 ml-1 justify-content-center">
                 <div class="add_node text-muted">
                     <span class="add_node_text">
                         没有你想要的节点？
                         <a class="add_node_link" href="{% url 'Content:add_node' %}">点击这里</a>
-                            增加节点。
+                            增加节点
                     </span>
+                </div>
+            </div>
+            <div class="row collections justify-content-center mt-2">
+                <div class="btn-group">
+                    <a class="btn btn-outline-info" href="{% url 'Content:collection_books' %}">
+                        （{{ user.collection.books.count }}）收藏的书籍
+                        <a class="btn btn-outline-info" href="{% url 'Discussion:collection_discussions' %}">
+                            ({{ user.collection.discussions.count }}) 收藏的话题
+                        </a>
                 </div>
             </div>
         </div>

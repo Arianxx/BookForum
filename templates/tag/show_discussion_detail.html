@@ -1,5 +1,6 @@
 {% load discussion_tags %}
 {% load content_tags %}
+{% load auth_tags %}
 
 <div class="lz p-4">
     <div class="row lz_info">
@@ -29,6 +30,26 @@
     <div class="row post_body lead pt-3 px-4 pb-2">
         {{ discussion.body }}
     </div>
+
+
+    {% if not user.is_anonymous %}
+        <div class="row reply_operations px-4 pb-3 mr-3">
+            <div class="new_reply ml-auto col col-1 mr-5">
+                {% check_collected_discussion request.user discussion as collected %}
+                {% if not collected %}
+                    <a class="new_reply_url btn btn-outline-info"
+                       href="{% url 'Discussion:collect_discussion' %}?discussion-id={{ discussion.id }}">
+                        收藏本话题
+                    </a>
+                {% else %}
+                    <a class="new_reply_url btn btn-outline-info"
+                       href="{% url 'Discussion:remove_collected_discussion' %}?discussion-id={{ discussion.id }}">
+                        撤销收藏本话题
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
 </div>
 
 {% get_discussion_replys discussion '-pub_date' 0 as replys %}

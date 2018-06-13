@@ -9,4 +9,8 @@ urlpatterns = [
     path('discussion/<pk>', DiscussionView.as_view(), name='discussion_detail'),
     path('<str:book_slug>/post-discussion', post_discussion, name='post_discussion'),
     path('<pk>/post-reply', post_reply, name='post_reply'),
+
+    path('collect-discussion', collect_discussion, name='collect_discussion'),
+    path('remove-collected-discussion', remove_collected_discussion, name='remove_collected_discussion'),
+    path('collection-discussions', collection_discussions, name='collection_discussions'),
 ]

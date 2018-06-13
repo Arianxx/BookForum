@@ -12,6 +12,6 @@
 {% endblock %}
 
 {% block book_detail_right %}
-    {% show_discussion_detail discussion %}
+    {% show_discussion_detail request discussion %}
     {% include 'component/post_reply_form.html' %}
 {% endblock %}

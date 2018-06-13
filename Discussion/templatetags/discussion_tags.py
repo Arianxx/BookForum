@@ -86,7 +86,7 @@ def show_book_detail(book_object):
 
 
 @register.inclusion_tag('tag/show_discussion_detail.html')
-def show_discussion_detail(discussion_object):
+def show_discussion_detail(reqeust, discussion_object):
     """
     加载指定讨论的详细信息模板
 
@@ -95,5 +95,6 @@ def show_discussion_detail(discussion_object):
     """
     context = {
         'discussion': discussion_object,
+        "request": reqeust,
     }
     return context

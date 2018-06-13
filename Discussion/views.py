@@ -2,7 +2,9 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.aggregates import Count
-from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.http import Http404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
 from django.views import generic
 
 from Content.models import Book
@@ -143,3 +145,44 @@ def post_reply(request, pk=''):
 
     redirect_url = reverse('Discussion:discussion_detail', args=[pk])
     return redirect(redirect_url)
+
+
+@login_required
+def collect_discussion(request):
+    id = request.GET.get('discussion-id', None)
+    if not id:
+        raise Http404
+    else:
+        discussion = get_object_or_404(Discuss, id=id)
+        if request.user.collect_discussion(discussion):
+            messages.success(request, "你成功收藏了这个话题")
+        else:
+            messages.info(request, "你已经收藏过这个话题")
+
+        redirect_url = reverse('Discussion:discussion_detail', kwargs={'pk': discussion.pk})
+        return redirect(redirect_url)
+
+
+@login_required
+def remove_collected_discussion(request):
+    id = request.GET.get('discussion-id', None)
+    if not id:
+        raise Http404
+    else:
+        discussion = get_object_or_404(Discuss, id=id)
+        if request.user.remove_collected_discussion(discussion):
+            messages.success(request, "你从收藏夹中删除了这个话题")
+        else:
+            messages.info(request, "你无法删除没有收藏的话题")
+
+        redirect_url = reverse('Discussion:discussion_detail', kwargs={"pk": discussion.pk})
+        return redirect(redirect_url)
+
+
+@login_required
+def collection_discussions(request):
+    discussions = request.user.collection.discussions.all()
+    context = {
+        'discussions': discussions,
+    }
+    return render(request, 'Discussion/collection_discussions.html', context=context)

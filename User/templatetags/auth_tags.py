@@ -3,6 +3,24 @@ from django import template
 register = template.Library()
 
 
+@register.simple_tag()
+def check_collected_book(user, book_object):
+    if user.is_anonymous:
+        return False
+
+    return True if user.collection.books.filter(id=book_object.id).all() \
+        else False
+
+
+@register.simple_tag()
+def check_collected_discussion(user, discussion):
+    if user.is_anonymous:
+        return False
+
+    return True if user.collection.discussions.filter(id=discussion.id).all() \
+        else False
+
+
 @register.simple_tag
 def get_omit_discussions(user, num=5):
     """

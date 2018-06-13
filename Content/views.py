@@ -3,6 +3,7 @@ import time
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 
@@ -132,7 +133,7 @@ class BookView(generic.DetailView):
 
 
 def all_hot_books(request):
-    books = Book.objects.order_by('-viewing').all()
+    books = Book.objects.order_by('-viewing').all()[:10]
     context = {
         'books': books,
     }
@@ -214,3 +215,44 @@ def add_tag(request):
         'form': form,
     }
     return render(request, 'Content/add_tag.html', context=context)
+
+
+@login_required
+def collect_book(request):
+    id = request.GET.get('book-id', None)
+    if not id:
+        raise Http404
+    else:
+        book = get_object_or_404(Book, id=id)
+        if request.user.collect_book(book):
+            messages.success(request, "你成功收藏了 {title}".format(title=book.name))
+        else:
+            messages.info(request, '你已经收藏过 {title}，不能再次收藏'.format(title=book.name))
+
+        redirect_url = reverse('Content:book', kwargs={'slug': book.slug})
+        return redirect(redirect_url)
+
+
+@login_required
+def remove_collected_book(request):
+    id = request.GET.get('book-id', None)
+    if not id:
+        raise Http404
+    else:
+        book = get_object_or_404(Book, id=id)
+        if request.user.remove_collected_book(book):
+            messages.success(request, "你从收藏夹中删除了图书 {title}".format(title=book.name))
+        else:
+            messages.info(request, "你还没有收藏过图书 {title}".format(title=book.name))
+
+        redirect_url = reverse('Content:book', kwargs={'slug': book.slug})
+        return redirect(redirect_url)
+
+
+@login_required
+def collection_books(request):
+    books = request.user.collection.books.all()
+    context = {
+        'books': books,
+    }
+    return render(request, 'Content/collection_books.html', context=context)

@@ -20,6 +20,7 @@ class User(AbstractUser):
     avatar = models.ImageField('用户头像', upload_to='avatar/%Y/%m/%d', default='avatar/default.jpg')
 
     is_confirmed = models.BooleanField("验证邮箱", default=False)
+    collection = models.OneToOneField('UserCollection', unique=True, related_name='user', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = '用户'
@@ -30,25 +31,35 @@ class User(AbstractUser):
         return 'User(username=%s)' % self.username
 
     def save(self, *args, **kwargs):
-        default_avatar_path = self.avatar.field.default.replace('/', '\\')
-        origin_user = User.objects.get(id=self.id)
-        if not default_avatar_path in origin_user.avatar.path:
-            if origin_user.avatar.path != self.avatar.path:
-                # 修改头像，删除原来头像
-                try:
-                    os.remove(origin_user.avatar.path)
-                except FileNotFoundError:
-                    pass
+        self.slug = slugify(self.username.encode())
 
-        self.slug = slugify(self.username)
+        if not self.id:
+            # 首次保存用户，增加关联UserCollection模型
+            collection = UserCollection()
+            collection.save()
+            self.collection = collection
+
         ret = super().save(*args, **kwargs)
 
+        default_avatar_path = self.avatar.field.default.replace('/', '\\')
+        try:
+            origin_user = User.objects.get(id=self.id)
+        except User.DoesNotExist:
+            return ret
+        else:
+            if not default_avatar_path in origin_user.avatar.path:
+                if origin_user.avatar.path != self.avatar.path:
+                    # 修改头像，删除原来头像
+                    try:
+                        os.remove(origin_user.avatar.path)
+                    except FileNotFoundError:
+                        pass
+
         if not default_avatar_path in self.avatar.path:
-            # 只剪裁用户上传的头像，不剪裁默认头像
+            # 只剪裁用户上传的头像，不剪裁默认头像的【
             AVATAR_WIDTH = getattr(settings, 'AVATAR_WIDTH', 800)
             AVATAR_HEIGHT = getattr(settings, 'AVATAR_HEIGHT', 800)
             crop_img(self.avatar, AVATAR_WIDTH, AVATAR_HEIGHT)
-
 
         return ret
 
@@ -75,3 +86,39 @@ class User(AbstractUser):
             return False
         except BadTimeSignature:
             return False
+
+    def collect_book(self, book):
+        if not self.collection.books.filter(id=book.id).all():
+            self.collection.books.add(book)
+            self.save()
+            return True
+        else:
+            return False
+
+    def collect_discussion(self, discussion):
+        if not self.collection.discussions.filter(id=discussion.id).all():
+            self.collection.discussions.add(discussion)
+            self.save()
+            return True
+        else:
+            return False
+
+    def remove_collected_book(self, book):
+        if not self.collection.books.filter(id=book.id).all():
+            return False
+        else:
+            self.collection.books.remove(book)
+            return True
+
+    def remove_collected_discussion(self, discussion):
+        if not self.collection.discussions.filter(id=discussion.id).all():
+            return False
+        else:
+            self.collection.discussions.remove(discussion)
+            return True
+
+
+class UserCollection(models.Model):
+    # TODO: 完善收藏功能
+    books = models.ManyToManyField('Content.Book', related_name='collection_users')
+    discussions = models.ManyToManyField('Discussion.Discuss', related_name='collection_users')

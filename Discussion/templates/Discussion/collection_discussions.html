@@ -1,0 +1,25 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+{% load discussion_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Discussion/css/discussion_list.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    我收藏的话题
+{% endblock %}
+
+{% block content %}
+    <div class="nav index_switch text-center flex-column flex-md-row pb-3 pb-md-0">
+        <li class="nav-item">
+            {% url 'Discussion:collection_discussions' as collection_discussions_url %}
+            <a class="nav-link index_switch_link link_switch_active" href="{{ collection_discussions_url }}">
+                <span class="index_switch_text">我收藏夹中的话题</span>
+            </a>
+        </li>
+    </div>
+
+    {% show_discussions discussions %}
+{% endblock %}
