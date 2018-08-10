@@ -3,7 +3,8 @@ import os
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from itsdangerous import URLSafeTimedSerializer, SignatureExpired, BadTimeSignature
+from itsdangerous import URLSafeTimedSerializer, \
+    SignatureExpired, BadTimeSignature
 from uuslug import slugify
 
 from Content.common_tools import crop_img, delete_img
@@ -17,10 +18,13 @@ class User(AbstractUser):
     slug = models.SlugField('Slug', unique=True)
 
     link = models.URLField("个人网站", blank=True)
-    avatar = models.ImageField('用户头像', upload_to='avatar/%Y/%m/%d', default='avatar/default.jpg')
+    avatar = models.ImageField(
+        '用户头像', upload_to='avatar/%Y/%m/%d', default='avatar/default.jpg')
 
     is_confirmed = models.BooleanField("验证邮箱", default=False)
-    collection = models.OneToOneField('UserCollection', unique=True, related_name='user', on_delete=models.CASCADE)
+    collection = models.OneToOneField(
+        'UserCollection', unique=True, related_name='user',\
+             on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = '用户'
@@ -47,7 +51,7 @@ class User(AbstractUser):
         except User.DoesNotExist:
             return ret
         else:
-            if not default_avatar_path in origin_user.avatar.path:
+            if default_avatar_path not in origin_user.avatar.path:
                 if origin_user.avatar.path != self.avatar.path:
                     # 修改头像，删除原来头像
                     try:
@@ -81,11 +85,12 @@ class User(AbstractUser):
         serializer = URLSafeTimedSerializer(getattr(settings, 'SECRET_KEY'))
         try:
             key_info = serializer.loads(token, max_age=expiration)
-            return key_info
         except SignatureExpired:
             return False
         except BadTimeSignature:
             return False
+        else:
+            return key_info
 
     def collect_book(self, book):
         if not self.collection.books.filter(id=book.id).all():
@@ -120,5 +125,7 @@ class User(AbstractUser):
 
 class UserCollection(models.Model):
     # TODO: 完善收藏功能
-    books = models.ManyToManyField('Content.Book', related_name='collection_users')
-    discussions = models.ManyToManyField('Discussion.Discuss', related_name='collection_users')
+    books = models.ManyToManyField(
+        'Content.Book', related_name='collection_users')
+    discussions = models.ManyToManyField(
+        'Discussion.Discuss', related_name='collection_users')

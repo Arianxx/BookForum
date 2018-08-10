@@ -4,67 +4,87 @@
     <bookmark url="file://$PROJECT_DIR$/Content/templates/Content/auther_books.html" line="34" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18a89c78-a3bb-4bc1-a00f-4ab05186123a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/templates/Content/collection_books.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion/templates/Discussion/collection_discussions.html" afterDir="false" />
+    <list default="true" id="18a89c78-a3bb-4bc1-a00f-4ab05186123a" name="Default" comment="增加基本收藏功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0002_auto_20180519_1015.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0003_auto_20180520_1800.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0004_remove_auther_age.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0005_auto_20180521_2129.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0006_auto_20180521_2247.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0007_carousel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0008_auto_20180524_1321.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0009_auto_20180524_1803.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0010_auto_20180524_2041.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0011_auto_20180524_2129.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0012_book_cover.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0013_auto_20180525_1725.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/migrations/0014_auto_20180611_1709.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/templates/Content/add_node.html" beforeDir="false" afterPath="$PROJECT_DIR$/Content/templates/Content/add_node.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/templates/Content/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Content/templates/Content/book_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/migrations/0002_auto_20180525_1725.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/migrations/0003_auto_20180529_2114.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/migrations/0004_remove_discussreply_parent_reply.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/templates/Discussion/discussion_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/templates/Discussion/discussion_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/templatetags/discussion_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/templatetags/discussion_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/migrations/0002_user_is_confirmed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/migrations/0003_auto_20180527_1821.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/migrations/0004_auto_20180527_2003.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/migrations/0005_user_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/migrations/0006_auto_20180610_1800.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/common_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/common_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/templates/Content/collection_books.html" beforeDir="false" afterPath="$PROJECT_DIR$/Content/templates/Content/collection_books.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/templates/Discussion/collection_discussions.html" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/templates/Discussion/collection_discussions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/templatetags/auth_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/templatetags/auth_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/component/right_navs/profile_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/right_navs/profile_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tag/show_discussion_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tag/show_discussion_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Share$views.coverage" NAME="views Coverage Results" MODIFIED="1528622778056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Discussion" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-889509822">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="2" />
+          <entry key="Python" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="2" />
+          <entry key="py" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Discussion/views.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/tests/test_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="160" selection-start-line="160" selection-end-line="161" />
+            <state relative-caret-position="-810">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -72,26 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Discussion/urls.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/User/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/User/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="72">
+              <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -130,9 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Discussion/admin.py" />
-        <option value="$PROJECT_DIR$/Discussion/exceptions.py" />
-        <option value="$PROJECT_DIR$/templates/component/right_navs/hot_discussions.html" />
         <option value="$PROJECT_DIR$/Discussion/static/Discussion/css/post_discussion.css" />
         <option value="$PROJECT_DIR$/templates/component/post_discussion_form.html" />
         <option value="$PROJECT_DIR$/Discussion/models.py" />
@@ -149,7 +151,6 @@
         <option value="$PROJECT_DIR$/User/templates/Auth/user_all_discussions.html" />
         <option value="$PROJECT_DIR$/User/urls.py" />
         <option value="$PROJECT_DIR$/User/templates/Auth/user_personal.html" />
-        <option value="$PROJECT_DIR$/User/views.py" />
         <option value="$PROJECT_DIR$/User/templates/Auth/user_all_replys.html" />
         <option value="$PROJECT_DIR$/Content/management/commands/clear_data.py" />
         <option value="$PROJECT_DIR$/Content/management/commands/fake_data.py" />
@@ -158,8 +159,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Content/static/Content/css/right_nav.css" />
         <option value="$PROJECT_DIR$/Content/templates/Content/publishing_books.html" />
-        <option value="$PROJECT_DIR$/Content/models.py" />
-        <option value="$PROJECT_DIR$/Content/forms.py" />
         <option value="$PROJECT_DIR$/Content/static/Content/css/add_node.css" />
         <option value="$PROJECT_DIR$/Content/static/Content/css/add_form.css" />
         <option value="$PROJECT_DIR$/Content/templates/Content/add_auther.html" />
@@ -176,11 +175,17 @@
         <option value="$PROJECT_DIR$/Content/views.py" />
         <option value="$PROJECT_DIR$/Content/urls.py" />
         <option value="$PROJECT_DIR$/Discussion/views.py" />
-        <option value="$PROJECT_DIR$/Content/templates/Content/collection_books.html" />
         <option value="$PROJECT_DIR$/templates/component/right_navs/profile_card.html" />
         <option value="$PROJECT_DIR$/Discussion/urls.py" />
+        <option value="$PROJECT_DIR$/Content/templates/Content/collection_books.html" />
         <option value="$PROJECT_DIR$/Discussion/templates/Discussion/collection_discussions.html" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/User/views.py" />
         <option value="$PROJECT_DIR$/User/models.py" />
+        <option value="$PROJECT_DIR$/Content/common_tools.py" />
+        <option value="$PROJECT_DIR$/Content/forms.py" />
+        <option value="$PROJECT_DIR$/Content/models.py" />
+        <option value="$PROJECT_DIR$/User/forms.py" />
       </list>
     </option>
   </component>
@@ -190,13 +195,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1934" />
-    <option name="height" value="1087" />
+    <option name="x" value="384" />
+    <option name="y" value="207" />
+    <option name="width" value="981" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -218,111 +221,12 @@
             <path>
               <item name="Share" type="b2602c69:ProjectViewProjectNode" />
               <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
               <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="right_navs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="tag" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Share" type="b2602c69:ProjectViewProjectNode" />
               <item name="Share" type="462c0819:PsiDirectoryNode" />
               <item name="User" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Share" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -344,12 +248,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="404&#9;null&#9;null&#10;SetPass&#9;null&#9;null&#10;PasswordResetForm&#9;null&#9;null&#10;password_reset_f&#9;FILE&#9;file://C:/Users/Vence/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/bootstrap_admin/templates/registration/password_reset_form.html&#10;PasswordChange&#9;null&#9;null&#10;Password&#9;null&#9;null&#10;admin&#9;null&#9;null&#10;Auth&#9;FILE&#9;file://C:/Users/Vence/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/contrib/auth&#10;User&#9;null&#9;null&#10;AuthenticationF&#9;null&#9;null&#10;CommonMi&#9;null&#9;null&#10;widget_&#9;null&#9;null&#10;user&#9;null&#9;null&#10;context&#9;FILE&#9;file://C:/Users/Vence/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/template/context_processors.py&#10;context_o&#9;null&#9;null&#10;static&#9;null&#9;null&#10;context_pr&#9;null&#9;null&#10;as_p&#9;null&#9;null" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Discussion/views.py" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Work/nelma_django" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/Content/common_tools.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -391,6 +303,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="Share" type="Python.DjangoServer" factoryName="Django server">
       <module name="Share" />
@@ -413,6 +328,7 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Django server.Share" />
@@ -481,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528733504035</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="增加基本收藏功能">
+      <created>1528904710863</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1528904710863</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -494,59 +417,62 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-1" width="1936" height="1089" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.19137749" />
-      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.22442588" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.12302839" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.20189275" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18822293" />
-      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.23764458" />
-      <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7329127" visible="true" weight="0.17324094" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.2807571" />
-      <window_info anchor="right" id="SciView" order="5" />
-      <window_info x="732" y="401" width="268" height="278" id="Structure" order="1" sideWeight="0.26708728" side_tool="true" weight="0.18763326" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7312187" visible="true" weight="0.17813765" />
+      <window_info x="732" y="401" width="268" height="278" id="Structure" order="1" sideWeight="0.2687813" side_tool="true" weight="0.1805668" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.20504732" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.19198665" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.18822293" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31385642" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.22442588" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.1903172" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.23421927" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32912722" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.2954925" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.24540901" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.24040067" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.2854758" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24939272" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32955465" />
+      <window_info anchor="right" id="Database" order="4" weight="0.21781376" />
+      <window_info anchor="right" id="SciView" order="5" />
       <window_info anchor="right" x="0" y="0" width="434" height="889" id="Documentation" order="6" side_tool="true" weight="0.26226014" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32912722" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.20504732" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18822293" />
-      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7312187" visible="true" weight="0.16032389" />
+      <window_info x="732" y="401" width="268" height="278" id="Structure" order="1" sideWeight="0.2687813" side_tool="true" weight="0.1805668" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7329127" visible="true" weight="0.15724947" />
-      <window_info x="732" y="401" width="268" height="278" id="Structure" order="1" sideWeight="0.26708728" side_tool="true" weight="0.18763326" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.19137749" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.19978969" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.20189275" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2807571" />
-      <window_info anchor="right" x="0" y="0" width="434" height="889" id="Documentation" order="6" side_tool="true" weight="0.26226014" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.23449" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.18822293" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31385642" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.22442588" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.1903172" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.23539232" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32912722" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.2954925" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.24540901" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.24040067" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.2854758" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24939272" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32955465" />
+      <window_info anchor="right" id="Database" order="4" weight="0.21781376" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="right" x="0" y="0" width="434" height="889" id="Documentation" order="6" side_tool="true" weight="0.26226014" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +514,8 @@
     <MESSAGE value="扩展了用户模型，增加部分如登陆、重置等验证机制，以及基础发帖功能" />
     <MESSAGE value="修正了README" />
     <MESSAGE value="添加发布节点等的页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加发布节点等的页面" />
+    <MESSAGE value="增加基本收藏功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加基本收藏功能" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -602,372 +529,300 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/User/templates/Auth/user_all_replys.html">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/collection_books.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="324">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="371" lean-forward="true" selection-start-line="371" selection-end-line="371" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/User/templates/Auth/user_personal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/templates/Auth/user_all_discussions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tag/show_user_replys.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/views/generic/detail.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <caret line="91" column="24" lean-forward="true" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/management/commands/clear_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/management/commands/fake_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/migrations/0013_auto_20180525_1725.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tag/show_books.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="73" column="22" lean-forward="true" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/book_list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="828">
-            <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/right_navs/tag_cloud.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/post_discussion_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/post_reply_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="60" lean-forward="true" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/publishing_books.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="107" selection-start-line="20" selection-start-column="107" selection-end-line="20" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/templates/Auth/avatar_edit.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/add_auther.css" />
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/add_publishing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/right_nav.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/templates/Auth/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/templates/Auth/profile_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1134" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/add_tag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/add_auther.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/add_form.css">
+    <entry file="file://$PROJECT_DIR$/User/templates/Auth/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/add_node.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3924">
-          <caret line="218" selection-start-line="218" selection-end-line="218" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templatetags/content_tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tag/show_book_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="164" column="27" selection-start-line="164" selection-start-column="27" selection-end-line="164" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/book_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/User/templatetags/auth_tags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="-72">
+          <caret line="41" column="15" lean-forward="true" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/templates/Discussion/discussion_detail.html">
+    <entry file="file://$PROJECT_DIR$/User/templates/Auth/avatar_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
+        <state relative-caret-position="-216" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tag/show_carousel.html">
+    <entry file="file://$PROJECT_DIR$/User/templates/Auth/email/change_email.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tag/show_discussion_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+    <entry file="file://$PROJECT_DIR$/User/templates/Auth/email/password_reset_email.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/forms.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/hot_books.html">
+    <entry file="file://$PROJECT_DIR$/Pipfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="234">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/setting_switch.html">
+    <entry file="file://$PROJECT_DIR$/Pipfile.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2dfffaa6-40c9-452d-a1aa-22973730d74b/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://2dfffaa6-40c9-452d-a1aa-22973730d74b/schema/main/table/content_book" />
+    <entry file="das://2dfffaa6-40c9-452d-a1aa-22973730d74b/schema/main/table/django_session" />
+    <entry file="das://2dfffaa6-40c9-452d-a1aa-22973730d74b/schema/main/table/discussion_discussreply" />
+    <entry file="das://2dfffaa6-40c9-452d-a1aa-22973730d74b/schema/main/table/auth_group" />
+    <entry file="das://2dfffaa6-40c9-452d-a1aa-22973730d74b/schema/main/table/content_auther" />
+    <entry file="file://$PROJECT_DIR$/Discussion/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2736">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/right_navs/hot_books.html">
+    <entry file="file://$PROJECT_DIR$/Discussion/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state relative-caret-position="4">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/urls.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+        <state relative-caret-position="72">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/templates/Auth/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/tests/test_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SimpleDjango-jZwA7-jS/Lib/site-packages/django/contrib/auth/base_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/management/commands/clear_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/management/commands/fake_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Share/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/common_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/forms.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1008">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="254" column="15" lean-forward="true" selection-start-line="254" selection-start-column="15" selection-end-line="254" selection-end-column="15" />
+        <state relative-caret-position="-1512">
+          <caret line="159" column="68" lean-forward="true" selection-start-line="159" selection-start-column="68" selection-end-line="159" selection-end-column="68" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/templates/Discussion/collection_discussions.html">
+    <entry file="file://$PROJECT_DIR$/Content/templates/Content/add_auther.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/templatetags/content_tags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state>
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/index.html">
+    <entry file="file://$PROJECT_DIR$/Share/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="-1530">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/templatetags/discussion_tags.py">
+    <entry file="file://$PROJECT_DIR$/Share/settings_dev.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="180">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/right_navs/profile_card.html">
+    <entry file="file://$PROJECT_DIR$/Content/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        <state relative-caret-position="270">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/templates/Content/collection_books.html">
+    <entry file="file://$PROJECT_DIR$/templates/tag/show_book_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
+        <state relative-caret-position="-216" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/views.py">
+    <entry file="file://$PROJECT_DIR$/Content/tests/test_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="160" selection-start-line="160" selection-end-line="161" />
+        <state relative-caret-position="-810">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/urls.py">
+    <entry file="file://$PROJECT_DIR$/User/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="388">
+          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User/models.py">
+    <entry file="file://$PROJECT_DIR$/User/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
         </state>
       </provider>
     </entry>

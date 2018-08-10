@@ -2,7 +2,7 @@
 {% load content_tags %}
 
 {% block title %}
-    我收藏的书籍
+    收藏的书籍
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
         <li class="nav-item">
             {% url 'Content:collection_books' as collection_books_Url %}
             <a class="nav-link index_switch_link link_switch_active" href="{{ collection_books_url }}" name="switcher">
-                <span class="index_switch_text">我收藏夹中的书籍</span>
+                <span class="index_switch_text">收藏夹中的书籍</span>
             </a>
         </li>
     </ul>

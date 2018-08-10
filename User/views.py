@@ -16,6 +16,7 @@ class UserPersonalView(DetailView):
     context_object_name = 'user'
     template_name = 'Auth/user_personal.html'
 
+
 class UserAllDiscussion(ListView):
     model = Discuss
     context_object_name = 'discussions'
@@ -36,6 +37,7 @@ class UserAllDiscussion(ListView):
         context['user'] = user
         return context
 
+
 class UserAllReplys(ListView):
     model = DiscussReply
     context_object_name = 'replys'
@@ -55,6 +57,7 @@ class UserAllReplys(ListView):
         user = get_object_or_404(User, slug=slug)
         context['user'] = user
         return context
+
 
 def register(request):
     if request.method == 'POST':

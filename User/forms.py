@@ -109,7 +109,7 @@ class ProfileForm(forms.Form):
 
         now = datetime.datetime.now()
 
-        if birth.year > now.year or birth.year < now.year - 130:
+        if birth.year > now.year or birth.year < now.year - 100:
             raise forms.ValidationError('生日年份必需介于 %d~%d 之间' % (now.year - 100, now.year))
 
 

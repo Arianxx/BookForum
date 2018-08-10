@@ -83,7 +83,3 @@ def send_mail_thread(subject, template, recipient, **kwargs):
     thr = Thread(target=_send_mail, args=[subject, template, recipient, kwargs, ])
     thr.start()
     return thr
-
-
-def test():
-    send_mail_thread('Test', 'Auth/email/change_email.txt', ['ysnyyhs@163.com', ], token='a')

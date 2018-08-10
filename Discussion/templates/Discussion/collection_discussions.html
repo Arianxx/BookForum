@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block title %}
-    我收藏的话题
+    收藏的话题
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
         <li class="nav-item">
             {% url 'Discussion:collection_discussions' as collection_discussions_url %}
             <a class="nav-link index_switch_link link_switch_active" href="{{ collection_discussions_url }}">
-                <span class="index_switch_text">我收藏夹中的话题</span>
+                <span class="index_switch_text">收藏夹中的话题</span>
             </a>
         </li>
     </div>
