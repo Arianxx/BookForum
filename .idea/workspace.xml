@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18a89c78-a3bb-4bc1-a00f-4ab05186123a" name="Default" comment="增加基本收藏功能">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/templates/Auth/user_all_discussions.html" beforeDir="false" afterPath="$PROJECT_DIR$/User/templates/Auth/user_all_discussions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/templates/Auth/user_all_replys.html" beforeDir="false" afterPath="$PROJECT_DIR$/User/templates/Auth/user_all_replys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/templates/Auth/user_personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/User/templates/Auth/user_personal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/component/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/footer.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,14 +52,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="13" />
+          <entry key="html" value="56" />
           <entry key="py" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="8" />
+          <entry key="HTML" value="9" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Python" value="44" />
@@ -73,14 +69,14 @@
         <counts>
           <entry key="LICENSE" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="8" />
+          <entry key="html" value="9" />
           <entry key="md" value="1" />
           <entry key="py" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="13" />
+          <entry key="HTML" value="56" />
           <entry key="Python" value="19" />
         </counts>
       </usages-collector>
@@ -124,14 +120,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/User/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3978">
-              <caret line="221" selection-start-line="221" selection-end-line="221" />
+            <state relative-caret-position="576">
+              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/component/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="110" selection-start-line="8" selection-start-column="110" selection-end-line="8" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -179,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Discussion/static/Discussion/css/post_discussion.css" />
         <option value="$PROJECT_DIR$/templates/component/post_discussion_form.html" />
         <option value="$PROJECT_DIR$/Discussion/models.py" />
         <option value="$PROJECT_DIR$/Discussion/forms.py" />
@@ -230,6 +234,7 @@
         <option value="$PROJECT_DIR$/User/templates/Auth/user_all_discussions.html" />
         <option value="$PROJECT_DIR$/User/views.py" />
         <option value="$PROJECT_DIR$/User/templates/Auth/user_all_replys.html" />
+        <option value="$PROJECT_DIR$/templates/component/footer.html" />
       </list>
     </option>
   </component>
@@ -281,6 +286,12 @@
               <item name="Share" type="b2602c69:ProjectViewProjectNode" />
               <item name="Share" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Share" type="b2602c69:ProjectViewProjectNode" />
@@ -496,14 +507,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7312187" visible="true" weight="0.18336888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7312187" visible="true" weight="0.18336888" />
       <window_info x="732" y="401" width="268" height="278" id="Structure" order="1" sideWeight="0.2687813" side_tool="true" weight="0.1805668" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.19198665" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.18822293" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.28690228" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.17879418" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.22442588" />
@@ -513,7 +525,7 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32912722" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.2954925" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.16112266" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.20893972" />
       <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.24040067" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.2854758" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -610,9 +622,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Pipfile.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2dfffaa6-40c9-452d-a1aa-22973730d74b/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -911,11 +920,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/User/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3978">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
+        <state relative-caret-position="576">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/component/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="110" selection-start-line="8" selection-start-column="110" selection-end-line="8" selection-end-column="110" />
         </state>
       </provider>
     </entry>
