@@ -112,12 +112,10 @@ class Command(BaseCommand):
             user = random.choice(all_users)
             for _ in range(random.randrange(10)):
                 try:
-                    reply_to = random.choice(discuss.replys.all())
                     discuss_reply = DiscussReply(
                         body=fake.text() * 4,
                         discuss=discuss,
                         user=user,
-                        reply_to=random.choice(discuss.replys.all()),
                     )
                 except IndexError:
                     discuss_reply = DiscussReply(
@@ -125,7 +123,9 @@ class Command(BaseCommand):
                         discuss=discuss,
                         user=user,
                     )
+                reply_to_user = random.choice(User.objects.all())
                 discuss_reply.save()
+                discuss_reply.reply_to.set([reply_to_user])
                 print('Fake reply: ', discuss_reply)
 
             print('Fake the discussion: ', discuss)

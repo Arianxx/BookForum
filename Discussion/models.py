@@ -3,7 +3,6 @@ from django.utils import timezone
 
 from Content.models import Book
 from User.models import User
-from .exceptions import PointError
 
 
 # Create your models here.
@@ -48,3 +47,22 @@ class DiscussReply(models.Model):
 
     def __str__(self):
         return "DiscussReply(Discuss title='%s')" % self.discuss.title
+
+
+class Notification(models.Model):
+    """
+    储存通知。
+    绑定signal，当DiscussReply保存之后自动在此模型中存入相关信息
+    """
+    sender = models.ForeignKey(User, verbose_name='发送者', on_delete=models.CASCADE, related_name='sender_notifies')
+    receivers = models.ManyToManyField(User, verbose_name='接收者', related_name='receive_notifies')
+    instance = models.ForeignKey(DiscussReply, verbose_name='消息', on_delete=models.CASCADE, related_name='notifies')
+    create_time = models.DateField('创建日期', default=timezone.now, blank=True, null=True)
+    is_read = models.BooleanField('是否阅读', default=False)
+
+    class Meta:
+        verbose_name = '通知'
+        verbose_name_plural = '通知'
+
+    def __str__(self):
+        return "DiscussReply(Notification sender='%s')" % self.sender.username

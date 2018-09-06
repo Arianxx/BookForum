@@ -45,6 +45,7 @@
 
                 {% if user.is_authenticated %}
                     {% url 'User:profile' as profile_url %}
+                    {% url 'User:user' slug=user.slug as user_url %}
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                             <img class="nav-icon nav-text" src="{% static 'Content/img/icon/profile.png' %}"
@@ -52,6 +53,7 @@
                             <span class="nav-user nav-text">用户面板</span>
                         </a>
                         <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ user_url }}">个人页面</a>
                             <a class="dropdown-item" href="{{ profile_url }}">个人设置</a>
                             {% if user.is_staff %}
                                 {% url 'admin:index' as admin_url %}
