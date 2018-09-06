@@ -2,7 +2,7 @@
     <div class="user_reply">
         <div class="user_reply_info">
             <span class="user_reply_discussion">
-                <a class="reply_info_link" href="{% url 'Discussion:discussion_detail' pk=reply.discuss.pk %}">
+                <a class="reply_info_link" href="{% url 'Discussion:discussion_detail' pk=reply.discuss.pk %}#{{ reply.id }}">
                     所在讨论：{{ reply.discuss.title }} |
                 </a>
             </span>
