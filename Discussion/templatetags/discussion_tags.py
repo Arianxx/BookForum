@@ -1,5 +1,10 @@
+import re
+
 from django import template
 from django.db.models.aggregates import Count
+from django.utils.safestring import mark_safe
+from django.utils.html import escape
+from django.shortcuts import reverse
 
 from ..models import Discuss
 
@@ -55,6 +60,14 @@ def get_hot_discussions(num=5):
     discussions = Discuss.objects.annotate(reply_num=Count('replys')).all()
     discussions = sorted(discussions, key=lambda x: x.reply_num, reverse=True)
     return discussions[:num]
+
+
+@register.simple_tag()
+def render_reply(reply):
+    # 替换@的用户名为链接
+    reply = escape(reply)
+    return mark_safe(re.sub(r'@\S*', lambda match: '<a href="' + reverse('User:user', kwargs={
+        "slug": match.group()[1:]}) + '">@' + match.group()[1:] + '</a>', reply))
 
 
 @register.inclusion_tag('tag/show_discussions.html')

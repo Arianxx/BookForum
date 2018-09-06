@@ -8,4 +8,3 @@ class DiscussionForm(forms.Form):
 
 class ReplyForm(forms.Form):
     body = forms.CharField(label='回复正文', max_length=1280)
-    reply_to_id = forms.IntegerField(required=False)

@@ -1,3 +1,5 @@
+import re
+
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -8,6 +10,7 @@ from django.urls import reverse
 from django.views import generic
 
 from Content.models import Book
+from User.models import User
 from .forms import DiscussionForm, ReplyForm
 from .models import Discuss, DiscussReply
 
@@ -100,24 +103,24 @@ def post_discussion(request, book_slug=''):
 
 @login_required
 def post_reply(request, pk=''):
-    #TODO：能够回复某个特别的用户
+    # TODO：能够回复某个特别的用户
     if request.method == 'POST':
         form = ReplyForm(request.POST)
         if form.is_valid():
             discussion = get_object_or_404(Discuss, id=int(pk))
             data = form.cleaned_data
+
+            mentions = map(lambda x: x.split('@'), re.findall(r'@\S*', data['body'], re.M))
+            mention_users = map(lambda username: User.objects.filter(username=username), mentions)
+            mention_users = list(map(lambda x: x[0], filter(lambda x: len(x), mention_users)))
+
             reply = DiscussReply(
                 body=data['body'],
                 discuss=discussion,
                 user=request.user,
             )
-
-            if data['reply_to_id']:
-                reply_to = get_object_or_404(DiscussReply, id=int(data['reply_to_id']))
-                if reply_to.discuss == discussion:
-                    # 指向的回复所属讨论与本回复所属讨论相同的情况下才储存
-                    reply.reply_to = reply_to
-
+            reply.save()
+            reply.reply_to.set(mention_users)
             reply.save()
 
             messages.success(request, '你成功添加了一条回复')

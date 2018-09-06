@@ -11,11 +11,11 @@
         {% csrf_token %}
 
         <div class="form-group">
-            <label for="body">
+            <label for="reply_box">
                 回复正文
             </label>
 
-            <textarea name="body" id="body" class="form-control" rows="5">
+            <textarea name="body" id="reply_box" class="form-control" rows="5">
                 {% if form.body %}
                     {{ form.body }}
                 {% endif %}
@@ -23,7 +23,7 @@
         </div>
 
         <div class="submit pb-5" style="width:100%">
-            <input type="submit" class="form-control btn btn-info col col-5 float-right mt-1" value="提交"/>
+            <input type="submit" class="form-control btn btn-info col col-5 float-right mt-1 submit_reply" value="提交"/>
         </div>
     </form>
 </div>

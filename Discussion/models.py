@@ -40,7 +40,7 @@ class DiscussReply(models.Model):
     discuss = models.ForeignKey("Discuss", on_delete=models.CASCADE, related_name="replys")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='replys')
 
-    reply_to = models.ForeignKey('DiscussReply', on_delete=models.CASCADE, related_name='replys', null=True)
+    reply_to = models.ManyToManyField(User, related_name='replys_from')
 
     class Meta:
         verbose_name = '讨论回复'
@@ -48,9 +48,3 @@ class DiscussReply(models.Model):
 
     def __str__(self):
         return "DiscussReply(Discuss title='%s')" % self.discuss.title
-
-    def save(self, *args, **kwargs):
-        if self.reply_to and (self.discuss != self.reply_to.discuss):
-            raise PointError("Can't point another discussion's reply!")
-
-        return super().save(*args, **kwargs)

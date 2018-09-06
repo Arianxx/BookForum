@@ -2,7 +2,7 @@
     <div class="user_reply">
         <div class="user_reply_info">
             <span class="user_reply_discussion">
-                <a class="reply_info_link" href="{% url 'Discussion:discussion_detail' pk=reply.discuss.pk  %}">
+                <a class="reply_info_link" href="{% url 'Discussion:discussion_detail' pk=reply.discuss.pk %}">
                     所在讨论：{{ reply.discuss.title }} |
                 </a>
             </span>
@@ -16,14 +16,6 @@
             <span class="user_reply_time">
                 发布日期：{{ reply.pub_date }} |
             </span>
-
-            {% if reply.reply_to %}
-            <span class="user_reply_to">
-                <a class="reply_info_link" href="{% url 'User:user' slug=reply.reply_to.user.username %}">
-                    回复：s{{ reply.reply_to.user.username }}
-                </a>
-            </span>
-            {% endif %}
         </div>
 
         <div class="user_reply_body">

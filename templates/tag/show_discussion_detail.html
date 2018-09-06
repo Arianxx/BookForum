@@ -80,19 +80,12 @@
         </div>
 
         <div class="row reply_body lead px-5 py-2">
-            {% if reply.reply_to %}
-                <span class="reply_to">
-                    回复 <a class="reply_to_url" href="#{{ reply.reply_to.id }}">
-                    {{ reply.reply_to.user.username }}
-                </a>：
-                </span>
-            {% endif %}
-            {{ reply.body }}
+            {% render_reply reply.body %}
         </div>
 
         <div class="row reply_operations px-4 pb-3">
             <div class="new_reply ml-auto col col-1 mr-5">
-                <a class="new_reply_url btn btn-outline-info" href="#reply_form">
+                <a class="new_reply_url btn btn-outline-info reply_btn" data-user="{{ reply.user.username }}" href="#reply_form">
                     回复
                 </a>
             </div>
