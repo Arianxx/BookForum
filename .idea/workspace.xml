@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18a89c78-a3bb-4bc1-a00f-4ab05186123a" name="Default" comment="增加基本收藏功能">
-      <change beforePath="$PROJECT_DIR$/Content/static/Content/css/right_nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/Content/static/Content/css/right_nav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Discussion/templates/Discussion/notification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Discussion/signal.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/signal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/templatetags/discussion_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/templatetags/discussion_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/component/right_navs/profile_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/right_navs/profile_card.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,20 +58,20 @@
         <counts>
           <entry key="Django Console" value="296" />
           <entry key="css" value="297" />
-          <entry key="html" value="685" />
+          <entry key="html" value="734" />
           <entry key="js" value="602" />
-          <entry key="py" value="3603" />
+          <entry key="py" value="4400" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="32" />
+          <entry key="HTML" value="35" />
           <entry key="JavaScript" value="3" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="72" />
+          <entry key="Python" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -76,110 +79,38 @@
           <entry key="LICENSE" value="1" />
           <entry key="css" value="2" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="32" />
+          <entry key="html" value="35" />
           <entry key="js" value="3" />
           <entry key="md" value="1" />
-          <entry key="py" value="72" />
+          <entry key="py" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="297" />
-          <entry key="HTML" value="685" />
+          <entry key="HTML" value="734" />
           <entry key="JavaScript" value="602" />
-          <entry key="Python" value="3899" />
+          <entry key="Python" value="4696" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Discussion/signal.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
-                  <folding>
-                    <marker date="1536247989663" expanded="true" signature="245:250" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/component/right_navs/profile_card.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="17" selection-start-column="17" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/component/navbar.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Content/static/Content/css/right_nav.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="558">
-                  <caret line="105" column="12" lean-forward="true" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Discussion/templatetags/discussion_tags.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="594">
-                  <caret line="78" selection-start-line="78" selection-end-line="78" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                    <marker date="1536248497041" expanded="true" signature="1697:1702" ph="..." />
-                    <marker date="1536248497041" expanded="true" signature="1697:1824" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Discussion/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
-                  <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Discussion/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-                  <folding>
-                    <marker date="1536223204132" expanded="true" signature="1527:1532" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Discussion/signal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+                <marker date="1536251421441" expanded="true" signature="265:266" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -221,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/User/static/Auth/css/personal_page.css" />
         <option value="$PROJECT_DIR$/Discussion/static/Discussion/css/show_user_replys.css" />
         <option value="$PROJECT_DIR$/User/static/Auth/css/show_user_replys.css" />
         <option value="$PROJECT_DIR$/User/urls.py" />
@@ -243,7 +173,6 @@
         <option value="$PROJECT_DIR$/User/templatetags/auth_tags.py" />
         <option value="$PROJECT_DIR$/Content/views.py" />
         <option value="$PROJECT_DIR$/Content/urls.py" />
-        <option value="$PROJECT_DIR$/Discussion/urls.py" />
         <option value="$PROJECT_DIR$/Content/templates/Content/collection_books.html" />
         <option value="$PROJECT_DIR$/Discussion/templates/Discussion/collection_discussions.html" />
         <option value="$PROJECT_DIR$/manage.py" />
@@ -261,17 +190,19 @@
         <option value="$PROJECT_DIR$/templates/component/post_reply_form.html" />
         <option value="$PROJECT_DIR$/Content/static/Content/js/app.js" />
         <option value="$PROJECT_DIR$/Discussion/forms.py" />
-        <option value="$PROJECT_DIR$/Discussion/views.py" />
         <option value="$PROJECT_DIR$/templates/tag/show_discussion_detail.html" />
         <option value="$PROJECT_DIR$/templates/tag/show_user_replys.html" />
         <option value="$PROJECT_DIR$/Content/management/commands/fake_data.py" />
         <option value="$PROJECT_DIR$/Discussion/apps.py" />
-        <option value="$PROJECT_DIR$/Discussion/models.py" />
         <option value="$PROJECT_DIR$/templates/component/navbar.html" />
-        <option value="$PROJECT_DIR$/Discussion/signal.py" />
         <option value="$PROJECT_DIR$/Discussion/templatetags/discussion_tags.py" />
-        <option value="$PROJECT_DIR$/templates/component/right_navs/profile_card.html" />
         <option value="$PROJECT_DIR$/Content/static/Content/css/right_nav.css" />
+        <option value="$PROJECT_DIR$/Discussion/models.py" />
+        <option value="$PROJECT_DIR$/Discussion/urls.py" />
+        <option value="$PROJECT_DIR$/templates/component/right_navs/profile_card.html" />
+        <option value="$PROJECT_DIR$/Discussion/templates/Discussion/notification.html" />
+        <option value="$PROJECT_DIR$/Discussion/views.py" />
+        <option value="$PROJECT_DIR$/Discussion/signal.py" />
       </list>
     </option>
   </component>
@@ -353,6 +284,19 @@
             <path>
               <item name="Share" type="b2602c69:ProjectViewProjectNode" />
               <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Share" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Share" type="462c0819:PsiDirectoryNode" />
+              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="Discussion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -593,28 +537,28 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7312187" visible="true" weight="0.18550107" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7312187" visible="true" weight="0.18550107" />
       <window_info x="732" y="401" width="268" height="278" id="Structure" order="1" sideWeight="0.2687813" side_tool="true" weight="0.1805668" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.19198665" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.18822293" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.16424116" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.18191268" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.22442588" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" weight="0.13617463" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.16216215" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.16839917" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32912722" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.16424116" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.16632016" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.16632016" />
       <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.24040067" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.2854758" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24939272" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2489339" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.32955465" />
       <window_info anchor="right" id="Database" order="4" weight="0.21781376" />
       <window_info anchor="right" id="SciView" order="5" />
@@ -706,20 +650,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/User/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -826,16 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/component/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -850,13 +770,6 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/templates/Discussion/discussion_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -915,13 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -994,53 +900,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User/views.py">
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/navbar.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/right_nav.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="124" column="39" lean-forward="true" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="558">
+          <caret line="105" column="12" lean-forward="true" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/views.py">
+    <entry file="file://$PROJECT_DIR$/User/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
-          <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
+          <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/models.py">
+    <entry file="file://$PROJECT_DIR$/User/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        <state relative-caret-position="270">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
-            <marker date="1536223204132" expanded="true" signature="1527:1532" ph="..." />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/navbar.css">
+    <entry file="file://$PROJECT_DIR$/templates/component/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/templates/Discussion/discussion_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/templates/Discussion/notification.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/signal.py">
+    <entry file="file://$PROJECT_DIR$/Discussion/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+        <state relative-caret-position="522">
+          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
-            <marker date="1536247989663" expanded="true" signature="245:250" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1536251316971" expanded="true" signature="1510:1894" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/component/right_navs/profile_card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Discussion/templatetags/discussion_tags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="450">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <marker date="1536248497041" expanded="true" signature="1697:1702" ph="..." />
@@ -1049,24 +987,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/right_navs/profile_card.html">
+    <entry file="file://$PROJECT_DIR$/Discussion/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        <state relative-caret-position="180">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/navbar.html">
+    <entry file="file://$PROJECT_DIR$/Discussion/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        <state relative-caret-position="378">
+          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding>
+            <marker date="1536250451058" expanded="true" signature="1511:1516" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/static/Content/css/right_nav.css">
+    <entry file="file://$PROJECT_DIR$/Discussion/signal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="105" column="12" lean-forward="true" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
+        <state relative-caret-position="144">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+            <marker date="1536251421441" expanded="true" signature="265:266" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

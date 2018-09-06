@@ -6,13 +6,14 @@
     {% if user.is_authenticated %}
         <div class="container">
             <div class="row">
-                <a class="right_nav_user_link col" href="{% url 'User:user' slug=user.slug %}" >
+                <a class="right_nav_user_link col" href="{% url 'User:user' slug=user.slug %}">
                     <img class="right_nav_user_avatar" src="{{ user.avatar.url }}"/>
                     <span class="right_nav_user_name align-content-center">{{ user.username }}</span>
                 </a>
                 {% unread_notifies_num user as unread_num %}
-                <a class="right_nav_unread_notify {% if unread_num == 0 %}no-notify{% else %}has-notify{% endif %}" href="#">
-                    <img class="right_nav_unread_icon" src="{% static 'Content/img/icon/notify.png' %}" />
+                <a class="right_nav_unread_notify {% if unread_num == 0 %}no-notify{% else %}has-notify{% endif %}"
+                   href="{% url 'Discussion:notifications' %}">
+                    <img class="right_nav_unread_icon" src="{% static 'Content/img/icon/notify.png' %}"/>
                     <span class="unread_num">{{ unread_num }}</span>
                 </a>
             </div>

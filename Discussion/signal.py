@@ -6,7 +6,7 @@ from Discussion.models import DiscussReply, Notification
 
 @receiver(post_save, sender=DiscussReply)
 def send_notification(sender, instance, created, **kwargs):
-    # todo: 发送通知
+    # todo: 回复自己不通知
     if created:
         notify = Notification(sender=instance.user, instance=instance)
         notify.save()

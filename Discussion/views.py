@@ -12,7 +12,7 @@ from django.views import generic
 from Content.models import Book
 from User.models import User
 from .forms import DiscussionForm, ReplyForm
-from .models import Discuss, DiscussReply
+from .models import Discuss, DiscussReply, Notification
 
 
 # Create your views here.
@@ -44,6 +44,19 @@ class DiscussionView(generic.DetailView):
         context['form'] = form
         self.request.session['ReplyForm'] = None
         return context
+
+
+class NotificationView(generic.ListView):
+    # todo: 填充模板内容
+    model = User
+    context_object_name = 'Notifications'
+    template_name = 'Discussion/notification.html'
+    paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
+    paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
+
+    def get_queryset(self):
+        query_set = super().get_queryset()
+        return query_set.get(id=self.request.user.id).receive_notifies.all()
 
 
 def all_hot_dicussions(request):
@@ -103,7 +116,6 @@ def post_discussion(request, book_slug=''):
 
 @login_required
 def post_reply(request, pk=''):
-    # TODO：能够回复某个特别的用户
     if request.method == 'POST':
         form = ReplyForm(request.POST)
         if form.is_valid():

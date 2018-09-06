@@ -32,7 +32,6 @@ class DiscussReply(models.Model):
     讨论的回复。
     每个评论可以拥有一个reply_to字段，表明它是否是回复另一个评论的评论。
     """
-    # TODO：消息提醒
     body = models.TextField('回复正文', max_length=1280)
     pub_date = models.DateField(default=timezone.now, blank=True, null=True)
 
