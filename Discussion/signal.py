@@ -10,6 +10,6 @@ def send_notification(sender, instance, created, **kwargs):
     if created:
         notify = Notification(sender=instance.user, instance=instance)
         notify.save()
-        notify.receivers.set((instance.reply_to if len(instance.reply_to) else []) + [instance.user])
+        notify.receivers.set((instance.reply_to if len(instance.reply_to.all()) else []) + [instance.user])
 
     return True

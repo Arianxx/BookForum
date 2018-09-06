@@ -69,6 +69,14 @@ def render_reply(reply):
     return mark_safe(re.sub(r'@\S*', lambda match: '<a href="' + reverse('User:user', kwargs={
         "slug": match.group()[1:]}) + '">@' + match.group()[1:] + '</a>', reply))
 
+@register.simple_tag()
+def unread_notifies_num(user):
+    """
+    得到user未读的通知数目
+    :param user: User实例
+    """
+    return len(user.receive_notifies.filter(is_read=False).all())
+
 
 @register.inclusion_tag('tag/show_discussions.html')
 def show_discussions(discussions_list):
