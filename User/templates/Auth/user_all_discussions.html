@@ -10,14 +10,14 @@
 {% endblock %}
 
 {% block title %}
-    用户 {{ user.username }} 的所有讨论
+    用户 {{ other_user.username }} 的所有讨论
 {% endblock %}
 
 {% block content %}
     <ul class="nav index_switch text-center">
     <li class="nav-item">
-        <a class="nav-link index_switch_link link_switch_active" href="{% url 'User:user_discussions' slug=user.slug %}">
-            用户 {{ user.username }} 发起的所有讨论
+        <a class="nav-link index_switch_link link_switch_active" href="{% url 'User:user_discussions' slug=other_user.slug %}">
+            用户 {{ other_user.username }} 发起的所有讨论
         </a>
     </li>
     </ul>
@@ -31,7 +31,7 @@
 
 {% block right-nav %}
     <div class="per_right_nav">
-        <a class="btn btn-outline-info" href="{% url 'User:user' slug=user.slug %}" style="width:100%">回到用户页</a>
+        <a class="btn btn-outline-info" href="{% url 'User:user' slug=other_user.slug %}" style="width:100%">回到用户页</a>
     </div>
     {{ block.super }}
 {% endblock %}

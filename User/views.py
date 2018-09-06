@@ -13,7 +13,7 @@ from .models import User
 
 class UserPersonalView(DetailView):
     model = User
-    context_object_name = 'user'
+    context_object_name = 'other_user'
     template_name = 'Auth/user_personal.html'
 
 
@@ -34,7 +34,7 @@ class UserAllDiscussion(ListView):
         context = super().get_context_data(*args, **kwargs)
         slug = self.kwargs.get('slug')
         user = get_object_or_404(User, slug=slug)
-        context['user'] = user
+        context['other_user'] = user
         return context
 
 
@@ -55,7 +55,7 @@ class UserAllReplys(ListView):
         context = super().get_context_data(*args, **kwargs)
         slug = self.kwargs.get('slug')
         user = get_object_or_404(User, slug=slug)
-        context['user'] = user
+        context['other_user'] = user
         return context
 
 

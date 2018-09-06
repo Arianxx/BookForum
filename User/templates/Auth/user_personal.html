@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block title %}
-    用户{{ user.username }}
+    用户{{ other_user.username }}
 {% endblock %}
 
 
@@ -19,20 +19,20 @@
     <div class="user_page jumbotron pt-4 pb-3">
         <div class="row">
             <div class="row justify-content-center usre_page_avatar col-12 col-md-4 pl-5">
-                <img class="user_page_avatar_img" src="{{ user.avatar.url }}" />
+                <img class="user_page_avatar_img" src="{{ other_user.avatar.url }}" />
             </div>
 
             <div class="user_page_info col-12 col-md-8 mt-3 mt-md-0">
 
                 <div class="row  justify-content-center">
-                    用户名：<p class="user_page_username mr-2"> {{ user.username }} </p>
+                    用户名：<p class="user_page_username mr-2"> {{ other_user.username }} </p>
                 </div>
 
-                {% if user.link %}
+                {% if other_user.link %}
                     <div class="row justify-content-center">
                         个人网址：<p class="user_page_personal_link ml-2">
-                            <a class="user_page_link" href="{{ user.link }}">
-                                {{ user.link }}
+                            <a class="user_page_link" href="{{ other_user.link }}">
+                                {{ other_user.link }}
                             </a>
                         </p>
                     </div>
@@ -40,22 +40,22 @@
 
                 <div class="row justify-content-center">
                     邮箱：<p class="user_page_email">
-                    {{ user.email }}
+                    {{ other_user.email }}
                 </p>
                 </div>
 
-                {% if user.birth %}
+                {% if other_user.birth %}
                     <div class="row justify-content-center">
                         生日：<p class="user_page_birthday">
-                        {{ user.birth }}
+                        {{ other_user.birth }}
                              </p>
                     </div>
                 {% endif %}
 
-                {% if user.last_login %}
+                {% if other_user.last_login %}
                 <div class="row justify-content-center">
                     最后一次登录：<p class="user_page_last_login">
-                    {{ user.last_login }}
+                    {{ other_user.last_login }}
                 </p>
                 </div>
                 {% endif %}
@@ -64,8 +64,8 @@
             <div class="row ml-4 mt-0 mt-md-2 pl-2 pr-4 pr-md-0">
                 <p class="laed user_page_about">
                 关于：
-                {% if user.about %}
-                    {{ user.about }}
+                {% if other_user.about %}
+                    {{ other_user.about }}
                 {% else %}
                     这个用户有点懒，没有留下任何东西
                 {% endif %}
@@ -76,16 +76,16 @@
 
     <ul class="nav index_switch text-center" style="margin-top:-25px !important">
         <li class="nav-item">
-            <a class="nav-link index_switch_link link_switch_active" href="{% url 'User:user' slug=user.slug %}">
-                用户 {{ user.username }} 发起的讨论
+            <a class="nav-link index_switch_link link_switch_active" href="{% url 'User:user' slug=other_user.slug %}">
+                用户 {{ other_user.username }} 发起的讨论
             </a>
         </li>
     </ul>
-    {% get_omit_discussions user as discussions %}
+    {% get_omit_discussions other_user as discussions %}
     {% if discussions %}
         {% show_discussions discussions %}
         <div class="more_discussions row justify-content-center my-3">
-            <a class="btn btn-outline-info col col-4" href="{% url 'User:user_discussions' slug=user.slug %}">查看更多</a>
+            <a class="btn btn-outline-info col col-4" href="{% url 'User:user_discussions' slug=other_user.slug %}">查看更多</a>
         </div>
     {% else %}
         <div class="row justify-content-center lead">
@@ -96,17 +96,17 @@
 
     <ul class="nav index_switch text-center" style="margin-top: 0 !important">
         <li class="nav-item">
-            <a class="nav-link index_switch_link link_switch_active" href="{% url 'User:user' slug=user.slug %}" >
-                用户 {{ user.username }} 的回复
+            <a class="nav-link index_switch_link link_switch_active" href="{% url 'User:user' slug=other_user.slug %}" >
+                用户 {{ other_user.username }} 的回复
             </a>
         </li>
     </ul>
-    {% get_omit_replys user as replys %}
+    {% get_omit_replys other_user as replys %}
     {% if replys %}
         {% show_user_replys replys %}
 
         <div class="more_replys row justify-content-center mt-3 mb-0 mb-md-3">
-            <a class="btn btn-outline-info col col-4" href="{% url 'User:user_replys' slug=user.slug %}">查看更多</a>
+            <a class="btn btn-outline-info col col-4" href="{% url 'User:user_replys' slug=other_user.slug %}">查看更多</a>
         </div>
     {% else %}
         <div class="row justify-content-center lead mt-3 mb-0 mb-md-3">
