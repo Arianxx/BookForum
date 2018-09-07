@@ -5,7 +5,7 @@ from Discussion.models import DiscussReply, Notification
 
 def send_notification(sender, instance, created, **kwargs):
     if created:
-        if len(instance.reply_to):
+        if len(instance.reply_to.all()):
             notify = Notification(sender=instance.user, instance=instance)
             notify.save()
             receivers = set(instance.reply_to if len(instance.reply_to.all()) else [])
