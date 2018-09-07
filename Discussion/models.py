@@ -56,12 +56,20 @@ class Notification(models.Model):
     sender = models.ForeignKey(User, verbose_name='发送者', on_delete=models.CASCADE, related_name='sender_notifies')
     receivers = models.ManyToManyField(User, verbose_name='接收者', related_name='receive_notifies')
     instance = models.ForeignKey(DiscussReply, verbose_name='消息', on_delete=models.CASCADE, related_name='notifies')
-    create_time = models.DateField('创建日期', default=timezone.now, blank=True, null=True)
+    create_time = models.DateTimeField('创建日期', default=timezone.now, blank=True, null=True)
     is_read = models.BooleanField('是否阅读', default=False)
+    # 通知分@和回复
+    is_reply = models.BooleanField('是否是回复', default=False)
 
     class Meta:
         verbose_name = '通知'
         verbose_name_plural = '通知'
+        ordering = ('-create_time', )
 
     def __str__(self):
         return "DiscussReply(Notification sender='%s')" % self.sender.username
+
+    def mark_to_read(self):
+        if not self.is_read:
+            self.is_read = True
+            self.save()

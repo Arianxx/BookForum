@@ -1,0 +1,32 @@
+.notify {
+    background-color: white;
+    border-top: 1px solid lightgrey;
+    padding: 30px;
+    width: 100%;
+}
+
+.notify-username,.notify-title {
+    color: #6c757d;
+    font-size: large;
+    border-bottom: grey solid 1px;
+}
+
+.notify-body {
+    color: #6c757d;
+    font-size: large;
+}
+
+.notify-box {
+    margin-bottom: 20px;
+}
+
+.notify-time {
+    float: right;
+    margin-top: -20px;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.unread {
+    color: dodgerblue;
+}

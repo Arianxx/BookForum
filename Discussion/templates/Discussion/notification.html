@@ -1,0 +1,42 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+{% load content_tags %}
+{% load discussion_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Discussion/css/notification.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    Notifications
+{% endblock %}
+
+{% block content %}
+    <ul class="nav index_switch text-center">
+        <li class="nav-item">
+            {% url 'Discussion:notifications' as now_url %}
+            <a class="nav-link index_switch_link {% if request.path == now_url %}link_switch_active{% endif %}"
+               href="{{ now_url }}" name="switcher">
+                <span class="index_switch_text">{{ user.username }} 的最新通知</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="notify-box">
+        {% for notify in notifications %}
+            <div class="notify">
+                <div class="notify-time {% if notify.is_read %}read{% else %}unread{% endif %}">{{ notify.create_time }}</div>
+                <a class="notify-username"
+                   href="{% url "User:user" slug=notify.sender.username %}">{{ notify.sender.username }}</a> 在主题
+                <a class="notify-title"
+                   href="{% url "Discussion:discussion_detail" pk=notify.instance.discuss.id %}">{{ notify.instance.discuss.title|truncatechars:"50" }}</a>
+                {% if notify.is_reply %}回复{% else %}提及{% endif %}了你：
+                <a class="notify-body"
+                   href="{% url "Discussion:discussion_detail" pk=notify.instance.discuss.id %}#{{ notify.instance.id }}">{{ notify.instance.body|truncatechars:"100" }}</a>
+            </div>
+        {% endfor %}
+
+        {% paginate paginator page_obj %}
+    </div>
+{% endblock %}

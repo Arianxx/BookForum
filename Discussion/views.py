@@ -47,16 +47,32 @@ class DiscussionView(generic.DetailView):
 
 
 class NotificationView(generic.ListView):
-    # todo: 填充模板内容
     model = User
     context_object_name = 'Notifications'
     template_name = 'Discussion/notification.html'
-    paginate_by = getattr(settings, 'PER_PAGE_SHOW', 20)
+    paginate_by = getattr(settings, 'PER_PAGE_SHOW', 10)
     paginate_orphans = getattr(settings, 'ORPHANS_PAGE_SHOW', 5)
 
     def get_queryset(self):
         query_set = super().get_queryset()
         return query_set.get(id=self.request.user.id).receive_notifies.all()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        self.request.context = context
+        context['notifications'] = list(filter(lambda x: not x.is_read, context['Notifications']))
+        # todo: bug： 模板渲染出都为read
+        context['notifications'].extend(list(filter(lambda x: x.is_read, context['Notifications'])))
+        return context
+
+    def get(self, *args, **kwargs):
+        response = super().get(self.request, *args, **kwargs)
+        # todo: 渲染前标注为了完成
+        self.mark_notify_to_read(self.request.context['Notifications'])
+        return response
+
+    def mark_notify_to_read(self, notifies):
+        list(map(lambda notify: notify.mark_to_read(), notifies))
 
 
 def all_hot_dicussions(request):
@@ -122,8 +138,9 @@ def post_reply(request, pk=''):
             discussion = get_object_or_404(Discuss, id=int(pk))
             data = form.cleaned_data
 
-            mentions = map(lambda x: x.split('@'), re.findall(r'@\S*', data['body'], re.M))
-            mention_users = map(lambda username: User.objects.filter(username=username), mentions)
+            # todo: 独立出来，为帖子添加通知
+            mentions = map(lambda x: x.split('@')[1], re.findall(r'@\S*', data['body'], re.M))
+            mention_users = map(lambda username: User.objects.filter(username=username).all(), mentions)
             mention_users = list(map(lambda x: x[0], filter(lambda x: len(x), mention_users)))
 
             reply = DiscussReply(

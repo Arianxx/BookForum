@@ -14,6 +14,7 @@ from User.models import User
 class Command(BaseCommand):
 
     def handle(self, *arg, **kwargs):
+        # todo: 未通知添加fake data
         # fake = Faker("zh_CN")
         fake = Faker()
         try:

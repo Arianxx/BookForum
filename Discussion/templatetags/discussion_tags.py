@@ -5,6 +5,7 @@ from django.db.models.aggregates import Count
 from django.utils.safestring import mark_safe
 from django.utils.html import escape
 from django.shortcuts import reverse
+from django.urls.exceptions import NoReverseMatch
 
 from ..models import Discuss
 
@@ -62,12 +63,21 @@ def get_hot_discussions(num=5):
     return discussions[:num]
 
 
+def sub_match_reply(match):
+    username = match.group()[1:]
+    try:
+        url = reverse("User:user", kwargs={"slug": username})
+    except NoReverseMatch:
+        url = username
+    return '<a href="' + url + '">@' + username + '</a>'
+
+
 @register.simple_tag()
 def render_reply(reply):
     # 替换@的用户名为链接
     reply = escape(reply)
-    return mark_safe(re.sub(r'@\S*', lambda match: '<a href="' + reverse('User:user', kwargs={
-        "slug": match.group()[1:]}) + '">@' + match.group()[1:] + '</a>', reply))
+    return mark_safe(re.sub(r'@\S*', sub_match_reply, reply))
+
 
 @register.simple_tag()
 def unread_notifies_num(user):
