@@ -1,4 +1,5 @@
 import re
+from copy import copy
 
 from django.conf import settings
 from django.contrib import messages
@@ -59,20 +60,20 @@ class NotificationView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        self.request.context = context
+        self.request.unread = []
         context['notifications'] = list(filter(lambda x: not x.is_read, context['Notifications']))
-        # todo: bug： 模板渲染出都为read
+        self.request.unread.extend(context['notifications'])
         context['notifications'].extend(list(filter(lambda x: x.is_read, context['Notifications'])))
         return context
 
     def get(self, *args, **kwargs):
         response = super().get(self.request, *args, **kwargs)
-        # todo: 渲染前标注为了完成
-        self.mark_notify_to_read(self.request.context['Notifications'])
+        self.mark_notify_to_read(self.request.unread)
         return response
 
     def mark_notify_to_read(self, notifies):
-        list(map(lambda notify: notify.mark_to_read(), notifies))
+        # 为了不影响渲染，使用copy
+        list(map(lambda notify: copy(notify).mark_to_read(), notifies))
 
 
 def all_hot_dicussions(request):
