@@ -1,10 +1,10 @@
-# ShareForum
+# BookForum
 ![Badges](https://img.shields.io/badge/Powerd%20By-Django-blue.svg)
 ![Badges](https://img.shields.io/github/license/mashape/apistatus.svg)
-![Badges](https://img.shields.io/twitter/url/https/github.com/Arianxx/ShareForum.svg?style=social
+![Badges](https://img.shields.io/twitter/url/https/github.com/Arianxx/BookForum.svg?style=social
 )
 
->Notice: ShareForum has not been completely developed yet.
+>Notice: BookForum has not been completely developed yet.
 
 ## What's this?
 This is a forum system powered by Django and Bootstrap to share your ideas of some interesting books. All of the forum's posts are based the book node though, it can also have many other topics by extending the book node.
@@ -22,7 +22,7 @@ This is a forum system powered by Django and Bootstrap to share your ideas of so
     + Add node, tag.
     + Notification.
 
-## Preview ShareForum
+## Preview BookForum
 ![](http://arian-blogs.oss-cn-beijing.aliyuncs.com/18-9-8/68408290.jpg)
 
 ## How to use?
@@ -40,7 +40,7 @@ This is a forum system powered by Django and Bootstrap to share your ideas of so
     
 3. Put the sensitive values in your environment variables according to the `settings_dev.py` , which should include something secret varibles that are needed to run the forum.
  
-    You can alse use another way: Create a new file named `.env` in the `Share` folder, then write some key-value pairs in it. ShareForum will load them as environment varibles when the programming is started.
+    You can alse use another way: Create a new file named `.env` in the `Share` folder, then write some key-value pairs in it. BookForum will load them as environment varibles when the programming is started.
 
 4. Start up:
     ```bash
