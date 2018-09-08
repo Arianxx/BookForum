@@ -30,10 +30,15 @@
                 <a class="notify-username"
                    href="{% url "User:user" slug=notify.sender.username %}">{{ notify.sender.username }}</a> 在主题
                 <a class="notify-title"
-                   href="{% url "Discussion:discussion_detail" pk=notify.instance.discuss.id %}">{{ notify.instance.discuss.title|truncatechars:"50" }}</a>
+                   href="{% url "Discussion:discussion_detail" pk=notify.discuss.id %}">{{ notify.discuss.title|truncatechars:"50" }}</a>
                 {% if notify.is_reply %}回复{% else %}提及{% endif %}了你：
-                <a class="notify-body"
-                   href="{% url "Discussion:discussion_detail" pk=notify.instance.discuss.id %}#{{ notify.instance.id }}">{{ notify.instance.body|truncatechars:"100" }}</a>
+                {% if notify.reply %}
+                    <a class="notify-body"
+                       href="{% url "Discussion:discussion_detail" pk=notify.discuss.id %}#{{ notify.reply.id }}">{{ notify.reply.body|truncatechars:"100" }}</a>
+                {% else %}
+                    <a class="notify-body"
+                       href="{% url "Discussion:discussion_detail" pk=notify.discuss.id %}">{{ notify.discuss.body|truncatechars:"100" }}</a>
+                {% endif %}
             </div>
         {% endfor %}
 

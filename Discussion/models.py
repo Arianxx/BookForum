@@ -19,6 +19,8 @@ class Discuss(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name="discussions")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="discussions")
 
+    mentions = models.ManyToManyField(User, related_name='replys_from_discussion')
+
     class Meta:
         verbose_name = '书籍讨论'
         verbose_name_plural = '书籍讨论'
@@ -38,7 +40,7 @@ class DiscussReply(models.Model):
     discuss = models.ForeignKey("Discuss", on_delete=models.CASCADE, related_name="replys")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='replys')
 
-    reply_to = models.ManyToManyField(User, related_name='replys_from')
+    mentions = models.ManyToManyField(User, related_name='replys_from_reply')
 
     class Meta:
         verbose_name = '讨论回复'
@@ -55,7 +57,9 @@ class Notification(models.Model):
     """
     sender = models.ForeignKey(User, verbose_name='发送者', on_delete=models.CASCADE, related_name='sender_notifies')
     receivers = models.ManyToManyField(User, verbose_name='接收者', related_name='receive_notifies')
-    instance = models.ForeignKey(DiscussReply, verbose_name='消息', on_delete=models.CASCADE, related_name='notifies')
+    discuss = models.ForeignKey(Discuss, verbose_name='主题', on_delete=models.CASCADE, related_name='notifies')
+    reply = models.ForeignKey(DiscussReply, verbose_name='回复', on_delete=models.CASCADE, related_name='notifies',
+                              null=True, blank=True)
     create_time = models.DateTimeField('创建日期', default=timezone.now, blank=True, null=True)
     is_read = models.BooleanField('是否阅读', default=False)
     # 通知分@和回复
@@ -64,7 +68,7 @@ class Notification(models.Model):
     class Meta:
         verbose_name = '通知'
         verbose_name_plural = '通知'
-        ordering = ('-create_time', )
+        ordering = ('-create_time',)
 
     def __str__(self):
         return "DiscussReply(Notification sender='%s')" % self.sender.username

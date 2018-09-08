@@ -101,6 +101,8 @@ def post_discussion(request, book_slug=''):
                 user=user,
             )
             discuss.save()
+            discuss.mentions.set(get_mention_users(data))
+            discuss.save()
 
             messages.success(request, '你成功发布了一个帖子')
 
@@ -139,18 +141,13 @@ def post_reply(request, pk=''):
             discussion = get_object_or_404(Discuss, id=int(pk))
             data = form.cleaned_data
 
-            # todo: 独立出来，为帖子添加通知
-            mentions = map(lambda x: x.split('@')[1], re.findall(r'@\S*', data['body'], re.M))
-            mention_users = map(lambda username: User.objects.filter(username=username).all(), mentions)
-            mention_users = list(map(lambda x: x[0], filter(lambda x: len(x), mention_users)))
-
             reply = DiscussReply(
                 body=data['body'],
                 discuss=discussion,
                 user=request.user,
             )
             reply.save()
-            reply.reply_to.set(mention_users)
+            reply.mentions.set(get_mention_users(data))
             reply.save()
 
             messages.success(request, '你成功添加了一条回复')
@@ -219,3 +216,9 @@ def collection_discussions(request):
         'discussions': discussions,
     }
     return render(request, 'Discussion/collection_discussions.html', context=context)
+
+
+def get_mention_users(data):
+    mentions = map(lambda x: x.split('@')[1], re.findall(r'@\S*', data['body'], re.M))
+    mention_users = map(lambda username: User.objects.filter(username=username).all(), mentions)
+    return list(map(lambda x: x[0], filter(lambda x: len(x), mention_users)))

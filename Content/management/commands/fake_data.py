@@ -126,7 +126,7 @@ class Command(BaseCommand):
                     )
                 reply_to_user = random.choice(User.objects.all())
                 discuss_reply.save()
-                discuss_reply.reply_to.set([reply_to_user])
+                discuss_reply.mentions.set([reply_to_user])
                 print('Fake reply: ', discuss_reply)
 
             print('Fake the discussion: ', discuss)

@@ -34,7 +34,7 @@ class DicussReplyTest(TestCase):
 
     def test_isolate_reply_error(self):
         isolate_reply = DiscussReply(body='Test', discuss=self.discussion)
-        isolate_reply.reply_to = self.replys[0]
+        isolate_reply.mentions = self.replys[0]
 
         with self.assertRaises(IsolateReplyError):
             isolate_reply.save()
