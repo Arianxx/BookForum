@@ -56,7 +56,7 @@ class Notification(models.Model):
     绑定signal，当DiscussReply保存之后自动在此模型中存入相关信息
     """
     sender = models.ForeignKey(User, verbose_name='发送者', on_delete=models.CASCADE, related_name='sender_notifies')
-    receivers = models.ManyToManyField(User, verbose_name='接收者', related_name='receive_notifies')
+    receiver = models.ForeignKey(User, verbose_name='接收者', on_delete=models.CASCADE, related_name='receive_notifies')
     discuss = models.ForeignKey(Discuss, verbose_name='主题', on_delete=models.CASCADE, related_name='notifies')
     reply = models.ForeignKey(DiscussReply, verbose_name='回复', on_delete=models.CASCADE, related_name='notifies',
                               null=True, blank=True)
