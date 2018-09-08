@@ -1,4 +1,8 @@
 # ShareForum
+![Badges](https://img.shields.io/badge/Powerd%20By-Django-blue.svg)
+![Badges](https://img.shields.io/github/license/mashape/apistatus.svg)
+![Badges](https://img.shields.io/twitter/url/https/github.com/Arianxx/ShareForum.svg?style=social
+)
 
 >Notice: ShareForum has not been completely developed yet.
 
