@@ -23,7 +23,7 @@ This is a forum system powered by Django and Bootstrap to share your ideas of so
     + Notification.
 
 ## Preview ShareForum
-![](http://arian-blogs.oss-cn-beijing.aliyuncs.com/18-5-31/10912899.jpg)
+![](http://arian-blogs.oss-cn-beijing.aliyuncs.com/18-9-8/68408290.jpg)
 
 ## How to use?
 1. Clone this repository into your computer.
