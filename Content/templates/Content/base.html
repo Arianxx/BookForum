@@ -23,12 +23,12 @@
 </head>
 <body style="background-color: whitesmoke">
 
-<header>
+<header style="position: fixed;width: 100%;top: 0;z-index: 9999">
     <!-- site's common navbar -->
     {% include 'component/navbar.html' %}
 </header>
 
-<section style="max-width:1500px;margin:auto">
+<section style="max-width:1500px;margin:auto;margin-top: 60px">
     <!-- show messages -->
     <div class="container mt-1">
         {% include 'component/messages.html' %}
@@ -45,7 +45,7 @@
 </footer>
 
 {% block scripts %}
-    <script src="{% static 'Content/js/jquery-3.3.1.slim.min.js' %}" ></script>
+    <script src="{% static 'Content/js/jquery-3.3.1.min.js' %}" ></script>
     <script src="{% static 'Content/js/popper.min.js' %}" ></script>
     <script src="{% static 'Content/js/bootstrap.min.js' %}" ></script>
     <script src="{% static 'Content/js/app.js' %}" ></script>

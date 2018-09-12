@@ -12,3 +12,31 @@ $('.reply_btn').click(e => {
 
     return false
 })
+
+
+$(() => {
+    let previousTop = 0;
+    let currentTop = 0;
+    let previousTime = 0;
+    let nowTime = 0;
+    let nav = $('.navbar:eq(0)');
+
+    $(window).scroll(() => {
+        nowTime = new Date().getTime()
+        if(nowTime - previousTime < 70){
+            return false
+        }
+
+        currentTop = $(window).scrollTop();
+
+        if(currentTop - previousTop > 100){
+
+            nav.attr('id')==='nav-show'?nav.attr('id', 'nav-hide'):null
+        } else if(previousTop - currentTop > 100) {
+            nav.attr('id')==='nav-hide'?$('.navbar:eq(0)').attr('id', 'nav-show'):null
+        }
+
+        previousTop = currentTop;
+        previousTime = nowTime;
+    })
+})

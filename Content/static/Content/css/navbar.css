@@ -34,3 +34,15 @@
     max-width: 15px;
     margin-bottom: 3px;
 }
+
+.navbar {
+    transition: transform 300ms linear;
+}
+
+#nav-show {
+    transform: translate(0);
+}
+
+#nav-hide {
+    transform: translateY(-100%);
+}
