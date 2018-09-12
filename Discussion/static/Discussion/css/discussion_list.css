@@ -59,6 +59,12 @@
     margin-top: -10px;
 }
 
+.discussion_article {
+    margin: 10px;
+    padding: 10px;
+    background-color: #fefefe;
+}
+
 .book_link {
     color: black;
     text-decoration: none !important;

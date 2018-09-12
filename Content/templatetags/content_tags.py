@@ -77,6 +77,14 @@ def show_books(object_list):
     :param object_list: Book模型实例的列表
     :return: 返回一个字典作为模板的上下文
     """
+    if len(object_list) > 0:
+        try:
+            getattr(object_list[0], 'object')
+        except AttributeError:
+            pass
+        else:
+            object_list = map(lambda ele: ele.object, object_list)
+
     context = {
         'books_list': object_list,
     }

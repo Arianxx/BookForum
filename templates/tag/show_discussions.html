@@ -17,6 +17,12 @@
                     </a>
                 </div>
 
+                {% if in_search %}
+                    <div class="discussion_article">
+                        {{ discussion.body|truncatechars:"150" }}
+                    </div>
+                {% endif %}
+
                 <div class="discussion_related text-muted">
                     <small>
                         <span class="discussion_book_name">
@@ -69,6 +75,6 @@
     </div>
 {% empty %}
     <p class="lead text-center mt-4">
-        这儿还没有帖子，去别的地方看看吧。
+        这儿还没有任何东西，去别的地方看看吧。
     </p>
 {% endfor %}

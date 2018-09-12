@@ -1,0 +1,25 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+{% load content_tags %}
+{% load discussion_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Discussion/css/discussion_list.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    搜索
+{% endblock %}
+
+{% block content %}
+    {% include 'component/search_switch.html' %}
+
+            <div class="search-box">
+                {{ results }}
+                {% handle_search_result page.object_list as discussions %}
+                {% show_discussions discussions True%}
+
+                {% paginate paginator page %}
+            </div>
+{% endblock %}

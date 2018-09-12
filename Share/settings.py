@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'haystack',
     'guardian',
     'widget_tweaks',
 
@@ -119,3 +120,12 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 # 媒体文件的url和根目录
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'Discussion.whoosh_cn_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+    },
+}
+
+HAYSTACK_SIGNAL_PROCESSOR = "haystack.signals.RealtimeSignalProcessor"

@@ -1,0 +1,11 @@
+{% load static %}
+
+<ul class="nav index_switch text-center">
+    {% url 'Discussion:haystack_search' as search %}
+    <li class="nav-item">
+        <a class="nav-link index_switch_link {% if request.path == search %}link_switch_active{% endif %}"
+           href="{{ search }}">
+            <span class="index_switch_text">搜索结果</span>
+        </a>
+    </li>
+</ul>

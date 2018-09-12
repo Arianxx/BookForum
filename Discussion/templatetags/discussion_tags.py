@@ -51,6 +51,11 @@ def get_discussion_replys(discussion, sort="-pub_date", num=1):
 
 
 @register.simple_tag()
+def handle_search_result(results):
+    return list(map(lambda ele:ele.object, results))
+
+
+@register.simple_tag()
 def get_hot_discussions(num=5):
     """
     得到指定数量的热门讨论
@@ -89,7 +94,7 @@ def unread_notifies_num(user):
 
 
 @register.inclusion_tag('tag/show_discussions.html')
-def show_discussions(discussions_list):
+def show_discussions(discussions_list, in_search=False):
     """
     加载指定讨论列表的模板
 
@@ -98,6 +103,7 @@ def show_discussions(discussions_list):
     """
     context = {
         'discussions_list': discussions_list,
+        'in_search': in_search,
     }
     return context
 

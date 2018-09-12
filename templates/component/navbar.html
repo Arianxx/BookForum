@@ -12,10 +12,10 @@
 
         <div class="collapse navbar-collapse mr-sm-0 mr-md-5" id="navbar">
             <div class="navbar-nav mr-auto">
-                <form class="form-inline mx-2 rounded-2" method="GET" action="{#  #}">
+                <form class="form-inline mx-2 rounded-2" method="GET" action="{% url 'Discussion:haystack_search' %}">
                     <div class="input-group">
-                        <input type="text" class="form-control nav-search" name="search" placeholder="搜索" />
-                        <button class="input-group-append btn btn-info">搜索</button>
+                        <input type="search" class="form-control nav-search" name="q" placeholder="搜索" />
+                        <input type="submit" class="input-group-append btn btn-info" value="搜索" />
                     </div>
                 </form>
             </div>

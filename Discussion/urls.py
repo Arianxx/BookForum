@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from django.contrib.auth.decorators import login_required
 
 from .views import *
@@ -15,4 +15,6 @@ urlpatterns = [
     path('collect-discussion', collect_discussion, name='collect_discussion'),
     path('remove-collected-discussion', remove_collected_discussion, name='remove_collected_discussion'),
     path('collection-discussions', collection_discussions, name='collection_discussions'),
+
+    path('search/', include('haystack.urls'), name='search')
 ]
