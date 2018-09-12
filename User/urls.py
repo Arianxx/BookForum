@@ -1,6 +1,6 @@
 from django.conf import settings
-from django.contrib.auth.views import login, logout, password_reset, password_reset_done, password_reset_confirm, \
-    password_reset_complete
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, \
+    PasswordResetCompleteView
 from django.urls import path
 
 from .views import register, profile, profile_edit, avatar_edit, password_change, email_change, email_change_confirm, \
@@ -8,25 +8,23 @@ from .views import register, profile, profile_edit, avatar_edit, password_change
 
 app_name = 'User'
 urlpatterns = [
-    path('login', login, {'template_name': 'Auth/login.html', }, name='login'),
-    path('logout', logout, {'template_name': 'Auth/logout.html', }, name='logout'),
+    path('login', LoginView.as_view(template_name='Auth/login.html'), name='login'),
+    path('logout', LogoutView.as_view(template_name='Auth/logout.html'), name='logout'),
     path('password-change', password_change, name='password_change'),
-    path('password-reset', password_reset, {
-        'template_name': 'Auth/password_reset.html',
-        'email_template_name': 'Auth/email/password_reset_email.html',
-        'subject_template_name': 'Auth/email/password_reset_subject.txt',
-        'post_reset_redirect': 'User:password_reset_done',
-        'from_email': getattr(settings, 'EMAIL_FROM'),
-    }, name='password_reset'),
-    path('password-reset-done', password_reset_done,
-         {'template_name': 'Auth/password_reset_done.html', },
+    path('password-reset', PasswordResetView.as_view(
+        template_name='Auth/password_reset.html',
+        email_template_name='Auth/email/password_reset_email.html',
+        subject_template_name='Auth/email/password_reset_subject.txt',
+        success_url='User:password_reset_done',
+        from_email=getattr(settings, 'EMAIL_FROM'),
+    ), name='password_reset'),
+    path('password-reset-done', PasswordResetDoneView.as_view(template_name='Auth/password_reset_done.html'),
          name='password_reset_done'),
-    path('password-reset-confirm/<uidb64>/<token>', password_reset_confirm, {
-        'template_name': 'Auth/password_reset_confirm.html',
-        'post_reset_redirect': 'User:password_reset_complete',
-    }, name='password_reset_confirm'),
-    path('password-reset-complete', password_reset_complete,
-         {'template_name': 'Auth/password_reset_complete.html', },
+    path('password-reset-confirm/<uidb64>/<token>', PasswordResetConfirmView.as_view(
+            template_name='Auth/password_reset_confirm.html',
+            success_url='User:password_reset_complete',
+    ), name='password_reset_confirm'),
+    path('password-reset-complete', PasswordResetCompleteView.as_view(template_name='Auth/password_reset_complete.html'),
          name='password_reset_complete'),
     path('register', register, name='register'),
     path('profile', profile, name='profile'),

@@ -1,12 +1,9 @@
 [[source]]
-
 url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
 django = "*"
 bootstrap-admin = "*"
 faker = "*"
@@ -16,12 +13,11 @@ django-widget-tweaks = "*"
 python-dotenv = "*"
 django-guardian = "*"
 django-uuslug = "*"
-
+whoosh = "*"
+django-haystack = "*"
+jieba = "*"
 
 [dev-packages]
 
-
-
 [requires]
-
 python_version = "3.6"
