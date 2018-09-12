@@ -49,6 +49,7 @@ AUTHENTICATION_BACKENDS = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -116,6 +117,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [STATIC_DIR, ]
+# For WhiteNoise, to serve static files.
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # 媒体文件的url和根目录
 MEDIA_URL = '/media/'

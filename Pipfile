@@ -16,6 +16,7 @@ django-uuslug = "*"
 whoosh = "*"
 django-haystack = "*"
 jieba = "*"
+whitenoise = "*"
 
 [dev-packages]
 
