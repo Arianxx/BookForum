@@ -1,0 +1,13 @@
+{% extends 'Content/index.html' %}
+{% load static %}
+
+{% block title %}
+    页面走丢了
+{% endblock %}
+
+{% block content-fluid %}
+    <div class="text-center" style="text-align: center">
+        <img src="{% static 'Content/img/icon/404.svg' %}"
+             style="position: absolute; left: 50%; margin-left: -120px; top: 50%; margin-top: -120px"/>
+    </div>
+{% endblock %}
