@@ -20,16 +20,20 @@
             {% block content-fluid %}
                 <div class="col col-12 col-xl-8">
                     {% block content %}
-                        {% show_carousel %}
-                        {% include 'component/index_switch.html' %}
-                        {% show_books object_list %}
-                        {% paginate paginator page_obj %}
+                        <div id="left_content">
+                            {% show_carousel %}
+                            {% include 'component/index_switch.html' %}
+                            {% show_books object_list %}
+                            {% paginate paginator page_obj %}
+                        </div>
                     {% endblock %}
                 </div>
 
-                <div class="col">
+                <div class="col col-12 col-xl-4">
                     {% block right-nav %}
-                        {% include 'component/right_nav_index.html' %}
+                        <div class="wrap-right-nav">
+                            {% include 'component/right_nav_index.html' %}
+                        </div>
                     {% endblock %}
                 </div>
             {% endblock %}

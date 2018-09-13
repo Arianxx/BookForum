@@ -1,5 +1,6 @@
 .right_nav {
-    margin-top: 25px
+    position: static;
+    margin-top: 25px;
 }
 
 .per_right_nav {

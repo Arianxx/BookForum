@@ -13,8 +13,11 @@
 {% endblock %}
 
 {% block content %}
-    {% show_carousel %}
-    {% include 'component/index_switch.html' %}
-    {% show_discussions object_list %}
-    {% paginate paginator page_obj %}
+    <
+    <div id="left_content">
+        {% show_carousel %}
+        {% include 'component/index_switch.html' %}
+        {% show_discussions object_list %}
+        {% paginate paginator page_obj %}
+    </div>
 {% endblock %}

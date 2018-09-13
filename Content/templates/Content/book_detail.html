@@ -20,43 +20,47 @@
 
 {% block content-fluid %}
     <div class="col col-12 col-lg-4 book_detail mt-4 mb-0 mb-lg-4">
-        <div class="book_detail_container">
-            <a class="book_detail_back btn btn-outline-info" href="{% url 'Content:index' %}" style="width:100%;">查看更多最新书籍</a>
-        </div>
-
-        {% url 'Content:book' book.slug as book_url %}
-        {% if request.path != book_url %}
+        <div id="book-left-nav">
             <div class="book_detail_container">
-                <a class="book_detail_back btn btn-outline-info" href="{% url 'Content:book' book.slug %}"
-                   style="width:100%">查看这本书籍的更多讨论</a>
+                <a class="book_detail_back btn btn-outline-info" href="{% url 'Content:index' %}" style="width:100%;">查看更多最新书籍</a>
             </div>
-        {% endif %}
 
-        {% if not user.is_anonymous %}
-            {% if request.path == book_url %}
-                {% check_collected_book user book as collected %}
+            {% url 'Content:book' book.slug as book_url %}
+            {% if request.path != book_url %}
                 <div class="book_detail_container">
-                    {% if not collected %}
-                        <a class="book_detail_back btn btn-outline-info"
-                           href="{% url 'Content:collect_book' %}?book-id={{ book.id }}"
-                           style="width:100%">收藏本书</a>
-                    {% else %}
-                        <a class="book_detail_back btn btn-outline-info"
-                           href="{% url 'Content:remove_collected_book' %}?book-id={{ book.id }}"
-                           style="width:100%">撤销收藏</a>
-                    {% endif %}
+                    <a class="book_detail_back btn btn-outline-info" href="{% url 'Content:book' book.slug %}"
+                       style="width:100%">查看这本书籍的更多讨论</a>
                 </div>
             {% endif %}
-        {% endif %}
 
-        {% show_book_detail book %}
+            {% if not user.is_anonymous %}
+                {% if request.path == book_url %}
+                    {% check_collected_book user book as collected %}
+                    <div class="book_detail_container">
+                        {% if not collected %}
+                            <a class="book_detail_back btn btn-outline-info"
+                               href="{% url 'Content:collect_book' %}?book-id={{ book.id }}"
+                               style="width:100%">收藏本书</a>
+                        {% else %}
+                            <a class="book_detail_back btn btn-outline-info"
+                               href="{% url 'Content:remove_collected_book' %}?book-id={{ book.id }}"
+                               style="width:100%">撤销收藏</a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endif %}
+
+            {% show_book_detail book %}
+        </div>
     </div>
 
     <div class="col book_discussions mt-2 mt-lg-4 mb-4">
-        {% block book_detail_right %}
-            {% include 'component/post_discussion_form.html' %}
-            {% get_discussions book as discussions %}
-            {% show_discussions discussions %}
-        {% endblock %}
+        <div id="book-right-nav">
+            {% block book_detail_right %}
+                {% include 'component/post_discussion_form.html' %}
+                {% get_discussions book as discussions %}
+                {% show_discussions discussions %}
+            {% endblock %}
+        </div>
     </div>
 {% endblock %}
