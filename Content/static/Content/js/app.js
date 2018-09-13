@@ -30,11 +30,11 @@ $(() => {
 
         currentTop = $(window).scrollTop();
 
-        if (currentTop - previousTop > 50) {
+        if (currentTop - previousTop > 10) {
 
             // nav.attr('id') === 'nav-show' ? nav.attr('id', 'nav-hide') : null
             nav.slideUp(200);
-        } else if (previousTop - currentTop > 50) {
+        } else if (previousTop - currentTop > 10) {
             // nav.attr('id') === 'nav-hide' ? $('.navbar:eq(0)').attr('id', 'nav-show') : null
             nav.slideDown(200);
         }
