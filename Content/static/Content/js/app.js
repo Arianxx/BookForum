@@ -24,16 +24,16 @@ $(() => {
 
     $(window).scroll(() => {
         nowTime = new Date().getTime()
-        if (nowTime - previousTime < 70) {
+        if (nowTime - previousTime < 100) {
             return false
         }
 
         currentTop = $(window).scrollTop();
 
-        if (currentTop - previousTop > 100) {
+        if (currentTop - previousTop > 50) {
 
             nav.attr('id') === 'nav-show' ? nav.attr('id', 'nav-hide') : null
-        } else if (previousTop - currentTop > 100) {
+        } else if (previousTop - currentTop > 50) {
             nav.attr('id') === 'nav-hide' ? $('.navbar:eq(0)').attr('id', 'nav-show') : null
         }
 
