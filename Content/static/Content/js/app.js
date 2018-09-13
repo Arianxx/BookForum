@@ -32,9 +32,11 @@ $(() => {
 
         if (currentTop - previousTop > 50) {
 
-            nav.attr('id') === 'nav-show' ? nav.attr('id', 'nav-hide') : null
+            // nav.attr('id') === 'nav-show' ? nav.attr('id', 'nav-hide') : null
+            nav.slideUp(200);
         } else if (previousTop - currentTop > 50) {
-            nav.attr('id') === 'nav-hide' ? $('.navbar:eq(0)').attr('id', 'nav-show') : null
+            // nav.attr('id') === 'nav-hide' ? $('.navbar:eq(0)').attr('id', 'nav-show') : null
+            nav.slideDown(200);
         }
 
         previousTop = currentTop;
