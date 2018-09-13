@@ -9,3 +9,4 @@ media/carousel/*
 !media/avatar/default.jpg
 !media/book_cover/default.jpg
 whoosh_index
+/static/
