@@ -46,3 +46,14 @@
 #nav-hide {
     transform: translateY(-100%);
 }
+
+#back {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 9999;
+}

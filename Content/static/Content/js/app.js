@@ -15,6 +15,7 @@ $('.reply_btn').click(e => {
 
 
 $(() => {
+    //顶栏隐藏
     let previousTop = 0;
     let currentTop = 0;
     let previousTime = 0;
@@ -23,20 +24,38 @@ $(() => {
 
     $(window).scroll(() => {
         nowTime = new Date().getTime()
-        if(nowTime - previousTime < 70){
+        if (nowTime - previousTime < 70) {
             return false
         }
 
         currentTop = $(window).scrollTop();
 
-        if(currentTop - previousTop > 100){
+        if (currentTop - previousTop > 100) {
 
-            nav.attr('id')==='nav-show'?nav.attr('id', 'nav-hide'):null
-        } else if(previousTop - currentTop > 100) {
-            nav.attr('id')==='nav-hide'?$('.navbar:eq(0)').attr('id', 'nav-show'):null
+            nav.attr('id') === 'nav-show' ? nav.attr('id', 'nav-hide') : null
+        } else if (previousTop - currentTop > 100) {
+            nav.attr('id') === 'nav-hide' ? $('.navbar:eq(0)').attr('id', 'nav-show') : null
         }
 
         previousTop = currentTop;
         previousTime = nowTime;
+    })
+})
+
+$(() => {
+    //回到顶部
+    let backImg = $('#back')
+    $(window).scroll(() => {
+        currentTop = $(window).scrollTop()
+
+        if(currentTop < 800 && backImg.is(':visible')){
+            backImg.hide('fast')
+        }else if(currentTop > 800 && !backImg.is(':visible')){
+            backImg.show('fast')
+        }
+    })
+
+    backImg.click((e) => {
+        $("html, body").animate({scrollTop: 0}, 500)
     })
 })
