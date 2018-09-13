@@ -30,7 +30,9 @@ $(() => {
 
         currentTop = $(window).scrollTop();
 
-        if (currentTop - previousTop > 10) {
+        if (currentTop < 100) {
+            nav.attr('id') === 'nav-hide' ? $('.navbar:eq(0)').attr('id', 'nav-show') : null
+        } else if (currentTop - previousTop > 10) {
 
             nav.attr('id') === 'nav-show' ? nav.attr('id', 'nav-hide') : null
         } else if (previousTop - currentTop > 10) {
@@ -48,9 +50,9 @@ $(() => {
     $(window).scroll(() => {
         currentTop = $(window).scrollTop()
 
-        if(currentTop < 800 && backImg.is(':visible')){
+        if (currentTop < 800 && backImg.is(':visible')) {
             backImg.hide('fast')
-        }else if(currentTop > 800 && !backImg.is(':visible')){
+        } else if (currentTop > 800 && !backImg.is(':visible')) {
             backImg.show('fast')
         }
     })
