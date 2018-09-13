@@ -24,7 +24,7 @@ $(() => {
 
     $(window).scroll(() => {
         nowTime = new Date().getTime()
-        if (nowTime - previousTime < 100) {
+        if (nowTime - previousTime < 50) {
             return false
         }
 
