@@ -88,12 +88,14 @@ class FixNav {
                 'bottom': '',
             })
         } else if (e.data.initialMulriple < 1.1 && e.data.initialMulriple > 0.9) {
-            e.data.initialMulriple = 2
+            e.data.initialMulriple = 2;
+            e.data.fixedNav('up');
+        } else {
+            e.data.fixedNav('up');
         }
         e.data.ele.css({
             'width': e.data.contrastEle.width() / e.data.initialMulriple,
         });
-        e.data.fixedNav('up');
     };
 
     toLowerBound() {
