@@ -12,7 +12,7 @@
         {% get_hot_discussions as disscussions %}
         <div class="list-group list-group-flush hot_disscussion_list">
             {% for discussion in disscussions %}
-                <div class="list-group-item list-group-item-action list-group-item-white hot_discussion_item">
+                <div class="list-group-item list-group-item-action list-group-item-white hot_discussion_item" style="background-color: rgba(255,255,255,0.7)">
                     {% url 'Discussion:discussion_detail' discussion.pk as discussion_url %}
                     <a class="book_link" href="{{ discussion_url }}">
                         <img class="right_item_icon" src="{% static 'Content/img/icon/hot_discuss_item.png' %}"/>

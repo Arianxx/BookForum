@@ -14,7 +14,7 @@ footer {
     height: 100px;
     margin-left: 0;
     margin-right: 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-text {

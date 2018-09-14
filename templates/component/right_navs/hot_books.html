@@ -12,7 +12,7 @@
     {% get_hot_books 5 as books %}
     <div class="list-group list-group-flush hot_book_list">
         {% for book in books %}
-            <div class="list-group-item list-group-item-action list-group-item-white hot_book_item">
+            <div class="list-group-item list-group-item-action list-group-item-white hot_book_item"  style="background-color: rgba(255,255,255,0.7)">
                 <a class="nav_link" href="{% url 'Content:book' slug=book.slug %}">
                     <img class="right_item_icon" src="{% static 'Content/img/icon/right.png' %}"/>
                     <span class="right_item_title">{{ book.name| truncatechars:32 }}</span>

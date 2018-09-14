@@ -4,7 +4,7 @@
     padding-bottom: 30px;
     margin-bottom: 30px;
     border: 1px solid lightgrey;
-    background-color: white !important;
+    background-color: rgba(255, 255, 255, 0.7)!important;
 }
 
 .form_name {
@@ -37,4 +37,10 @@
 
 .required_hint {
     color: red !important;
+}
+
+body {
+    background-image: url('/static/Content/img/bg/login.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
 }

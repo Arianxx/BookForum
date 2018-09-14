@@ -21,30 +21,32 @@
     <link rel="stylesheet" href="{% static 'Content/css/footer.css' %}" />
     {% endblock %}
 </head>
-<body style="background-color: whitesmoke">
+<body>
 
-<header style="position: fixed;width: 100%;top: 0;z-index: 9999">
-    <!-- site's common navbar -->
-    {% include 'component/navbar.html' %}
-</header>
+<div class="grid">
+    <header style="position: fixed;width: 100%;top: 0;z-index: 9999">
+        <!-- site's common navbar -->
+        {% include 'component/navbar.html' %}
+    </header>
 
-<section style="max-width:1500px;margin:auto;margin-top: 60px">
-    <!-- show messages -->
-    <div class="container mt-1">
-        {% include 'component/messages.html' %}
-    </div>
+    <section style="max-width:1500px;margin:auto;margin-top: 60px">
+        <!-- show messages -->
+        <div class="container mt-1">
+            {% include 'component/messages.html' %}
+        </div>
 
-    <!-- main content of the page -->
-    {% block main %}
-    {% endblock %}
-</section>
+        <!-- main content of the page -->
+        {% block main %}
+        {% endblock %}
+    </section>
 
-<img src="{% static 'Content/img/icon/top.png' %}" id='back'/>
+    <img src="{% static 'Content/img/icon/top.png' %}" id='back'/>
 
-<footer>
-    <!-- site's footer -->
-    {% include "component/footer.html" %}
-</footer>
+    <footer>
+        <!-- site's footer -->
+        {% include "component/footer.html" %}
+    </footer>
+</div>
 
 {% block scripts %}
     <script src="{% static 'Content/js/jquery-3.3.1.min.js' %}" ></script>

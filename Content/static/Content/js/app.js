@@ -75,7 +75,7 @@ class FixNav {
         this.initialMulriple = contrastEle.width() / ele.width();
 
         this.upping = false;
-        this.downing = true;
+        this.downing = false;
     }
 
     adaptWidth(e) {
@@ -90,7 +90,10 @@ class FixNav {
         } else if (e.data.initialMulriple < 1.1 && e.data.initialMulriple > 0.9) {
             e.data.initialMulriple = 2
         }
-        e.data.ele.css('width', e.data.contrastEle.width() / e.data.initialMulriple)
+        e.data.ele.css({
+            'width': e.data.contrastEle.width() / e.data.initialMulriple,
+        });
+        e.data.fixedNav('up');
     };
 
     toLowerBound() {
@@ -98,7 +101,7 @@ class FixNav {
         let nowTop = $(window).height() + $(window).scrollTop();
         let eleTop = ele.offset().top + ele.height();
         let temp = nowTop - eleTop
-        return temp > 0;
+        return temp > 20;
     };
 
     toUpperBound() {
@@ -128,7 +131,7 @@ class FixNav {
             'position': 'fixed',
             'margin-top': '',
         };
-        cssObj[arrowWord] = arrow === 'up' ? 60 : 0;
+        cssObj[arrowWord] = arrow === 'up' ? this.contrastEle.offset().top - 5 : 20;
         ele.css(cssObj);
         ele.attr('arrow', arrow);
         ele.arrow = arrow;
@@ -205,4 +208,17 @@ $(function fixLeftNav() {
     let left = $('#book-left-nav');
     let right = $('#book-right-nav');
     new FixNav(left, right).run()
+})
+
+$(function expandGrid() {
+    //页面长度不够时，拉伸grid div至屏幕长度
+
+    let grid = $('.grid:eq(0)');
+    let header = $('header:eq(0)');
+    let footer = $('footer:eq(0)');
+    let shouldHeight = $(window).height() - header.height() - footer.height();
+
+    if(shouldHeight > grid.height()){
+        grid.css('height', shouldHeight);
+    }
 })

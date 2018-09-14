@@ -1,5 +1,5 @@
 .lz {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid lightgrey;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .reply {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid lightgrey;
 }
 

@@ -57,3 +57,30 @@
     cursor: pointer;
     z-index: 9999;
 }
+
+.opac {
+    background-color: rgba(255,255,255,0.5)!important;
+}
+
+.list-group-item:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.list-group-item:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+body {
+    background-image: url('/static/Content/img/bg/index.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.grid {
+    background-image: url('/static/Content/img/bg/grid.png');
+    background-size: 4px 4px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
