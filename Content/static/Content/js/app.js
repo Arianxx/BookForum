@@ -178,6 +178,10 @@ class FixNav {
     };
 
     run() {
+        if(!this.ele || !this.contrastEle){
+            return false
+        }
+
         this.adaptWidth({data: this})
         $(window).resize(this, this.adaptWidth)
 
