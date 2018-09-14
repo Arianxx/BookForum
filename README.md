@@ -22,8 +22,8 @@ This is a forum system powered by Django and Bootstrap to share your ideas of so
     + Add node, tag.
     + Notification.
 
-## Preview BookForum
-![](http://arian-blogs.oss-cn-beijing.aliyuncs.com/18-9-8/68408290.jpg)
+## Demo
+[Demo](http://101.132.174.76:7777)
 
 ## How to use?
 1. Clone this repository into your computer.
