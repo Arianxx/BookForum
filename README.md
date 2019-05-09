@@ -22,9 +22,6 @@ This is a forum system powered by Django and Bootstrap to share your ideas of so
     + Add node, tag.
     + Notification.
 
-## Demo
-[Demo](http://101.132.174.76:7777)
-
 ## How to use?
 1. Clone this repository into your computer.
 2. Get dependencies(recommend):
